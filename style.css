@@ -76,6 +76,18 @@ nav a {
     display: none;
 }
 
+.icon-xl {
+    font-size: x-large;
+    text-align: center;
+    color: #3A1078;
+}
+
+.icon-lg {
+    font-size: large;
+    text-align: center;
+    color: #3A1078;
+}
+
 main {
     position: relative;
     display: flex;
@@ -114,7 +126,7 @@ main {
         justify-items: center;
         position: absolute;
         bottom: 2rem;
-        padding: 2rem 0rem;
+        padding: 1rem 0rem;
         border-radius: 2rem;
 
     }
