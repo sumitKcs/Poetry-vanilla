@@ -38,7 +38,7 @@
 
 
 
-    <main>
+    <main class="gap_xl">
         <!-- Slider main container start-->
         <section class="swiper">
             <div class="swiper-wrapper" id="slider">
@@ -60,17 +60,9 @@
         </section>
         <!-- Slider main container end -->
 
-        <!-- bottom menu start -->
-        <section class="bottom_menu shadow">
-            <div class="bottom_menu_items icon-lg">
-                <a href="/"><i class="fa-solid fa-house"></i></a>
-                <a href="/explore"><i class="fa-solid fa-compass"></i></a>
-                <a href="/write"><i class="fa-solid fa-pen-to-square"></i></a>
-                <a href="/store"><i class="fa-solid fa-store"></i></a>
-                <a href="/user"><i class="fa-solid fa-user"></i></a>
-            </div>
-        </section>
-        <!-- bottom menu end -->
+
+
+        <!-- search start -->
         <section class="search">
             <div class="search_wrapper items_center ">
                 <input type="text" placeholder="mohabbat, zindagi, raat">
@@ -78,9 +70,95 @@
             </div>
             <div class=" items_center"><button class="search_button">Search</button></div>
         </section>
+
+        <!-- search end -->
+
+        <!-- what's your mood start-->
+        <section class="flex_col gap_lg item_container">
+            <div class="items_between w-full ">
+                <span class="text_large text_bold">What's your mood</span>
+                <span><a href="/mood">view all <span class="text-sm">&gt;</span></a></span>
+            </div>
+            <div class="item_grid gap_lg">
+                <!-- grid cards -->
+                <div class="flex_col gap_sm ">
+                    <a href="/mood">
+                        <div class="items_center item_box icon-xl"><i class="fa-solid fa-heart"></i></div>
+
+                    </a>
+                    <span>Love</span>
+                </div>
+
+                <div class="flex_col gap_sm">
+                    <a href="/mood">
+                        <div class="items_center item_box icon-xl"><i class="fa-solid fa-bullseye"></i></div>
+
+                    </a>
+                    <span>Motivation</span>
+                </div>
+                <div class="flex_col gap_sm">
+                    <a href="/mood">
+                        <div class="items_center item_box icon-xl"><i class="fa-solid fa-heart-crack"></i></div>
+
+                    </a>
+                    <span>Breakup</span>
+                </div>
+                <div class="flex_col gap_sm">
+                    <a href="/mood">
+                        <div class="items_center item_box icon-xl"><i class="fa-solid fa-face-sad-tear"></i></div>
+
+                    </a>
+                    <span>Sad</span>
+                </div>
+                <div class="flex_col gap_sm">
+                    <a href="/mood">
+                        <div class="items_center item_box icon-xl"><i class="fa-solid fa-handshake"></i></div>
+                    </a>
+                    <span>Friendship</span>
+                </div>
+            </div>
+        </section>
+        <!-- what's your mood end-->
+
+
+        <!-- Browse collections start-->
+        <section class="flex_col gap_lg item_container">
+            <div class="items_between w-full ">
+                <span class="text_large text_bold">Browse Collections</span>
+                <span><a href="/mood">view all <span class="text-sm">&gt;</span></a></span>
+            </div>
+
+
+            <div class="item_grid gap_lg">
+                <!-- grid cards -->
+                <div class="flex_col gap_sm ">
+                    <a href="/mood">
+                        <div class="items_center item_box icon-xl"><i class="fa-solid fa-heart"></i></div>
+
+                    </a>
+                    <span>Love</span>
+                </div>
+
+            </div>
+        </section>
+        <!--  Browse collections end-->
+
+
+
+
     </main>
 
-
+    <!-- bottom menu start -->
+    <section class="bottom_menu shadow">
+        <div class="bottom_menu_items icon-lg">
+            <a href="/"><i class="fa-solid fa-house"></i></a>
+            <a href="/explore"><i class="fa-solid fa-compass"></i></a>
+            <a href="/write"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a href="/store"><i class="fa-solid fa-store"></i></a>
+            <a href="/user"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </section>
+    <!-- bottom menu end -->
 
     <script>
         const swiper = new Swiper(".swiper", {

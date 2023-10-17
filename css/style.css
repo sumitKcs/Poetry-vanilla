@@ -33,6 +33,11 @@ html {
     --third-color: #2F58CD;
     --fourth-color: #3795BD;
     --border-radius: .3rem;
+    --gap-xl: 4rem;
+    --gap-lg: 2rem;
+    --gap-md: 1rem;
+    --gap-sm: .5rem;
+    --gap-xs: .2rem;
 }
 
 body {
@@ -42,6 +47,8 @@ body {
     justify-items: center;
     width: 100vw;
     height: 100dvh;
+    overflow-y: auto;
+    position: relative;
 
 }
 
@@ -55,6 +62,7 @@ header {
 
 a {
     color: var(--primary-color);
+    text-decoration: none;
 }
 
 a:visited {
@@ -64,6 +72,47 @@ a:visited {
 
 .shadow {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.text-sm {
+    font-size: small;
+}
+
+.gap_xl {
+    gap: var(--gap-xl)
+}
+
+.gap_lg {
+    gap: var(--gap-lg)
+}
+
+.gap_md {
+    gap: var(--gap-md)
+}
+
+.gap_sm {
+    gap: var(--gap-sm)
+}
+
+.gap_xs {
+    gap: var(--gap-xs)
+}
+
+.flex_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 60%;
+    align-self: center;
+}
+
+.self_center {
+    align-self: center;
 }
 
 .items_center {
@@ -84,6 +133,29 @@ a:visited {
     justify-items: center;
 }
 
+.items_between {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.item_grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+
+
+}
+
+
+
+.item_box {
+    border: 1px solid black;
+    padding: 2rem 3.5rem;
+    border-radius: var(--border-radius);
+}
+
 
 nav {
     display: flex;
@@ -96,6 +168,9 @@ nav a {
     color: black;
 }
 
+.text_bold {
+    font-weight: 400;
+}
 
 .text_large {
     font-size: large;
@@ -129,15 +204,17 @@ nav a {
     color: var(--primary-color);
 }
 
+
+
+
 main {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: start;
     justify-items: center;
-    gap: 2rem;
     width: 100%;
-    height: 100%;
+    height: fit-content;
 }
 
 .swiper {
@@ -221,11 +298,12 @@ main {
         justify-content: center;
         justify-items: center;
         align-self: center;
-        position: absolute;
-        bottom: 1.5rem;
+        position: fixed;
+        bottom: 0rem;
         padding: 1rem 0rem;
         border-radius: 2rem;
-
+        z-index: 2;
+        background-color: white;
     }
 
     .bottom_menu_items {
@@ -247,5 +325,21 @@ main {
     }
 
 
+    .item_grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2rem;
 
+    }
+
+    .flex_col {
+        width: 90%;
+
+    }
+
+    .item_box {
+        padding: 2rem 3rem;
+
+    }
 }
