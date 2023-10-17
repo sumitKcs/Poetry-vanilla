@@ -481,5 +481,10 @@ main {
 
     }
 
+    .app_download_wrapper h1 {
+        font-size: large;
+        font-weight: bold;
+    }
+
 
 }
