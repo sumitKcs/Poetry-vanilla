@@ -3,6 +3,7 @@ import APP_DATA from "./data.js";
 const navigation = document.getElementById("main_navigation");
 const fragment = document.createDocumentFragment();
 const slider = document.getElementById("slider");
+const collection = document.getElementById("collection");
 
 let list = "";
 APP_DATA.MENU.map((item) => {
@@ -22,3 +23,19 @@ APP_DATA.SLIDER_IMAGES.map((image) => {
 slider.innerHTML = "";
 slider.appendChild(fragment);
 fragment.innerHTML = "";
+
+let collections = "";
+APP_DATA.COLLECTIONS.map((collection) => {
+  collections =
+    collections +
+    ` <div class="flex_col gap_sm ">
+ <a href="/mood">
+   <div class="items_center collection_box shadow">
+     <img src=${collection.image} alt=${collection}/>
+   </div>
+ </a>
+ <span>${collection.name}</span>
+</div>`;
+});
+
+collection.innerHTML = collections;

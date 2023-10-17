@@ -66,6 +66,38 @@ const APP_DATA = {
     "https://picsum.photos/id/201/1920/600",
     "https://picsum.photos/id/167/1920/600",
   ],
+  COLLECTIONS: [
+    {
+      name: "Chand Shayari",
+      image:
+        "https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png",
+    },
+    {
+      name: "Chand Shayari",
+      image:
+        "https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png",
+    },
+    {
+      name: "Chand Shayari",
+      image:
+        "https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png",
+    },
+    {
+      name: "Chand Shayari",
+      image:
+        "https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png",
+    },
+    {
+      name: "Chand Shayari",
+      image:
+        "https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png",
+    },
+    {
+      name: "Chand Shayari",
+      image:
+        "https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png",
+    },
+  ],
 };
 
 export default APP_DATA;
