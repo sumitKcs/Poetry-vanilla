@@ -32,6 +32,17 @@ const APP_DATA = {
       author_name: "Akram Mahmood",
       date: "October 15, 2023",
     },
+    {
+      title: "बहर #8 बहर-ए-मुतक़ारिब मुसम्मन सालिम",
+      thumbnail:
+        "https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/TTJJpgjCvlN8eJnOnGKna9gURgPOPjopH5nyTdeN.png",
+      description:
+        "अकेले अकेले कहाँ जा रहे हो मोहम्मद रफ़ी साहब का ये गाना तो आपने सुना ही होगा। क्या आप जानते हैं कि ये गाना भी बहर में है? और जिस बहर में है वो उर्दू शायरी की सबसे आसान और ख़ूब इस्तेमाल की जाने वाली बहरों में से एक है। बहर सीरीज़ के इस आठवें ब्लॉग में हम बात करने जा रहे हैं इसी गाने की बहर बहर-ए-मुतक़ा",
+      author_image:
+        "https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/9JXQE0wy15H4jGOdJJogw20dhBy9CmNQBbenTEZ0.jpg",
+      author_name: "Akram Mahmood",
+      date: "October 15, 2023",
+    },
   ],
 
   WRITERS: [

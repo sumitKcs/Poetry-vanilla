@@ -5,6 +5,7 @@ const fragment = document.createDocumentFragment();
 const slider = document.getElementById("slider");
 const collection = document.getElementById("collection");
 const category = document.getElementById("category");
+const latest_blog = document.getElementById("latest_blog");
 
 let list = "";
 APP_DATA.MENU.map((item) => {
@@ -57,3 +58,23 @@ APP_DATA.CATEGORIES.map((category) => {
 });
 
 category.innerHTML = categories;
+
+let latest_blogs = "";
+
+APP_DATA.BLOGS_LATEST.map((blog) => {
+  latest_blogs =
+    latest_blogs +
+    `<div class="shadow">
+  <div class="latest_blog_image_wrapper">
+      <img src=${blog.thumbnail}
+          alt="blog">
+      <div class=" latest_blog_content flex_col gap_sm">
+          <h3>${blog.title}</h3>
+          <p class="blog_description">
+              ${blog.description}
+          </p>
+      </div>
+  </div>
+</div>`;
+});
+latest_blog.innerHTML = latest_blogs;
