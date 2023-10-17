@@ -4,6 +4,7 @@ const navigation = document.getElementById("main_navigation");
 const fragment = document.createDocumentFragment();
 const slider = document.getElementById("slider");
 const collection = document.getElementById("collection");
+const category = document.getElementById("category");
 
 let list = "";
 APP_DATA.MENU.map((item) => {
@@ -39,3 +40,20 @@ APP_DATA.COLLECTIONS.map((collection) => {
 });
 
 collection.innerHTML = collections;
+
+let categories = "";
+APP_DATA.CATEGORIES.map((category) => {
+  const url = "/" + `${category}`;
+  categories =
+    categories +
+    ` <div class="flex_col gap_sm category_item self_center" id="category">
+    <a href=${url}>
+        <div class="items_center category_box self_center">
+        <span class="category_text items_center self_center text-sm">${category}</span>
+        </div>
+
+    </a>
+</div>`;
+});
+
+category.innerHTML = categories;
