@@ -481,9 +481,13 @@ main {
 
     }
 
-    .coming_soon {
-        font-size: large;
+    .app_download_wrapper>span {
+        font-size: medium;
         font-weight: bold;
+    }
+
+    .app_download_wrapper>p {
+        font-size: small;
     }
 
 
