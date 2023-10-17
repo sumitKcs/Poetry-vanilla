@@ -359,13 +359,19 @@ main {
 }
 
 .app_download_wrapper {
+    width: 60%;
     display: flex;
-    border: 1px solid black;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    padding: 2rem 1rem;
+    border: 2px dotted rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, rgba(252, 195, 244, 1) 100%);
 }
 
-.app_download {
-    padding: 2rem 2rem;
-}
+
 
 @media only screen and (max-width: 640px) {
     nav.items_center {
@@ -468,6 +474,11 @@ main {
         text-align: justify;
         line-height: 1.5rem;
         width: 90%;
+    }
+
+    .app_download_wrapper {
+        width: 90%;
+
     }
 
 
