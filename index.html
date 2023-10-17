@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/a12bd5cdcb.js" crossorigin="anonymous"></script>
     <script type="module" src="data.js"></script>
+    <script type="module" src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 </head>
 
@@ -22,7 +25,7 @@
         <div class="logo items_left">
             <img src="https://i.postimg.cc/3RvKKHPh/logo.png" alt="logo">
         </div>
-        <nav class="items_center text_large">
+        <nav class="items_center text_large" id="main_navigation">
             <a href="#">Home</a>
             <a href="#">Shayari</a>
             <a href="#">Blogs</a>
@@ -33,8 +36,30 @@
     </header>
     <!-- header end -->
 
+
     <!-- bottom menu start -->
     <main>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"> <img class="upk-xanc-img" src="https://picsum.photos/id/1011/1920/600" />
+                </div>
+                <div class="swiper-slide"> <img class="upk-xanc-img" src="https://picsum.photos/id/201/1920/600" />
+                </div>
+                <div class="swiper-slide"> <img class="upk-xanc-img" src="https://picsum.photos/id/167/1920/600" />
+                </div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <a href="#services" class="cs-down"></a>
         <section class="bottom_menu shadow">
             <div class="bottom_menu_items icon-lg">
                 <a href="/"><i class="fa-solid fa-house"></i></a>
@@ -48,6 +73,23 @@
 
 
     <!-- bottom menu end -->
+    <script>
+        const swiper = new Swiper(".swiper", {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>

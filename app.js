@@ -1,11 +1,13 @@
-const navigation = document.getElementsByTagName("nav");
-console.log("nav", navigation);
+import APP_DATA from "./data.js";
 
-// {APP_DATA.MENU.map((item, key) => (
-//     <li className=" font-medium float-left tracking-wider opacity-90" key={key}>
-//         {item}
-//     </li>
-//     ))}
-//     <li className=" font-medium float-left tracking-wider opacity-90">
-//         <Link href="/login"> Login</Link>
-//     </li>
+const navigation = document.getElementById("main_navigation");
+const fragment = document.createDocumentFragment();
+
+let list = "";
+APP_DATA.MENU.map((item) => {
+  list = list + ` <a key={item} href="/${item}"> ${item} </a>`;
+});
+
+navigation.innerHTML = list;
+
+
