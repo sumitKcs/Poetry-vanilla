@@ -61,6 +61,11 @@ const APP_DATA = {
         "https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/IPtyfoMSJWc3iILr9x1U8gcaZAoyMvmpDHqFoHla.png",
     },
   ],
+  SLIDER_IMAGES: [
+    "https://picsum.photos/id/1011/1920/600",
+    "https://picsum.photos/id/201/1920/600",
+    "https://picsum.photos/id/167/1920/600",
+  ],
 };
 
 export default APP_DATA;
