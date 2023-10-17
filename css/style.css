@@ -296,20 +296,21 @@ main {
 }
 
 .category_box {
-    scale: 1.5;
     width: 100px;
     height: 100px;
     padding: 2rem 1rem;
     border-radius: var(--border-radius);
-    background-image: url('/book.png');
+    background-image: url('/book.gif');
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
 }
 
 .category_text {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    font-weight: bold;
+    color: black;
     padding: 5px;
     border-radius: var(--border-radius);
+    position: absolute;
+    background-color: white;
 }
 
 
