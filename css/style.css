@@ -391,4 +391,9 @@ main {
         width: 120px;
     }
 
+    .category_box {
+        scale: 1.2;
+
+    }
+
 }
