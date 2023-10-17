@@ -6,13 +6,18 @@ const slider = document.getElementById("slider");
 const collection = document.getElementById("collection");
 const category = document.getElementById("category");
 const latest_blog = document.getElementById("latest_blog");
+const writer = document.getElementById("writer");
+const thought_of_the_day = document.getElementById("thought_of_the_day");
 
+// main menu
 let list = "";
 APP_DATA.MENU.map((item) => {
   list = list + ` <a key={item} href="/${item}"> ${item} </a>`;
 });
 
 navigation.innerHTML = list;
+
+// slider images
 
 APP_DATA.SLIDER_IMAGES.map((image) => {
   const div = document.createElement("div");
@@ -26,12 +31,15 @@ slider.innerHTML = "";
 slider.appendChild(fragment);
 fragment.innerHTML = "";
 
+// collections
+
 let collections = "";
 APP_DATA.COLLECTIONS.map((collection) => {
+  const url = "/collection?" + collection;
   collections =
     collections +
     ` <div class="flex_col gap_sm ">
- <a href="/mood">
+ <a href=${url}>
    <div class="items_center collection_box shadow">
      <img src=${collection.image} alt=${collection}/>
    </div>
@@ -42,9 +50,11 @@ APP_DATA.COLLECTIONS.map((collection) => {
 
 collection.innerHTML = collections;
 
+// categories
+
 let categories = "";
 APP_DATA.CATEGORIES.map((category) => {
-  const url = "/" + `${category}`;
+  const url = "/category?" + category;
   categories =
     categories +
     ` <div class="flex_col gap_sm category_item self_center" id="category">
@@ -59,12 +69,15 @@ APP_DATA.CATEGORIES.map((category) => {
 
 category.innerHTML = categories;
 
+// latest blogs
+
 let latest_blogs = "";
 
 APP_DATA.BLOGS_LATEST.map((blog) => {
+  const url = "/blog?" + blog.title;
   latest_blogs =
     latest_blogs +
-    `<div class="shadow">
+    `<a href=${url}><div class="shadow">
   <div class="latest_blog_image_wrapper">
       <img src=${blog.thumbnail}
           alt="blog">
@@ -78,3 +91,37 @@ APP_DATA.BLOGS_LATEST.map((blog) => {
 </div>`;
 });
 latest_blog.innerHTML = latest_blogs;
+
+//writers
+
+let writers = "";
+APP_DATA.WRITERS.map((writer) => {
+  const url = "/writer?" + writer.name;
+  writers =
+    writers +
+    ` <div class="flex_col gap_sm ">
+ <a href=${url}>
+   <div class="items_center collection_box shadow">
+     <img src=${writer.image} alt=${writer.name}/>
+   </div>
+ </a>
+ <span>${writer.name}</span>
+</div>`;
+});
+
+writer.innerHTML = writers;
+
+// thought of the day
+
+let thoughts = "";
+
+APP_DATA.THOUGHT_OF_THE_DAY.map((thought) => {
+  thoughts =
+    thoughts +
+    ` <h1>${thought.title}</h1>
+  <p class="text_lg">${thought.quote}</p>
+  <span class="text_bold ">${thought.author}</span>
+  `;
+});
+
+thought_of_the_day.innerHTML = thoughts;

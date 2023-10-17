@@ -74,7 +74,7 @@ a:visited {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.w-full {
+.w_full {
     width: 100%;
 }
 
@@ -150,7 +150,7 @@ nav a {
 }
 
 .text_bold {
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .text_xl {
@@ -161,11 +161,11 @@ nav a {
     font-size: large;
 }
 
-.text-sm {
+.text_sm {
     font-size: small;
 }
 
-.text-xs {
+.text_xs {
     font-size: x-small
 }
 
@@ -337,6 +337,35 @@ main {
     overflow: hidden;
 }
 
+.thought_of_the_day {
+    background: rgb(145, 197, 252);
+    background: linear-gradient(45deg, rgba(145, 197, 252, 1) 0%, rgba(223, 195, 252, 1) 100%);
+    border-radius: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    padding-left: .3rem;
+    padding-right: .3rem;
+}
+
+.thought_of_the_day p {
+    text-align: justify;
+    word-spacing: 3px;
+    line-height: 2rem;
+    width: 90%;
+}
+
+.thought_of_the_day span {
+    color: rgba(0, 0, 0, 0.59);
+}
+
+.app_download_wrapper {
+    display: flex;
+    border: 1px solid black;
+}
+
+.app_download {
+    padding: 2rem 2rem;
+}
 
 @media only screen and (max-width: 640px) {
     nav.items_center {
@@ -432,6 +461,13 @@ main {
     .latest_blog_content {
         width: 300px;
         padding: 1rem 1rem;
+    }
+
+    .thought_of_the_day p {
+        font-size: medium;
+        text-align: justify;
+        line-height: 1.5rem;
+        width: 90%;
     }
 
 
