@@ -481,8 +481,8 @@ main {
 
     }
 
-    .app_download_wrapper h1 {
-        font-size: large;
+    .app_download_wrapper>span {
+        font-size: larger;
         font-weight: bold;
     }
 
