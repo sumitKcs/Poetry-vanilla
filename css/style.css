@@ -299,7 +299,7 @@ main {
         justify-items: center;
         align-self: center;
         position: fixed;
-        bottom: 0rem;
+        bottom: 1rem;
         padding: 1rem 0rem;
         border-radius: 2rem;
         z-index: 2;
