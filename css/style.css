@@ -47,7 +47,6 @@ body {
     justify-items: center;
     width: 100vw;
     height: 100dvh;
-    overflow-y: auto;
     position: relative;
 
 
@@ -509,7 +508,7 @@ main {
         font-size: small;
     }
 
-    .side_navigation {
+    aside {
         width: 300px;
         height: 100dvh;
         background-color: white;
