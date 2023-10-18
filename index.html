@@ -18,8 +18,8 @@
 <body>
 
     <!-- header start -->
-    <header class="shadow">
-        <div class="mobile_menu icon-xl">
+    <header class="shadow" id="header">
+        <div class="mobile_menu icon-xl" id="menu_icon">
             <i class="fa-solid fa-bars"></i>
         </div>
         <div class="logo items_left">
@@ -33,7 +33,39 @@
         </nav>
         <div class="login items_right text_large">Login</div>
 
+
+
     </header>
+
+    <!-- side navigatioon -->
+
+    <aside class="side_navigation text_lg shadow" id="side_bar">
+        <div class=" items_right" id="sidebar_close_button"><button class="close_button text_lg text_bold">X</button></div>
+        <div class="side_navigation_col1 gap_sm">
+            <div class="items_left gap_sm "><i class="fa-solid fa-magnifying-glass icon_lg"></i><span>Search</span>
+            </div>
+            <div class="items_left gap_sm"><i class="fa-solid fa-feather-pointed icon_lg"></i><span>Writers</span></div>
+            <div class="items_left gap_sm"><i class="fa-regular fa-newspaper icon_lg"></i><span>Blog</span></div>
+            <div class="items_left gap_sm"><i class="fa-regular fa-face-smile-wink icon_lg"></i><span>Shayari
+                    Moods</span></div>
+            <div class="items_left gap_sm"><i class="fa-brands fa-whatsapp icon_lg"></i><span>Shayari On Whatsapp</span>
+            </div>
+
+        </div>
+
+        <div class="w-full side_navigation_col2 gap_lg ">
+            <div>
+                <hr>
+            </div>
+            <div class=" w-full items_center gap_lg ">
+                <a href=""><i class="fa-brands fa-youtube icon_lg"></i></a>
+                <a href=""><i class="fa-brands fa-facebook icon_lg"></i></a>
+                <a href=""><i class="fa-brands fa-square-instagram icon_lg"></i></a>
+                <a href=""><i class="fa-brands fa-discord icon_lg"></i></a>
+            </div>
+        </div>
+    </aside>
+
     <!-- header end -->
 
 
@@ -220,7 +252,7 @@
 
     <!-- bottom menu start -->
     <section class="bottom_menu shadow">
-        <div class="bottom_menu_items icon-lg">
+        <div class="bottom_menu_items icon_lg">
             <a href="/"><i class="fa-solid fa-house"></i></a>
             <a href="/explore"><i class="fa-solid fa-compass"></i></a>
             <a href="/write"><i class="fa-solid fa-pen-to-square"></i></a>

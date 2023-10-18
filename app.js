@@ -8,6 +8,9 @@ const category = document.getElementById("category");
 const latest_blog = document.getElementById("latest_blog");
 const writer = document.getElementById("writer");
 const thought_of_the_day = document.getElementById("thought_of_the_day");
+const side_bar = document.getElementById("side_bar");
+const menu_icon = document.getElementById("menu_icon");
+const sidebar_close_button = document.getElementById("sidebar_close_button");
 
 // main menu
 let list = "";
@@ -125,3 +128,12 @@ APP_DATA.THOUGHT_OF_THE_DAY.map((thought) => {
 });
 
 thought_of_the_day.innerHTML = thoughts;
+
+// toggle side bar
+menu_icon.addEventListener("click", () => {
+  side_bar.style.display = "flex";
+});
+
+sidebar_close_button.addEventListener("click", () => {
+  side_bar.style.display = "none";
+});
