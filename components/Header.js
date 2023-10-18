@@ -29,7 +29,7 @@ const Header = (MENU, LOGO) => {
             Moods</span></div>
     <div class="items_left gap_sm"><i class="fa-solid fa-shop"></i><span>Store
         </span></div>
-    <div class="items_left gap_sm"><i class="fa-brands fa-whatsapp icon_lg"></i><span>Shayari On Whatsapp</span>
+    <div class="items_left gap_sm"><i class="fa-brands fa-whatsapp icon_lg"></i><span>Whatsapp Community</span>
     </div>
 
 </div>
