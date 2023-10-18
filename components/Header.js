@@ -21,16 +21,16 @@ const Header = (MENU, LOGO) => {
 <div class=" items_right" id="sidebar_close_button"><button class="close_button text_lg text_bold">X</button>
 </div>
 <div class="side_navigation_col1 gap_sm">
-    <div class="items_left gap_sm "><i class="fa-solid fa-magnifying-glass icon_lg"></i><span>Search</span>
-    </div>
-    <div class="items_left gap_sm"><i class="fa-solid fa-feather-pointed icon_lg"></i><span>Writers</span></div>
-    <div class="items_left gap_sm"><i class="fa-regular fa-newspaper icon_lg"></i><span>Blog</span></div>
-    <div class="items_left gap_sm"><i class="fa-regular fa-face-smile-wink icon_lg"></i><span>Shayari
-            Moods</span></div>
-    <div class="items_left gap_sm"><i class="fa-solid fa-shop"></i><span>Store
-        </span></div>
-    <div class="items_left gap_sm"><i class="fa-brands fa-whatsapp icon_lg"></i><span>Whatsapp Community</span>
-    </div>
+    <a href="/routes/search" class="items_left gap_sm "><i class="fa-solid fa-magnifying-glass icon_lg"></i><span>Search</span>
+    </a>
+    <a href="/routes/writers" class="items_left gap_sm"><i class="fa-solid fa-feather-pointed icon_lg"></i><span>Writers</span></a>
+    <a href="/routes/blog" class="items_left gap_sm"><i class="fa-regular fa-newspaper icon_lg"></i><span>Blog</span></a>
+    <a href="/routes/moods" class="items_left gap_sm"><i class="fa-regular fa-face-smile-wink icon_lg"></i><span>Shayari
+            Moods</span></a>
+    <a href="/routes/store" class="items_left gap_sm"><i class="fa-solid fa-shop"></i><span>Store
+        </span></a>
+    <a href="https://whatsapp.com/channel/0029Va8lsG74tRrzqkQjUC3C" class="items_left gap_sm"><i class="fa-brands fa-whatsapp icon_lg"></i><span>Whatsapp Community</span>
+    </a>
 
 </div>
 
