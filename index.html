@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lekhak</title>
     <meta name="description" content="A place to join poetry world">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="plugins/css/swiper-bundle.css" />
     <script src="https://kit.fontawesome.com/a12bd5cdcb.js" crossorigin="anonymous"></script>
-    <script type="module" src="data.js"></script>
+    <script type="module" src="assets/js/data.js"></script>
     <script type="module" src="app.js"></script>
     <script src="plugins/js/swiper-bundel.js"></script>
 
@@ -18,56 +18,8 @@
 <body>
 
     <!-- header start -->
-    <header class="shadow" id="header">
-        <div class="mobile_menu icon-xl" id="menu_icon">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <div class="logo items_left">
-            <img src="https://i.postimg.cc/3RvKKHPh/logo.png" alt="logo">
-        </div>
-        <nav class="items_center text_large" id="main_navigation">
-            <a href="#">Home</a>
-            <a href="#">Shayari</a>
-            <a href="#">Blogs</a>
-            <a href="#">Write</a>
-        </nav>
-        <div class="login items_right text_large">Login</div>
 
 
-
-    </header>
-
-    <!-- side navigatioon -->
-
-    <aside class="side_navigation text_lg shadow" id="side_bar">
-        <div class=" items_right" id="sidebar_close_button"><button class="close_button text_lg text_bold">X</button>
-        </div>
-        <div class="side_navigation_col1 gap_sm">
-            <div class="items_left gap_sm "><i class="fa-solid fa-magnifying-glass icon_lg"></i><span>Search</span>
-            </div>
-            <div class="items_left gap_sm"><i class="fa-solid fa-feather-pointed icon_lg"></i><span>Writers</span></div>
-            <div class="items_left gap_sm"><i class="fa-regular fa-newspaper icon_lg"></i><span>Blog</span></div>
-            <div class="items_left gap_sm"><i class="fa-regular fa-face-smile-wink icon_lg"></i><span>Shayari
-                    Moods</span></div>
-            <div class="items_left gap_sm"><i class="fa-solid fa-shop"></i><span>Store
-                </span></div>
-            <div class="items_left gap_sm"><i class="fa-brands fa-whatsapp icon_lg"></i><span>Shayari On Whatsapp</span>
-            </div>
-
-        </div>
-
-        <div class="w-full side_navigation_col2 gap_lg ">
-            <div>
-                <hr>
-            </div>
-            <div class=" w-full items_center gap_lg ">
-                <a href=""><i class="fa-brands fa-youtube icon_lg"></i></a>
-                <a href=""><i class="fa-brands fa-facebook icon_lg"></i></a>
-                <a href=""><i class="fa-brands fa-square-instagram icon_lg"></i></a>
-                <a href=""><i class="fa-brands fa-discord icon_lg"></i></a>
-            </div>
-        </div>
-    </aside>
 
     <!-- header end -->
 
@@ -94,177 +46,7 @@
             <div class="swiper-button-next"></div>
         </section>
         <!-- Slider main container end -->
-
-
-
-        <!-- search start -->
-        <section class="search">
-            <div class="search_wrapper items_center ">
-                <input type="text" placeholder="mohabbat, zindagi, raat">
-                <span class="search_icon icon-xl"><i class="fa-solid fa-magnifying-glass"></i></span>
-            </div>
-            <div class=" items_center"><button class="search_button">Search</button></div>
-        </section>
-
-        <!-- search end -->
-
-        <!-- what's your mood start-->
-        <section class="flex_col gap_lg item_container">
-            <div class="items_between w_full ">
-                <span class="text_xl text_bold">What's your mood</span>
-                <span><a href="/mood">view all <span class="text-sm">&gt;</span></a></span>
-            </div>
-            <div class="mood_grid gap_lg items_center" id="mood">
-                <!-- grid cards -->
-                <div class="flex_col gap_sm ">
-                    <a href="/mood">
-                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-heart"></i></div>
-
-                    </a>
-                    <span>Love</span>
-                </div>
-
-                <div class="flex_col gap_sm">
-                    <a href="/mood">
-                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-bullseye"></i></div>
-
-                    </a>
-                    <span>Motivation</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/mood">
-                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-heart-crack"></i></div>
-
-                    </a>
-                    <span>Breakup</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/mood">
-                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-face-sad-tear"></i></div>
-
-                    </a>
-                    <span>Sad</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/mood">
-                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-handshake"></i></div>
-                    </a>
-                    <span>Friendship</span>
-                </div>
-            </div>
-        </section>
-        <!-- what's your mood end-->
-
-
-        <!-- Browse collections start-->
-        <section class="flex_col gap_lg item_container">
-            <div class="items_between w_full ">
-                <span class="text_xl text_bold">Browse Collections</span>
-                <span><a href="/collections">view all <span class="text-sm">&gt;</span></a></span>
-            </div>
-
-
-            <div class="collection_grid gap_sm items_center" id="collection">
-                <!-- grid cards -->
-                <div class="flex_col gap_sm items_center ">
-                </div>
-
-            </div>
-        </section>
-        <!--  Browse collections end-->
-
-        <!-- Categories start-->
-        <section class="flex_col gap_lg item_container ">
-            <div class="items_between w_full ">
-                <span class="text_xl text_bold">Choose Category</span>
-                <span><a href="/mood">view all <span class="text-sm">&gt;</span></a></span>
-            </div>
-            <div class="category_grid gap_sm items_center self_center" id="category">
-                <!-- grid cards -->
-                <div class="flex_col gap_sm ">
-                </div>
-            </div>
-        </section>
-        <!-- Categorioes end-->
-
-
-        <!-- Latest Blogs start-->
-        <section class="flex_col gap_lg item_container ">
-            <div class="items_between w_full ">
-                <span class="text_xl text_bold">Latest Blogs</span>
-                <span><a href="/mood">view all <span class="text-sm">&gt;</span></a></span>
-            </div>
-            <div class=" latest_blog gap_sm " id="latest_blog">
-                <!-- grid cards -->
-            </div>
-            </div>
-        </section>
-        <!-- Latest Blogs end-->
-
-        <!-- Writers start-->
-        <section class="flex_col gap_lg item_container">
-            <div class="items_between w_full ">
-                <span class="text_xl text_bold">Writers</span>
-                <span><a href="/writers">view all <span class="text-sm">&gt;</span></a></span>
-            </div>
-
-
-            <div class="collection_grid gap_sm items_center" id="writer">
-                <!-- grid cards -->
-                <div class="flex_col gap_sm items_center ">
-                </div>
-
-            </div>
-        </section>
-        <!--  Writers end-->
-
-        <!-- thought fof the day start -->
-        <section class="w_full items_centers self_center">
-            <div class=" items_center self_center">
-                <div class="thought_of_the_day flex_col gap_lg" id="thought_of_the_day">
-                    <h1>Thought of the day</h1>
-                    <p class="text_lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-
-                    </p>
-                    <span class="text_bold ">Rahat fateh khan</span>
-                </div>
-            </div>
-        </section>
-        <!-- thought fof the day end -->
-
-        <!-- thought fof the day start -->
-        <section class="w_full items_center  mb_96 self_center">
-            <div class="w_full app_download_wrapper gap_lg">
-
-
-                <span class="items_center text_xl text_bold ">Lekhak App is Coming Soon</span>
-                <p class="items_center text_lg">A place to join poetry world</p>
-                <div class="items_center">
-                    <img src="google-play.png" alt="google play icon" width="50">
-                    <span class="self_center">Google Play</span>
-                </div>
-
-
-
-            </div>
-            </div>
-        </section>
-        <!-- thought fof the day end -->
-
     </main>
-
-    <!-- bottom menu start -->
-    <section class="bottom_menu shadow">
-        <div class="bottom_menu_items icon_lg">
-            <a href="/"><i class="fa-solid fa-house"></i></a>
-            <a href="/explore"><i class="fa-solid fa-compass"></i></a>
-            <a href="/write"><i class="fa-solid fa-pen-to-square"></i></a>
-            <a href="/store"><i class="fa-solid fa-store"></i></a>
-            <a href="/user"><i class="fa-solid fa-user"></i></a>
-        </div>
-    </section>
-    <!-- bottom menu end -->
-
 
     <script>
         const swiper = new Swiper(".swiper", {

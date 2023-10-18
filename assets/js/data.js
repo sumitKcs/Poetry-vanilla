@@ -110,7 +110,7 @@ const APP_DATA = {
     },
   ],
 
-  THOUGHT_OF_THE_DAY: [
+  QUOTE_OF_THE_DAY: [
     {
       title: "quote of the day",
       quote:

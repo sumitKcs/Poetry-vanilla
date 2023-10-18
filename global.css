@@ -156,6 +156,12 @@ nav a {
     color: black;
 }
 
+nav>a {
+    text-decoration: none;
+    color: black;
+}
+
+
 .text_bold {
     font-weight: 600;
 }
@@ -214,13 +220,15 @@ nav a {
 
 
 main {
+    height: fit-content;
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    justify-items: center;
-    width: 100%;
-    height: fit-content;
+    justify-items: start;
+    padding-bottom: 10rem;
+
 }
 
 .swiper {
@@ -315,7 +323,7 @@ main {
     height: 100px;
     padding: 2rem 1rem;
     border-radius: var(--border-radius);
-    background-image: url('/book.gif');
+    background-image: url('/assets/img/book.gif');
     background-repeat: no-repeat;
     background-size: 100px 100px;
 }
