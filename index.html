@@ -10,10 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lekhak</title>
     <meta name="description" content="A place to join poetry world">
-    <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="plugins/css/swiper-bundle.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./plugins/css/swiper-bundle.css">
     <script src="https://kit.fontawesome.com/a12bd5cdcb.js" crossorigin="anonymous"></script>
-
+    <script defer src="./assets/js/app.js"></script>
+    <script src="./plugins/js/swiper-bundel.js"></script>
 
 </head>
 
@@ -30,7 +31,7 @@
             <a key="Shayari" href="/shayari"> Shayari </a> <a key="Writers" href="/writers"> Writers </a> <a
                 key="Search" href="/search"> Search </a> <a key="Posts" href="/posts"> Posts </a>
         </nav>
-        <a href="/routes/user" class="login items_right text_large">Login</a>
+        <a href="/routes/login.html" class="login items_right text_large">Login</a>
     </header>
 
     <!-- mobile menu -->
@@ -319,84 +320,186 @@
                 <!-- grid cards -->
                 <div class="flex_col gap_sm category_item self_center" id="category">
                     <a href="/category?Sher">
-                        <div class="items_center category_box self_center">
-                            <span class="category_text items_center self_center text_lg">Sher</span>
-                        </div>
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
+                                    height="80">
+                            </div>
 
-                    </a>
-                </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Ghazal">
-                        <div class="items_center category_box self_center">
-                            <span class="category_text items_center self_center text_lg">Ghazal</span>
+                            <span class="category_text text_xl">Sher</span>
                         </div>
-
-                    </a>
-                </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Nazm">
-                        <div class="items_center category_box self_center">
-                            <span class="category_text items_center self_center text_lg">Nazm</span>
-                        </div>
-
-                    </a>
-                </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Nazm">
-                        <div class="items_center category_box self_center">
-                            <span class="category_text items_center self_center text_lg">Nazm</span>
-                        </div>
-
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
                     <a href="/category?Sher">
-                        <div class="items_center category_box self_center">
-                            <span class="category_text items_center self_center text_lg">Sher</span>
-                        </div>
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
+                                    height="80">
+                            </div>
 
-                    </a>
-                </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Ghazal">
-                        <div class="items_center category_box self_center">
-                            <span class="category_text items_center self_center text_lg">Ghazal</span>
+                            <span class="category_text text_xl">Nazam</span>
                         </div>
-
-                    </a>
-                </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Nazm">
-                        <div class="items_center category_box self_center">
-                            <span class="category_text items_center self_center text_lg">Nazm</span>
-                        </div>
-
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
                     <a href="/category?Sher">
-                        <div class="items_center category_box self_center">
-                            <span class="category_text items_center self_center text_lg">Sher</span>
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
+                                    height="80">
+                            </div>
+                            `
+                            <span class="category_text text_xl">Ghazal</span>
                         </div>
-
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Ghazal">
-                        <div class="items_center category_box self_center">
-                            <span class="category_text items_center self_center text_lg">Ghazal</span>
-                        </div>
+                    <a href="/category?Sher">
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
+                                    height="80">
+                            </div>
 
+                            <span class="category_text text_xl">Sher</span>
+                        </div>
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Nazm">
-                        <div class="items_center category_box self_center">
-                            <span class="category_text items_center self_center text_lg">Nazm</span>
-                        </div>
+                    <a href="/category?Sher">
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
+                                    height="80">
+                            </div>
 
+                            <span class="category_text text_xl">Nazam</span>
+                        </div>
                     </a>
                 </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Sher">
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
+                                    height="80">
+                            </div>
+                            `
+                            <span class="category_text text_xl">Ghazal</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Sher">
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
+                                    height="80">
+                            </div>
+
+                            <span class="category_text text_xl">Sher</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Sher">
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
+                                    height="80">
+                            </div>
+
+                            <span class="category_text text_xl">Nazam</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Sher">
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
+                                    height="80">
+                            </div>
+                            `
+                            <span class="category_text text_xl">Ghazal</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Sher">
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
+                                    height="80">
+                            </div>
+
+                            <span class="category_text text_xl">Sher</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Sher">
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
+                                    height="80">
+                            </div>
+
+                            <span class="category_text text_xl">Nazam</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Sher">
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
+                                    height="80">
+                            </div>
+                            `
+                            <span class="category_text text_xl">Ghazal</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Sher">
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
+                                    height="80">
+                            </div>
+
+                            <span class="category_text text_xl">Sher</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Sher">
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
+                                    height="80">
+                            </div>
+
+                            <span class="category_text text_xl">Nazam</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Sher">
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
+                                    height="80">
+                            </div>
+                            `
+                            <span class="category_text text_xl">Ghazal</span>
+                        </div>
+                    </a>
+                </div>
+
+
             </div>
         </categories>
         <blogs class="flex_col gap_lg item_container">
@@ -614,26 +717,6 @@
         </div>
     </bottom_menu>
 
-
-    <script type="module" src="assets/js/app.js"></script>
-    <script src="plugins/js/swiper-bundel.js"></script>
-    <script>
-        const swiper = new Swiper(".swiper", {
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
 </body>
 
 </html>

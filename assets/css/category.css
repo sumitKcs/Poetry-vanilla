@@ -3,35 +3,97 @@
 }
 
 .category_grid {
-    width: 96vw;
+    width: 80vw;
     display: grid;
     place-items: center;
     place-content: center;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
 
 }
 
 .category_box {
-    width: 100px;
+    width: 200px;
     height: 100px;
     padding: 2rem 1rem;
-    border-radius: var(--border-radius);
-    background-image: url('/assets/img/book.gif');
+    border-radius: .3rem;
     background-repeat: no-repeat;
     background-size: 100px 100px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 
+
 .category_text {
+    align-self: baseline;
     color: black;
     padding: 5px;
     border-radius: var(--border-radius);
-    position: absolute;
-    background-color: white;
+    flex: 1;
+}
+
+.category_image.category_image {
+    border-bottom: 2px solid var(--primary-color);
+    align-self: baseline;
+}
+
+.category_image.category_image img {
+    align-self: baseline;
+    width: 50px;
+    height: 50px;
+}
+
+.category_box:hover {
+    background-color: wheat;
+
+    .category_image.category_image img {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+
+    }
+}
+
+
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(15deg);
+        transform-origin: right;
+    }
+
+    25% {
+        transform: rotate(24deg);
+        transform-origin: right;
+    }
+
+    50.1% {
+        transform: rotate(35deg);
+        transform-origin: right;
+
+    }
+
+    100% {
+        transform: rotate(45deg);
+        transform-origin: right;
+
+    }
+
+
 }
 
 @media only screen and (max-width: 640px) {
 
     .category_grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category_box {
+        width: 160px;
+        height: 80px;
+    }
+
+    .category_image.category_image img {
+        align-self: baseline;
+        width: 30px;
+        height: 30px;
     }
 }
