@@ -1,0 +1,37 @@
+.category_title {
+    width: 90vw;
+}
+
+.category_grid {
+    width: 96vw;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+
+.category_box {
+    width: 100px;
+    height: 100px;
+    padding: 2rem 1rem;
+    border-radius: var(--border-radius);
+    background-image: url('/assets/img/book.gif');
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+}
+
+.category_text {
+    color: black;
+    padding: 5px;
+    border-radius: var(--border-radius);
+    position: absolute;
+    background-color: white;
+}
+
+@media only screen and (max-width: 640px) {
+
+    .category_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

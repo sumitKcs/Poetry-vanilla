@@ -1,0 +1,26 @@
+@import url(base.css);
+@import url(utility.css);
+@import url(swiper.css);
+@import url(header.css);
+@import url(search.css);
+@import url(mood.css);
+@import url(collection.css);
+@import url(category.css);
+@import url(latest_blog.css);
+@import url(bottom_menu.css);
+@import url(thought_of_the_day.css);
+@import url(app_download.css);
+
+
+:root {
+    --primary-color: #3A1078;
+    --secondary-color: #4E31AA;
+    --third-color: #2F58CD;
+    --fourth-color: #3795BD;
+    --border-radius: .3rem;
+    --gap-xl: 4rem;
+    --gap-lg: 2rem;
+    --gap-md: 1rem;
+    --gap-sm: .5rem;
+    --gap-xs: .2rem;
+}

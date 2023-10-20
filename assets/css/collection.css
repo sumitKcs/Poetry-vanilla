@@ -1,0 +1,34 @@
+.collection_title {
+    width: 90vw;
+}
+
+.collection_grid {
+    width: 96vw;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.collection_box {
+    padding: .5rem .5rem;
+    border-radius: var(--border-radius);
+}
+
+.collection_grid div a img {
+    width: 250px;
+}
+
+
+
+@media only screen and (max-width: 640px) {
+
+
+    .collection_grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .collection_grid div a img {
+        width: 120px;
+    }
+}

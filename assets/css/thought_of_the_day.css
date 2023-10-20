@@ -1,0 +1,34 @@
+.thought_of_the_day {
+    width: 90vw;
+    background: rgb(145, 197, 252);
+    background: linear-gradient(45deg, rgba(145, 197, 252, 1) 0%, rgba(223, 195, 252, 1) 100%);
+    border-radius: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    padding-left: .3rem;
+    padding-right: .3rem;
+}
+
+.thought_of_the_day p {
+    text-align: justify;
+    word-spacing: 3px;
+    line-height: 2rem;
+    width: 90%;
+}
+
+.thought_of_the_day span {
+    color: rgba(0, 0, 0, 0.59);
+}
+
+@media only screen and (max-width: 640px) {
+
+
+
+    .thought_of_the_day p {
+        font-size: small;
+        text-align: justify;
+        line-height: 1.5rem;
+        width: 90%;
+    }
+
+}

@@ -1,53 +1,622 @@
-<!DOCTYPE html>
 <html lang="en">
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lekhak</title>
     <meta name="description" content="A place to join poetry world">
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="plugins/css/swiper-bundle.css" />
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="plugins/css/swiper-bundle.css">
     <script src="https://kit.fontawesome.com/a12bd5cdcb.js" crossorigin="anonymous"></script>
-    <script type="module" src="assets/js/data.js"></script>
-    <script type="module" src="app.js"></script>
-    <script src="plugins/js/swiper-bundel.js"></script>
+
 
 </head>
 
 <body>
+    <!-- main menu -->
+    <header class="shadow" id="header">
+        <div class="mobile_menu icon-xl" id="menu_icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="logo items_left">
+            <img src="https://i.postimg.cc/3RvKKHPh/logo.png" alt="logo">
+        </div>
+        <nav class="items_center text_large" id="main_navigation">
+            <a key="Shayari" href="/shayari"> Shayari </a> <a key="Writers" href="/writers"> Writers </a> <a
+                key="Search" href="/search"> Search </a> <a key="Posts" href="/posts"> Posts </a>
+        </nav>
+        <a href="/routes/user" class="login items_right text_large">Login</a>
+    </header>
 
-    <!-- header start -->
+    <!-- mobile menu -->
+    <aside class="side_navigation text_lg shadow" id="side_bar" style="display: none;">
+        <div class=" items_between" id="sidebar_close_button">
+            <div class="self_center items_center">
+                <img src="https://i.postimg.cc/3RvKKHPh/logo.png" alt="logo">
+            </div>
+            <button class="close_button text_lg text_bold">X</button>
+        </div>
+        <div class="side_navigation_col1 gap_sm">
+            <a href="/routes/search" class="items_left gap_sm "><i
+                    class="fa-solid fa-magnifying-glass icon_lg"></i><span>Search</span>
+            </a>
+            <a href="/routes/writers" class="items_left gap_sm"><i
+                    class="fa-solid fa-feather-pointed icon_lg"></i><span>Writers</span></a>
+            <a href="/routes/blog" class="items_left gap_sm"><i
+                    class="fa-regular fa-newspaper icon_lg"></i><span>Blog</span></a>
+            <a href="/routes/moods" class="items_left gap_sm"><i
+                    class="fa-regular fa-face-smile-wink icon_lg"></i><span>Shayari
+                    Moods</span></a>
+            <a href="/routes/store" class="items_left gap_sm"><i class="fa-solid fa-shop"></i><span>Store
+                </span></a>
+            <a href="https://whatsapp.com/channel/0029Va8lsG74tRrzqkQjUC3C" class="items_left gap_sm"><i
+                    class="fa-brands fa-whatsapp icon_lg"></i><span>Whatsapp Community</span>
+            </a>
 
+        </div>
 
+        <div class="w-full side_navigation_col2 gap_lg ">
+            <div>
+                <hr>
+            </div>
+            <div class=" w-full items_center gap_lg ">
+                <a href=""><i class="fa-brands fa-youtube icon_lg"></i></a>
+                <a href=""><i class="fa-brands fa-facebook icon_lg"></i></a>
+                <a href=""><i class="fa-brands fa-square-instagram icon_lg"></i></a>
+                <a href=""><i class="fa-brands fa-discord icon_lg"></i></a>
+            </div>
+        </div>
+    </aside>
 
-    <!-- header end -->
 
 
 
     <main class="gap_xl w_full">
         <!-- Slider main container start-->
-        <section class="swiper">
-            <div class="swiper-wrapper" id="slider">
+        <swiper class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide">
-                </div>
-                <div class="swiper-slide">
-                </div>
-                <div class="swiper-slide">
-                </div>
+                <div class="swiper-slide"><img src="https://picsum.photos/id/1011/1920/600"></div>
+                <div class="swiper-slide"><img src="https://picsum.photos/id/201/1920/600"></div>
+                <div class="swiper-slide"><img src="https://picsum.photos/id/167/1920/600"></div>
                 ...
             </div>
-            <!-- pagination -->
+            <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
 
-            <!--navigation buttons -->
+            <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-        </section>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </swiper>
         <!-- Slider main container end -->
+        <search class="search">
+            <div class="search_wrapper items_center ">
+                <input type="text" placeholder="mohabbat, zindagi, raat">
+                <span class="search_icon icon-xl"><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+            <div class=" items_center"><button class="search_button">Search</button></div>
+        </search>
+        <mood class="w_full flex_col gap_lg">
+            <div class="mood_title items_between w_full " id="mood_title">
+                <span class="text_xl text_bold">What's your mood</span>
+                <span><a href="/mood">view all <span class="text-sm">&gt;</span></a></span>
+            </div>
+            <div class="mood_grid gap_lg items_center" id="mood_grid">
+                <!-- grid cards -->
+                <div class="flex_col gap_sm ">
+                    <a href="/mood">
+                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-heart"></i></div>
+
+                    </a>
+                    <span>Love</span>
+                </div>
+
+                <div class="flex_col gap_sm">
+                    <a href="/mood">
+                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-bullseye"></i></div>
+
+                    </a>
+                    <span>Motivation</span>
+                </div>
+                <div class="flex_col gap_sm">
+                    <a href="/mood">
+                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-heart-crack"></i></div>
+
+                    </a>
+                    <span>Breakup</span>
+                </div>
+                <div class="flex_col gap_sm">
+                    <a href="/mood">
+                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-face-sad-tear"></i></div>
+
+                    </a>
+                    <span>Sad</span>
+                </div>
+                <div class="flex_col gap_sm">
+                    <a href="/mood">
+                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-handshake"></i></div>
+                    </a>
+                    <span>Friendship</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/mood">
+                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-heart"></i></div>
+
+                    </a>
+                    <span>Love</span>
+                </div>
+
+                <div class="flex_col gap_sm">
+                    <a href="/mood">
+                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-bullseye"></i></div>
+
+                    </a>
+                    <span>Motivation</span>
+                </div>
+                <div class="flex_col gap_sm">
+                    <a href="/mood">
+                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-heart-crack"></i></div>
+
+                    </a>
+                    <span>Breakup</span>
+                </div>
+                <div class="flex_col gap_sm">
+                    <a href="/mood">
+                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-face-sad-tear"></i></div>
+
+                    </a>
+                    <span>Sad</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/mood">
+                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-heart"></i></div>
+
+                    </a>
+                    <span>Love</span>
+                </div>
+                <div class="flex_col gap_sm">
+                    <a href="/mood">
+                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-handshake"></i></div>
+                    </a>
+                    <span>Friendship</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/mood">
+                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-heart"></i></div>
+
+                    </a>
+                    <span>Love</span>
+                </div>
+
+                <div class="flex_col gap_sm">
+                    <a href="/mood">
+                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-bullseye"></i></div>
+
+                    </a>
+                    <span>Motivation</span>
+                </div>
+                <div class="flex_col gap_sm">
+                    <a href="/mood">
+                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-heart-crack"></i></div>
+
+                    </a>
+                    <span>Breakup</span>
+                </div>
+                <div class="flex_col gap_sm">
+                    <a href="/mood">
+                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-face-sad-tear"></i></div>
+
+                    </a>
+                    <span>Sad</span>
+                </div>
+                <div class="flex_col gap_sm">
+                    <a href="/mood">
+                        <div class="items_center mood_box icon-xl"><i class="fa-solid fa-handshake"></i></div>
+                    </a>
+                    <span>Friendship</span>
+                </div>
+            </div>
+        </mood>
+        <collection class="flex_col gap_lg">
+            <div class="collection_title items_between w_full ">
+                <span class="text_xl text_bold">Browse Collections</span>
+                <span><a href="/collections">view all <span class="text-sm">&gt;</span></a></span>
+            </div>
+
+
+            <div class="collection_grid gap_sm items_center" id="collection_grid">
+                <!-- grid cards -->
+                <div class="flex_col gap_sm ">
+                    <a href="/collection?[object" object]="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
+                                alt="[object" object]="">
+                        </div>
+                    </a>
+                    <span>Chand Shayari</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/collection?[object" object]="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
+                                alt="[object" object]="">
+                        </div>
+                    </a>
+                    <span>Chand Shayari</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/collection?[object" object]="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
+                                alt="[object" object]="">
+                        </div>
+                    </a>
+                    <span>Chand Shayari</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/collection?[object" object]="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
+                                alt="[object" object]="">
+                        </div>
+                    </a>
+                    <span>Chand Shayari</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/collection?[object" object]="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
+                                alt="[object" object]="">
+                        </div>
+                    </a>
+                    <span>Chand Shayari</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/collection?[object" object]="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
+                                alt="[object" object]="">
+                        </div>
+                    </a>
+                    <span>Chand Shayari</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/collection?[object" object]="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
+                                alt="[object" object]="">
+                        </div>
+                    </a>
+                    <span>Chand Shayari</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/collection?[object" object]="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
+                                alt="[object" object]="">
+                        </div>
+                    </a>
+                    <span>Chand Shayari</span>
+                </div>
+
+            </div>
+        </collection>
+        <categories class="flex_col gap_lg item_container">
+            <div class="category_title items_between w_full ">
+                <span class="text_xl text_bold">Choose Category</span>
+                <span><a href="/mood">view all <span class="text-sm">&gt;</span></a></span>
+            </div>
+            <div class="category_grid gap_sm items_center self_center" id="category">
+                <!-- grid cards -->
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Sher">
+                        <div class="items_center category_box self_center">
+                            <span class="category_text items_center self_center text_lg">Sher</span>
+                        </div>
+
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Ghazal">
+                        <div class="items_center category_box self_center">
+                            <span class="category_text items_center self_center text_lg">Ghazal</span>
+                        </div>
+
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Nazm">
+                        <div class="items_center category_box self_center">
+                            <span class="category_text items_center self_center text_lg">Nazm</span>
+                        </div>
+
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Nazm">
+                        <div class="items_center category_box self_center">
+                            <span class="category_text items_center self_center text_lg">Nazm</span>
+                        </div>
+
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Sher">
+                        <div class="items_center category_box self_center">
+                            <span class="category_text items_center self_center text_lg">Sher</span>
+                        </div>
+
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Ghazal">
+                        <div class="items_center category_box self_center">
+                            <span class="category_text items_center self_center text_lg">Ghazal</span>
+                        </div>
+
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Nazm">
+                        <div class="items_center category_box self_center">
+                            <span class="category_text items_center self_center text_lg">Nazm</span>
+                        </div>
+
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Sher">
+                        <div class="items_center category_box self_center">
+                            <span class="category_text items_center self_center text_lg">Sher</span>
+                        </div>
+
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Ghazal">
+                        <div class="items_center category_box self_center">
+                            <span class="category_text items_center self_center text_lg">Ghazal</span>
+                        </div>
+
+                    </a>
+                </div>
+                <div class="flex_col gap_sm category_item self_center" id="category">
+                    <a href="/category?Nazm">
+                        <div class="items_center category_box self_center">
+                            <span class="category_text items_center self_center text_lg">Nazm</span>
+                        </div>
+
+                    </a>
+                </div>
+            </div>
+        </categories>
+        <blogs class="flex_col gap_lg item_container">
+            <div class="blogs_title items_between w_full ">
+                <span class="text_xl text_bold">Latest Blogs</span>
+                <span><a href="/mood">view all <span class="text-sm">&gt;</span></a></span>
+            </div>
+            <div class=" latest_blog gap_sm " id="latest_blog">
+                <!-- grid cards -->
+                <a href="/blog?बहर" #8="" बहर-ए-मुतक़ारिब="" मुसम्मन="" सालिम="">
+                    <div class="shadow">
+                        <div class="latest_blog_image_wrapper">
+                            <img src="https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/TTJJpgjCvlN8eJnOnGKna9gURgPOPjopH5nyTdeN.png"
+                                alt="blog">
+                            <div class=" latest_blog_content flex_col gap_sm">
+                                <h3>बहर #8 बहर-ए-मुतक़ारिब मुसम्मन सालिम</h3>
+                                <p class="blog_description">
+                                    अकेले अकेले कहाँ जा रहे हो मोहम्मद रफ़ी साहब का ये गाना तो आपने सुना ही होगा। क्या आप
+                                    जानते हैं कि ये गाना भी बहर में है? और जिस बहर में है वो उर्दू शायरी की सबसे आसान और
+                                    ख़ूब इस्तेमाल की जाने वाली बहरों में से एक है। बहर सीरीज़ के इस आठवें ब्लॉग में हम बात
+                                    करने जा रहे हैं इसी गाने की बहर बहर-ए-मुतक़ा
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a><a href="/blog?बहर" #8="" बहर-ए-मुतक़ारिब="" मुसम्मन="" सालिम="">
+                    <div class="shadow">
+                        <div class="latest_blog_image_wrapper">
+                            <img src="https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/TTJJpgjCvlN8eJnOnGKna9gURgPOPjopH5nyTdeN.png"
+                                alt="blog">
+                            <div class=" latest_blog_content flex_col gap_sm">
+                                <h3>बहर #8 बहर-ए-मुतक़ारिब मुसम्मन सालिम</h3>
+                                <p class="blog_description">
+                                    अकेले अकेले कहाँ जा रहे हो मोहम्मद रफ़ी साहब का ये गाना तो आपने सुना ही होगा। क्या आप
+                                    जानते हैं कि ये गाना भी बहर में है? और जिस बहर में है वो उर्दू शायरी की सबसे आसान और
+                                    ख़ूब इस्तेमाल की जाने वाली बहरों में से एक है। बहर सीरीज़ के इस आठवें ब्लॉग में हम बात
+                                    करने जा रहे हैं इसी गाने की बहर बहर-ए-मुतक़ा
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div><a href="/blog?बहर" #8="" बहर-ए-मुतक़ारिब="" मुसम्मन="" सालिम="">
+            </a>
+        </blogs>
+        <writers class="flex_col gap_lg item_container">
+            <div class="mood_title items_between w_full ">
+                <span class="text_xl text_bold">Writers</span>
+                <span><a href="/writers">view all <span class="text-sm">&gt;</span></a></span>
+            </div>
+
+
+            <div class="collection_grid gap_sm items_center" id="writer">
+                <!-- grid cards -->
+                <div class="flex_col gap_sm ">
+                    <a href="/writer?Tehzeeb" hafi="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/9JXQE0wy15H4jGOdJJogw20dhBy9CmNQBbenTEZ0.jpg"
+                                alt="Tehzeeb" hafi="">
+                        </div>
+                    </a>
+                    <span>Tehzeeb Hafi</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/writer?jaun" ellia="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/kMtj4kd3xfXfEI4xNAwGE77hYivNKU5RN6AXroHR.jpg"
+                                alt="jaun" ellia="">
+                        </div>
+                    </a>
+                    <span>jaun Ellia</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/writer?Ali" zoryun="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/lNKHFTFGfGJ7OCRnZwpvjSCvyXqijoMBgUmgOhmb.jpg"
+                                alt="Ali" zoryun="">
+                        </div>
+                    </a>
+                    <span>Ali Zoryun</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/writer?Zubair" ali="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/wiwbyvSKwxFWedde4VgBBKdUhZFctM6Y2f3EnHcT.jpg"
+                                alt="Zubair" ali="">
+                        </div>
+                    </a>
+                    <span>Zubair Ali</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/writer?Rahat" indauri="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/IPtyfoMSJWc3iILr9x1U8gcaZAoyMvmpDHqFoHla.png"
+                                alt="Rahat" indauri="">
+                        </div>
+                    </a>
+                    <span>Rahat Indauri</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/writer?Tehzeeb" hafi="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/9JXQE0wy15H4jGOdJJogw20dhBy9CmNQBbenTEZ0.jpg"
+                                alt="Tehzeeb" hafi="">
+                        </div>
+                    </a>
+                    <span>Tehzeeb Hafi</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/writer?jaun" ellia="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/kMtj4kd3xfXfEI4xNAwGE77hYivNKU5RN6AXroHR.jpg"
+                                alt="jaun" ellia="">
+                        </div>
+                    </a>
+                    <span>jaun Ellia</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/writer?Ali" zoryun="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/lNKHFTFGfGJ7OCRnZwpvjSCvyXqijoMBgUmgOhmb.jpg"
+                                alt="Ali" zoryun="">
+                        </div>
+                    </a>
+                    <span>Ali Zoryun</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/writer?Zubair" ali="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/wiwbyvSKwxFWedde4VgBBKdUhZFctM6Y2f3EnHcT.jpg"
+                                alt="Zubair" ali="">
+                        </div>
+                    </a>
+                    <span>Zubair Ali</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/writer?Rahat" indauri="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/IPtyfoMSJWc3iILr9x1U8gcaZAoyMvmpDHqFoHla.png"
+                                alt="Rahat" indauri="">
+                        </div>
+                    </a>
+                    <span>Rahat Indauri</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/writer?jaun" ellia="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/kMtj4kd3xfXfEI4xNAwGE77hYivNKU5RN6AXroHR.jpg"
+                                alt="jaun" ellia="">
+                        </div>
+                    </a>
+                    <span>jaun Ellia</span>
+                </div>
+                <div class="flex_col gap_sm ">
+                    <a href="/writer?Ali" zoryun="">
+                        <div class="items_center collection_box shadow">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/lNKHFTFGfGJ7OCRnZwpvjSCvyXqijoMBgUmgOhmb.jpg"
+                                alt="Ali" zoryun="">
+                        </div>
+                    </a>
+                    <span>Ali Zoryun</span>
+                </div>
+
+            </div>
+        </writers>
+        <thoughteoftheday class="w_full items_centers self_center">
+            <section class="w_full items_centers self_center">
+                <div class=" items_center self_center">
+                    <div class="thought_of_the_day flex_col gap_lg" id="thought_of_the_day">
+                        <h1>Thought of the day</h1>
+                        <p class="text_lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                            laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                            laborum.</p>
+                        <span class="text_bold ">Alberto Buff</span>
+
+                    </div>
+                </div>
+            </section>
+        </thoughteoftheday>
+        <appdownload class="w_full items_center self_center">
+            <div class="w_full app_download_wrapper gap_lg">
+
+
+                <span class="items_center text_xl text_bold ">Lekhak App is Coming Soon</span>
+                <p class="items_center text_lg">A place to join poetry world</p>
+                <div class="items_center">
+                    <img src="assets/img/google-play.png" alt="google play icon" width="50">
+                    <span class="self_center">Google Play</span>
+                </div>
+
+
+
+            </div>
+        </appdownload>
     </main>
 
+
+
+
+    <bottom_menu class="bottom_menu shadow">
+        <div class="bottom_menu_items icon_lg" id="bottom_menu">
+            <a href="/"><i class="fa-solid fa-house"></i></a>
+            <a href="/routes/explore"><i class="fa-solid fa-compass"></i></a>
+            <a href="/routes/write"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a href="/routes/store"><i class="fa-solid fa-store"></i></a>
+            <a href="/routes/user"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </bottom_menu>
+
+
+    <script type="module" src="assets/js/app.js"></script>
+    <script src="plugins/js/swiper-bundel.js"></script>
     <script>
         const swiper = new Swiper(".swiper", {
             autoplay: {

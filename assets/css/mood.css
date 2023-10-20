@@ -1,0 +1,23 @@
+.mood_title {
+    width: 90vw;
+}
+
+.mood_grid {
+    width: 90vw;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.mood_box {
+    border: 1px solid black;
+    padding: 2rem 3.5rem;
+    border-radius: var(--border-radius);
+}
+
+@media only screen and (max-width: 640px) {
+
+    .mood_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
