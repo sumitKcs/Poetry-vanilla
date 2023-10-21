@@ -7,6 +7,8 @@
     display: grid;
     place-items: center;
     grid-template-columns: repeat(4, 1fr);
+    row-gap: 1rem;
+    font-weight: bold;
 }
 
 .collection_box {
@@ -15,7 +17,7 @@
 }
 
 .collection_grid div a img {
-    width: 280px;
+    width: 20vw;
 }
 
 
@@ -25,10 +27,12 @@
 
     .collection_grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        row-gap: .6rem;
+        column-gap: .5rem;
     }
 
     .collection_grid div a img {
-        width: 200px;
+        width: 41vw;
     }
+
 }

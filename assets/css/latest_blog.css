@@ -3,20 +3,20 @@
 }
 
 .latest_blog {
-    width: 90vw;
+    width: 80vw;
     display: flex;
     justify-content: space-between;
     justify-items: start;
-    gap: var(--gap-lg);
+    gap: .1rem;
 }
 
 .latest_blog_image_wrapper img {
-    width: 670px;
+    width: 39vw;
 
 }
 
 .latest_blog_content {
-    width: 670px;
+    width: 39vw;
     padding: 1rem 1rem;
 }
 
@@ -39,7 +39,7 @@
         flex-direction: column;
         justify-content: space-between;
         justify-items: start;
-        gap: var(--gap-lg);
+        gap: 1.2rem;
     }
 
     .latest_blog_image_wrapper img {
@@ -47,7 +47,7 @@
     }
 
     .latest_blog_content {
-        width: 300px;
+        width: 90vw;
         padding: 1rem 1rem;
     }
 }
