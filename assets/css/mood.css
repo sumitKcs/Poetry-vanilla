@@ -19,7 +19,15 @@
 
 @media only screen and (max-width: 640px) {
 
+
     .mood_grid {
+        width: 90vw;
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .mood_box {
+        border: 1px solid black;
+        padding: 1rem 2.5rem;
+        border-radius: var(--border-radius);
     }
 }
