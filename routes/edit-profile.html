@@ -1,0 +1,378 @@
+<html lang="en">
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekhak</title>
+    <meta name="description" content="A place to join poetry world">
+    <link rel="stylesheet" href="../assets/css/edit_profile.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a12bd5cdcb.js" crossorigin="anonymous"></script>
+    <script defer src="../assets/js/app.js"></script>
+</head>
+<style>
+    .pic-holder {
+        border: 1px solid black;
+        text-align: center;
+        position: relative;
+        border-radius: 50%;
+        width: 168px;
+        height: 168px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        align-self: center;
+        border: 8px solid #089efc;
+        object-fit: cover;
+    }
+
+    .pic-holder .pic {
+        height: 100%;
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+    }
+
+    .profile-pic-wrapper {
+        align-self: center;
+        position: absolute;
+        top: 2rem;
+        z-index: 1;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .pic-holder .upload-file-block,
+    .pic-holder .upload-loader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(90, 92, 105, 0.7);
+        color: #f8f9fc;
+        font-size: 12px;
+        font-weight: 600;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+    }
+
+    .pic-holder .upload-file-block {
+        cursor: pointer;
+    }
+
+    .pic-holder:hover .upload-file-block,
+    .uploadProfileInput:focus~.upload-file-block {
+        opacity: 1;
+    }
+
+    .pic-holder.uploadInProgress .upload-file-block {
+        display: none;
+    }
+
+    .pic-holder.uploadInProgress .upload-loader {
+        opacity: 1;
+    }
+
+    /* Snackbar css */
+    .snackbar {
+        visibility: hidden;
+        min-width: 250px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        bottom: 30px;
+        font-size: 14px;
+        transform: translateX(-50%);
+    }
+
+    .snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+
+
+    @-webkit-keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+</style>
+
+<body>
+    <!-- main menu -->
+    <header class="shadow" id="header">
+        <div class="mobile_menu icon-xl" id="menu_icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="logo items_left">
+            <img src="https://i.postimg.cc/3RvKKHPh/logo.png" alt="logo">
+        </div>
+        <nav class="items_center text_large" id="main_navigation">
+            <a key="Shayari" href="/shayari"> Shayari </a> <a key="Writers" href="/writers"> Writers </a> <a
+                key="Search" href="/search"> Search </a> <a key="Posts" href="/posts"> Posts </a>
+        </nav>
+        <a href="/routes/login.html" class="login items_right text_large">Login</a>
+    </header>
+
+    <!-- mobile menu -->
+    <aside class="side_navigation text_lg shadow" id="side_bar" style="display: none;">
+        <div class=" items_between" id="sidebar_close_button">
+            <a href="/" class="self_center items_center">
+                <img src="https://i.postimg.cc/3RvKKHPh/logo.png" alt="logo">
+            </a>
+            <button class="close_button text_lg text_bold">X</button>
+        </div>
+        <div class="side_navigation_col1 gap_sm">
+            <a href="/routes/search" class="items_left gap_sm "><i
+                    class="fa-solid fa-magnifying-glass icon_lg"></i><span>Search</span>
+            </a>
+            <a href="/routes/writers" class="items_left gap_sm"><i
+                    class="fa-solid fa-feather-pointed icon_lg"></i><span>Writers</span></a>
+            <a href="/routes/blog" class="items_left gap_sm"><i
+                    class="fa-regular fa-newspaper icon_lg"></i><span>Blog</span></a>
+            <a href="/routes/moods" class="items_left gap_sm"><i
+                    class="fa-regular fa-face-smile-wink icon_lg"></i><span>Shayari
+                    Moods</span></a>
+            <a href="/routes/store" class="items_left gap_sm"><i class="fa-solid fa-shop"></i><span>Store
+                </span></a>
+            <a href="https://whatsapp.com/channel/0029Va8lsG74tRrzqkQjUC3C" class="items_left gap_sm"><i
+                    class="fa-brands fa-whatsapp icon_lg"></i><span>Whatsapp Community</span>
+            </a>
+
+        </div>
+
+        <div class="w-full side_navigation_col2 gap_lg ">
+            <div>
+                <hr>
+            </div>
+            <div class=" w-full items_center gap_lg ">
+                <a href=""><i class="fa-brands fa-youtube icon_lg"></i></a>
+                <a href=""><i class="fa-brands fa-facebook icon_lg"></i></a>
+                <a href=""><i class="fa-brands fa-square-instagram icon_lg"></i></a>
+                <a href=""><i class="fa-brands fa-discord icon_lg"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <section class="edit_profile">
+            <div class="edit_profile_wrapper shadow">
+                <div class="items_center   ">
+                    <form action="/profile.php" class="flex_col_start gap_lg">
+                        <!-- profile picture file upload start -->
+                        <div class="profile-pic-wrapper">
+                            <div class="pic-holder">
+                                <!-- uploaded pic shown here -->
+                                <img id="profilePic" class="pic"
+                                    src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg" height="150"
+                                    width="150">
+
+                                <Input class="uploadProfileInput" type="file" name="profile_pic" id="newProfilePhoto"
+                                    accept="image/*" style="opacity: 0;" />
+                                <label for="newProfilePhoto" class="upload-file-block">
+                                    <div class="text-center">
+                                        <div class="mb-2">
+                                            <i class="fa fa-camera fa-2x"></i>
+                                        </div>
+                                        <div class="text-uppercase">
+                                            Update <br /> Profile Photo
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- profile picture file upload end -->
+                        <!-- input boxes start-->
+                        <div class="input_boxes">
+                            <input type="text" placeholder="Name" name="user_name" id="user_name">
+                        </div>
+                        <div class="input_boxes">
+                            <input type="text" placeholder="Instagram Handle" name="user_name" id="user_name">
+                        </div>
+                        <div class="input_boxes">
+                            <input type="text" placeholder="Facebook URL" name="user_name" id="user_name">
+                        </div>
+                        <div class="input_boxes">
+                            <input type="text" placeholder="X(Twitter) URL" name="user_name" id="user_name">
+                        </div>
+                        <div class="input_boxes">
+                            <input type="text" placeholder="Discord URL" name="user_name" id="user_name">
+                        </div>
+
+                        <div class="input_boxes">
+                            <input type="text" placeholder="Other Social URL" name="user_name" id="user_name">
+                        </div>
+                        <button type="submit" class="update_profile_button"> Update Profile</button>
+
+
+
+
+
+                    </form>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!-- user profile image -->
+            <!-- <div class="edit_user_image">
+                <img src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg" width="150" height="150" />
+            </div> -->
+
+
+
+
+        </section>
+
+
+    </main>
+
+
+    <bottom_menu class="bottom_menu shadow">
+        <div class="bottom_menu_items icon_lg" id="bottom_menu">
+            <a href="/"><i class="fa-solid fa-house"></i></a>
+            <a href="/routes/explore"><i class="fa-solid fa-compass"></i></a>
+            <a href="/routes/write"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a href="/routes/store"><i class="fa-solid fa-store"></i></a>
+            <a href="/routes/user"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </bottom_menu>
+
+    <script>
+        document.addEventListener("change", function (event) {
+            if (event.target.classList.contains("uploadProfileInput")) {
+                var triggerInput = event.target;
+                var currentImg = triggerInput.closest(".pic-holder").querySelector(".pic").src;
+                var holder = triggerInput.closest(".pic-holder");
+                var wrapper = triggerInput.closest(".profile-pic-wrapper");
+
+                var alerts = wrapper.querySelectorAll('[role="alert"]');
+                alerts.forEach(function (alert) {
+                    alert.remove();
+                });
+
+                triggerInput.blur();
+                var files = triggerInput.files || [];
+                if (!files.length || !window.FileReader) {
+                    return;
+                }
+
+                if (/^image/.test(files[0].type)) {
+                    var reader = new FileReader();
+                    reader.readAsDataURL(files[0]);
+
+                    reader.onloadend = function () {
+                        holder.classList.add("uploadInProgress");
+                        holder.querySelector(".pic").src = this.result;
+
+                        var loader = document.createElement("div");
+                        loader.classList.add("upload-loader");
+                        loader.innerHTML = '<div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div>';
+                        holder.appendChild(loader);
+
+                        setTimeout(function () {
+                            holder.classList.remove("uploadInProgress");
+                            loader.remove();
+
+                            var random = Math.random();
+                            if (random < 0.9) {
+                                wrapper.innerHTML += '<div class="snackbar show" role="alert"><i class="fa fa-check-circle text-success"></i> Profile image updated successfully</div>';
+                                triggerInput.value = "";
+                                setTimeout(function () {
+                                    wrapper.querySelector('[role="alert"]').remove();
+                                }, 3000);
+                            } else {
+                                holder.querySelector(".pic").src = currentImg;
+                                wrapper.innerHTML += '<div class="snackbar show" role="alert"><i class="fa fa-times-circle text-danger"></i> There is an error while uploading! Please try again later.</div>';
+                                triggerInput.value = "";
+                                setTimeout(function () {
+                                    wrapper.querySelector('[role="alert"]').remove();
+                                }, 3000);
+                            }
+                        }, 1500);
+                    };
+                } else {
+                    wrapper.innerHTML += '<div class="alert alert-danger d-inline-block p-2 small" role="alert">Please choose a valid image.</div>';
+                    setTimeout(function () {
+                        var invalidAlert = wrapper.querySelector('[role="alert"]');
+                        if (invalidAlert) {
+                            invalidAlert.remove();
+                        }
+                    }, 3000);
+                }
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

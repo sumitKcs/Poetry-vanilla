@@ -1,0 +1,93 @@
+@import url(global.css);
+
+.edit_profile {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    background-color: white;
+    position: relative;
+    background-color: #f5f5fa;
+    gap: 2rem;
+}
+
+.edit_profile_wrapper {
+    margin-top: 6rem;
+    width: 60vw;
+    height: fit-content;
+    align-self: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    justify-items: center;
+    gap: 1rem;
+    padding: 4rem;
+    border-radius: .7rem;
+}
+
+.edit_profile_wrapper form {
+    margin-top: 7rem;
+    width: 80%;
+}
+
+.edit_user_image {
+    align-self: center;
+    position: absolute;
+    top: 2rem;
+    z-index: 1;
+    border: 2px solid #089efc;
+    border-radius: 50%;
+    padding: .4rem;
+    background: #089efc;
+
+}
+
+.edit_user_image img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.input_boxes {
+    align-self: center;
+    width: 100%;
+}
+
+.input_boxes input {
+    padding: .5rem 1rem;
+    width: 100%;
+    outline: none;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.update_profile_button {
+    align-self: center;
+    width: 80%;
+    padding: 1rem 1.5rem;
+    border-radius: .4rem;
+    background-color: #089efc;
+    color: white;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    .edit_profile_wrapper {
+        margin-top: 6rem;
+        width: 90vw;
+        height: fit-content;
+        align-self: center;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        justify-items: center;
+        gap: 1rem;
+        padding: 2rem;
+
+    }
+}
