@@ -51,15 +51,16 @@
     position: absolute;
     top: 2rem;
     z-index: 1;
-    border: 2px solid var(--primary-color);
+    border: 2px solid #089efc;
     border-radius: 50%;
-    padding: 1rem;
-    background: var(--primary-color);
+    padding: .4rem;
+    background: #089efc;
 
 }
 
 .user_image img {
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .edit_profile_button {
