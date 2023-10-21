@@ -80,6 +80,13 @@
 
 }
 
+@media only screen and (max-width: 1024px) {
+    .category_grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
 @media only screen and (max-width: 640px) {
 
     .category_grid {
