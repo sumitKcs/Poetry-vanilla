@@ -1,5 +1,9 @@
 .blogs_title {
     width: 90vw;
+    font-size: large !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .latest_blog {
