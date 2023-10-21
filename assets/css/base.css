@@ -28,7 +28,8 @@ html {
 }
 
 :root {
-    --primary-color: #3A1078;
+    --primary-color: #089efc;
+    /* --primary-color: #3A1078; */
     --secondary-color: #4E31AA;
     --third-color: #2F58CD;
     --fourth-color: #3795BD;

@@ -151,16 +151,16 @@ a:visited {
 }
 
 
-.icon-xl {
+.icon_xl {
     font-size: x-large;
     text-align: center;
-    color: var(--primary-color);
+
 }
 
 .icon_lg {
     font-size: large;
     text-align: center;
-    color: var(--primary-color);
+
 }
 
 .mt_xs {
