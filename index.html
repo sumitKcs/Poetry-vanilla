@@ -28,8 +28,10 @@
             <img src="https://i.postimg.cc/3RvKKHPh/logo.png" alt="logo">
         </a>
         <nav class="items_center text_large" id="main_navigation">
-            <a key="Shayari" href="/shayari"> Shayari </a> <a key="Writers" href="/writers"> Writers </a> <a
-                key="Search" href="/search"> Search </a> <a key="Posts" href="/posts"> Posts </a>
+            <a key="Shayari" href="routes/shayari.html"> Shayari </a>
+            <a key="Shayari" href="/routes/mood.html"> Moods </a> <a key="Writers" href="/routes/writers.html"> Writers
+            </a> <a key="Search" href="/routes/search.html"> Search </a> <a key="Posts" href="/routes/blog.html"> Blog
+            </a>
         </nav>
         <a href="/routes/login.html" class="login items_right text_large">Login</a>
     </header>
@@ -74,7 +76,15 @@
         </div>
     </aside>
 
-
+    <bottom_menu class="bottom_menu shadow">
+        <div class="bottom_menu_items icon_lg" id="bottom_menu">
+            <a href="/"><i class="fa-solid fa-house"></i></a>
+            <a href="/routes/explore"><i class="fa-solid fa-compass"></i></a>
+            <a href="/routes/write"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a href="/routes/store"><i class="fa-solid fa-store"></i></a>
+            <a href="/routes/login.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </bottom_menu>
 
 
     <main class="gap_xl w_full">
@@ -230,7 +240,7 @@
         <collection class="flex_col gap_lg">
             <div class="collection_title items_between w_full ">
                 <span class="text_xl text_bold">Browse Collections</span>
-                <span class="items_center self_center"><a href="/collections">view all <span
+                <span class="items_center self_center"><a href="./routes/collections.html">view all <span
                             class="text-sm">&gt;</span></a></span>
             </div>
 
@@ -238,7 +248,7 @@
             <div class="collection_grid gap_sm items_center" id="collection_grid">
                 <!-- grid cards -->
                 <div class="flex_col gap_sm ">
-                    <a href="/collection?[object" object]="">
+                    <a href="./routes/collections.html">
                         <div class="items_center collection_box shadow">
                             <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
                                 alt="[object" object]="">
@@ -247,7 +257,7 @@
                     <span>Chand Shayari</span>
                 </div>
                 <div class="flex_col gap_sm ">
-                    <a href="/collection?[object" object]="">
+                    <a href="./routes/collections.html">
                         <div class="items_center collection_box shadow">
                             <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
                                 alt="[object" object]="">
@@ -256,7 +266,7 @@
                     <span>Chand Shayari</span>
                 </div>
                 <div class="flex_col gap_sm ">
-                    <a href="/collection?[object" object]="">
+                    <a href="./routes/collections.html">
                         <div class="items_center collection_box shadow">
                             <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
                                 alt="[object" object]="">
@@ -265,7 +275,7 @@
                     <span>Chand Shayari</span>
                 </div>
                 <div class="flex_col gap_sm ">
-                    <a href="/collection?[object" object]="">
+                    <a href="./routes/collections.html">
                         <div class="items_center collection_box shadow">
                             <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
                                 alt="[object" object]="">
@@ -274,7 +284,7 @@
                     <span>Chand Shayari</span>
                 </div>
                 <div class="flex_col gap_sm ">
-                    <a href="/collection?[object" object]="">
+                    <a href="./routes/collections.html">
                         <div class="items_center collection_box shadow">
                             <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
                                 alt="[object" object]="">
@@ -283,7 +293,7 @@
                     <span>Chand Shayari</span>
                 </div>
                 <div class="flex_col gap_sm ">
-                    <a href="/collection?[object" object]="">
+                    <a href="./routes/collections.html">
                         <div class="items_center collection_box shadow">
                             <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
                                 alt="[object" object]="">
@@ -292,7 +302,7 @@
                     <span>Chand Shayari</span>
                 </div>
                 <div class="flex_col gap_sm ">
-                    <a href="/collection?[object" object]="">
+                    <a href="./routes/collections.html">
                         <div class="items_center collection_box shadow">
                             <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
                                 alt="[object" object]="">
@@ -301,7 +311,7 @@
                     <span>Chand Shayari</span>
                 </div>
                 <div class="flex_col gap_sm ">
-                    <a href="/collection?[object" object]="">
+                    <a href="./routes/collections.html">
                         <div class="items_center collection_box shadow">
                             <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
                                 alt="[object" object]="">
@@ -309,18 +319,19 @@
                     </a>
                     <span>Chand Shayari</span>
                 </div>
+
 
             </div>
         </collection>
         <categories class="flex_col gap_lg item_container">
             <div class="category_title items_between w_full ">
                 <span class="text_xl text_bold">Choose Category</span>
-                <span><a href="/mood">view all <span class="text-sm">&gt;</span></a></span>
+                <span><a href="./routes/category.html">view all <span class="text-sm">&gt;</span></a></span>
             </div>
             <div class="category_grid gap_sm items_center self_center" id="category">
                 <!-- grid cards -->
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -333,7 +344,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -346,7 +357,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -359,7 +370,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -372,7 +383,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -385,7 +396,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -398,7 +409,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -411,7 +422,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -424,7 +435,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -437,7 +448,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -450,7 +461,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -463,7 +474,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -476,7 +487,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -489,7 +500,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -502,7 +513,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -515,7 +526,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -528,7 +539,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -541,7 +552,7 @@
                     </a>
                 </div>
                 <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="/category?Sher">
+                    <a href="./routes/category.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
                                 <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
@@ -553,6 +564,8 @@
                         </div>
                     </a>
                 </div>
+
+
 
 
 
@@ -769,15 +782,7 @@
 
 
 
-    <bottom_menu class="bottom_menu shadow">
-        <div class="bottom_menu_items icon_lg" id="bottom_menu">
-            <a href="/"><i class="fa-solid fa-house"></i></a>
-            <a href="/routes/explore"><i class="fa-solid fa-compass"></i></a>
-            <a href="/routes/write"><i class="fa-solid fa-pen-to-square"></i></a>
-            <a href="/routes/store"><i class="fa-solid fa-store"></i></a>
-            <a href="/routes/login.html"><i class="fa-solid fa-user"></i></a>
-        </div>
-    </bottom_menu>
+
 
     <script>
         const swiper = new Swiper(".swiper", {

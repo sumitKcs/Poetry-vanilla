@@ -1,0 +1,77 @@
+@import url(global.css);
+
+.mood_page {
+    width: 100vw;
+    height: fit-content;
+    margin-top: 3rem;
+}
+
+.mood_page_wrapper {
+    width: 100vw;
+}
+
+.mood_page_heading {
+    font-size: xx-large;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.mood_page_card {
+    align-self: center;
+    width: 80vw;
+    height: fit-content;
+    padding: 2rem;
+
+}
+
+.mood_page_card_title {
+    font-size: large;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.mood_page_card_grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+
+}
+
+.mood_page_mood_chips {
+    text-align: center;
+    border: 2px solid var(--fourth-color);
+    padding: 1rem 1rem;
+    border-radius: .7rem;
+}
+
+.mood_page_mood_chips:hover {
+    background-color: wheat;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .mood_page_heading {
+        font-size: x-large;
+    }
+
+    .mood_page_card {
+        align-self: center;
+        width: 90vw;
+        height: fit-content;
+
+    }
+
+    .mood_page_card_grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: .3rem;
+
+    }
+
+    .mood_page_mood_chips {
+        text-align: center;
+        border: 2px solid var(--fourth-color);
+        padding: 1rem 1rem;
+        border-radius: .3rem;
+    }
+}

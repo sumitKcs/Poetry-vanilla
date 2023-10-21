@@ -21,6 +21,10 @@
     border-radius: var(--border-radius);
 }
 
+.mood_title a {
+    color: var(--primary-color);
+}
+
 @media only screen and (max-width: 1024px) {
 
 

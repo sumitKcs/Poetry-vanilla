@@ -1,4 +1,5 @@
 @import url(global.css);
+@import url(load_more_button.css);
 
 .user {
     width: 100vw;

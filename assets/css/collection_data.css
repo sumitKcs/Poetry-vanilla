@@ -1,0 +1,25 @@
+@import url(global.css);
+@import url(user.css);
+
+.collection_title {
+    width: 40%;
+    align-self: center;
+    border-bottom: 5px solid var(--primary-color);
+    font-size: xx-large;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .collection_title {
+        width: 80%;
+        font-size: x-large;
+    }
+
+    .collection_description {
+        width: 90vw;
+        font-size: small
+    }
+}

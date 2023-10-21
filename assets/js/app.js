@@ -42,8 +42,10 @@ function filledSaveHandler(e) {
   save_button.removeEventListener("click", filledSaveHandler);
   save_button.addEventListener("click", saveHandler);
 }
-tab_1.style.display = "grid";
-tab_container.appendChild(tab_1);
+if (tab_1) {
+  tab_1.style.display = "grid";
+  tab_container.appendChild(tab_1);
+}
 
 function firstTabHandler(e) {
   tab_1.style.display = "grid";
