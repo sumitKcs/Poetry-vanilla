@@ -269,4 +269,11 @@
     .content_text {
         font-size: small;
     }
+
+    .edit_profile_button {
+
+        font-size: 14px;
+        text-align: center;
+
+    }
 }
