@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+.mood_grid a:visited {
+    color: var(--primary-color) !important;
+}
+
 .mood_grid {
     width: 80vw;
     display: grid;
@@ -19,6 +23,11 @@
     border: 1px solid black;
     padding: 2rem 3.5rem;
     border-radius: var(--border-radius);
+}
+
+.mood_box:hover .mood_icon {
+
+    scale: 2.5;
 }
 
 .mood_title a {

@@ -11,6 +11,14 @@ header {
 
 }
 
+header a:visited {
+    color: black;
+}
+
+header a:hover {
+    color: var(--green)
+}
+
 
 nav {
     display: flex;
