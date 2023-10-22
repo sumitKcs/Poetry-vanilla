@@ -18,6 +18,8 @@
     padding: .8rem 3rem;
     border-radius: var(--border-radius);
     font-size: medium;
+    outline: transparent;
+    border: 1px solid var(--primary-color)
 }
 
 .search_icon {
@@ -34,6 +36,13 @@
     background-color: var(--primary-color);
     border-radius: var(--border-radius);
     color: white;
+    border: transparent;
+    outline: transparent;
+}
+
+.search_button:focus {
+    border: transparent;
+    outline: none;
 }
 
 @media only screen and (max-width: 640px) {

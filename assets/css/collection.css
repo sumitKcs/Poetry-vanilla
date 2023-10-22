@@ -11,6 +11,10 @@
     font-weight: bold;
 }
 
+.collection_grid div:hover {
+    background-color: var(--primary-color);
+}
+
 .collection_box {
     padding: .5rem .5rem;
     border-radius: var(--border-radius);
