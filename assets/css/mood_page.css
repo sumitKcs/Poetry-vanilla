@@ -11,8 +11,12 @@
 }
 
 .mood_page_heading {
+    width: 30%;
+    align-self: center;
+    border-bottom: 5px solid var(--primary-color);
     font-size: xx-large;
     color: rgba(0, 0, 0, 0.8);
+    text-align: center;
 }
 
 .mood_page_card {
@@ -27,6 +31,8 @@
     font-size: large;
     border-bottom: 2px solid var(--primary-color);
 }
+
+
 
 .mood_page_card_grid {
     width: 100%;
@@ -73,5 +79,11 @@
         border: 2px solid var(--fourth-color);
         padding: 1rem 1rem;
         border-radius: .3rem;
+    }
+
+    .mood_page_heading {
+        width: 70%;
+        font-size: x-large;
+
     }
 }
