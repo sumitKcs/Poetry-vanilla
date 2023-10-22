@@ -12,12 +12,14 @@
     margin-top: 1rem;
     width: 80vw;
     height: fit-content;
-    padding: 2rem;
+    padding: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     justify-items: center;
     gap: 2rem;
+    word-spacing: 2px;
+    line-height: 2rem;
 }
 
 .shayari_page_title {
@@ -44,4 +46,54 @@
 .shayari_page_content_hindi {
     line-height: 2.5rem;
     color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 768px) {
+    .shayari_page_wrapper {
+        margin-top: .8rem;
+        width: 90vw;
+        padding: .5rem;
+        word-spacing: 2px;
+        line-height: 2rem;
+        gap: 1.5rem;
+    }
+
+    .shayari_page_title {
+        font-size: large;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        border-bottom: 3px solid var(--primary-color)
+    }
+
+    .shayari_page_content {
+        align-self: center;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        justify-items: center;
+        gap: 1rem;
+
+    }
+
+    .shayari_page_content_hindi {
+        font-size: large;
+        word-spacing: 1px;
+        line-height: 1.5rem;
+        color: var(--secondary-color);
+    }
+
+    .shayari_page_content_english {
+        align-self: center;
+        font-size: medium;
+        word-spacing: 2px;
+        line-height: 1rem;
+    }
+
+    .shayari_page_content_author_name {
+        font-size: large;
+        margin-bottom: 1rem;
+    }
+
 }
