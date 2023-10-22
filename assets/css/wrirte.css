@@ -1,0 +1,21 @@
+@import url(global.css);
+
+.write_form_wrapper {
+    width: 80vw;
+    height: 350px;
+    padding: 2rem;
+    overflow-y: scroll;
+}
+
+.write_form textarea {
+    outline: transparent;
+    border: 1px solid grey;
+    resize: none;
+    padding: 5rem .5rem;
+    border-radius: .5rem;
+}
+
+.write_form textarea:focus {
+    outline: transparent;
+    border: 2px solid var(--primary-color);
+}
