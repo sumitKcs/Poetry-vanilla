@@ -165,15 +165,19 @@
 <body>
     <!-- main menu -->
     <header class="shadow" id="header">
-        <div class="mobile_menu icon-xl" id="menu_icon">
+        <div class="mobile_menu icon_xl" id="menu_icon">
             <i class="fa-solid fa-bars"></i>
         </div>
-        <div class="logo items_left">
+        <a href="/" class="logo items_left">
             <img src="https://i.postimg.cc/3RvKKHPh/logo.png" alt="logo">
-        </div>
+        </a>
         <nav class="items_center text_large" id="main_navigation">
-            <a key="Shayari" href="/shayari"> Shayari </a> <a key="Writers" href="/writers"> Writers </a> <a
-                key="Search" href="/search"> Search </a> <a key="Posts" href="/posts"> Posts </a>
+            <a key="collection" href="/routes/collections.html"> Collections </a>
+            <a key="Shayari" href="/routes/mood.html"> Moods </a>
+            <a key="Writers" href="/routes/category.html"> Categories </a>
+            <a key="Writers" href="/routes/writers.html"> Writers </a>
+            <a key="Posts" href="/routes/blog.html"> Blog </a>
+
         </nav>
         <a href="/routes/login.html" class="login items_right text_large">Login</a>
     </header>
@@ -181,26 +185,26 @@
     <!-- mobile menu -->
     <aside class="side_navigation text_lg shadow" id="side_bar" style="display: none;">
         <div class=" items_between" id="sidebar_close_button">
-            <a href="/" class="self_center items_center">
+            <div class="self_center items_center">
                 <img src="https://i.postimg.cc/3RvKKHPh/logo.png" alt="logo">
-            </a>
+            </div>
             <button class="close_button text_lg text_bold">X</button>
         </div>
         <div class="side_navigation_col1 gap_sm">
             <a href="/routes/search" class="items_left gap_sm "><i
-                    class="fa-solid fa-magnifying-glass icon_lg"></i><span>Search</span>
+                    class="fa-solid fa-magnifying-glass "></i><span>Search</span>
             </a>
             <a href="/routes/writers" class="items_left gap_sm"><i
-                    class="fa-solid fa-feather-pointed icon_lg"></i><span>Writers</span></a>
+                    class="fa-solid fa-feather-pointed "></i><span>Writers</span></a>
             <a href="/routes/blog" class="items_left gap_sm"><i
-                    class="fa-regular fa-newspaper icon_lg"></i><span>Blog</span></a>
+                    class="fa-regular fa-newspaper "></i><span>Blog</span></a>
             <a href="/routes/moods" class="items_left gap_sm"><i
-                    class="fa-regular fa-face-smile-wink icon_lg"></i><span>Shayari
+                    class="fa-regular fa-face-smile-wink "></i><span>Shayari
                     Moods</span></a>
             <a href="/routes/store" class="items_left gap_sm"><i class="fa-solid fa-shop"></i><span>Store
                 </span></a>
             <a href="https://whatsapp.com/channel/0029Va8lsG74tRrzqkQjUC3C" class="items_left gap_sm"><i
-                    class="fa-brands fa-whatsapp icon_lg"></i><span>Whatsapp Community</span>
+                    class="fa-brands fa-whatsapp "></i><span>Whatsapp Community</span>
             </a>
 
         </div>
@@ -217,6 +221,16 @@
             </div>
         </div>
     </aside>
+
+    <bottom_menu class="bottom_menu shadow">
+        <div class="bottom_menu_items icon_lg" id="bottom_menu">
+            <a href="/"><i class="fa-solid fa-house"></i></a>
+            <a href="./routes/explore.html"><i class="fa-solid fa-compass"></i></a>
+            <a href="./routes/write.html"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a href="./routes/store.html"><i class="fa-solid fa-store"></i></a>
+            <a href="./routes/user.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </bottom_menu>
 
     <main>
         <section class="edit_profile">
@@ -296,15 +310,7 @@
     </main>
 
 
-    <bottom_menu class="bottom_menu shadow">
-        <div class="bottom_menu_items icon_lg" id="bottom_menu">
-            <a href="/"><i class="fa-solid fa-house"></i></a>
-            <a href="/routes/explore"><i class="fa-solid fa-compass"></i></a>
-            <a href="/routes/write"><i class="fa-solid fa-pen-to-square"></i></a>
-            <a href="/routes/store"><i class="fa-solid fa-store"></i></a>
-            <a href="/routes/user"><i class="fa-solid fa-user"></i></a>
-        </div>
-    </bottom_menu>
+
 
     <script>
         document.addEventListener("change", function (event) {
