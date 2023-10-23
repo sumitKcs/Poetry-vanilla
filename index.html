@@ -523,7 +523,7 @@
             </div>
             <div class="owl-carousel owl-theme blog_carousel" style="width: 100%;">
                 <!-- cards -->
-                <a href="./routes/blog-data.html" class="item" style="width:500px; margin-top: 8px;">
+                <a href="./routes/blog-data.html" class="item">
                     <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/Blog-Cover-Azra-Naqvi.jpg" alt="blog">
                     <span class=" text_md line_clamp_2">
                         आसी ने ज़िंदगी की महरूमियों को क़बूल ज़रूर किया लेकिन कभी हालात के आगे झुके नहीं. कभी
@@ -532,7 +532,7 @@
                         कि उनसे मिलने वाला हर अजनबी उनका अपना बन गया.
                     </span>
                 </a>
-                <a href="./routes/blog-data.html" class="item" style="width:500px; margin-top: 8px;">
+                <a href="./routes/blog-data.html" class="item">
                     <img src="https://blog.rekhta.org/wp-content/uploads/2023/02/Valentines-Day-Blog.jpg" alt="blog">
                     <span class=" text_md line_clamp_2">
                         उर्दू शायरी में इश्क़ के बारे में ये और ऐसे कई शे’र मशहूर हैं मगर ऐसा नहीं है कि इश्क़ और आशिक़ की
@@ -541,8 +541,7 @@
                         ख़ूब मिलते हैं जिन का असर बॉलीवुड में भी बहुत है।
                 </a>
 
-                <a href="./routes/blog-data.html" class="item flex_col"
-                    style="width:500px; margin-top: 8px; height: 280px">
+                <a href="./routes/blog-data.html" class="item flex_col" height:500px ; 3>
                     <img src="https://blog.rekhta.org/wp-content/uploads/2023/10/Artboard-1.png" alt="blog">
                     <span class=" text_md line_clamp_2" style="direction: rtl;">
                         سن 2023ء کا ادب کا نوبیل انعام ناروے کے ادیب یان فاسے (Jon Olav Fosse)نے حاصل کیا۔
@@ -551,7 +550,7 @@
                         لڑکپن اسٹین برم نامی قصبے میں بیتا۔ جہاں سات برس کی عمر میں مسلسل ہونے والے حادث
                     </span>
                 </a>
-                <a href="./routes/blog-data.html" class="item" style="width:500px; margin-top: 8px;">
+                <a href="./routes/blog-data.html" class="item">
                     <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/22nd-Aug-Blog-Cover.jpg" alt="blog">
                     <span class=" text_md line_clamp_2">
                         In 1977, a well-known journalist and writer late, Kushwant Singh, called Urdu a
@@ -560,7 +559,7 @@
                         individuals intentionally portray it to be
                     </span>
                 </a>
-                <a href="./routes/blog-data.html" class="item" style="width:500px; margin-top: 8px;">
+                <a href="./routes/blog-data.html" class="item">
                     <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/Artboard-2.png" alt="blog">
                     <span class=" text_md line_clamp_2">
                         Urdu poetry is a realm where words transcend their literal meanings, weaving a
@@ -570,14 +569,14 @@
                     </span>
                 </a>
 
-                <a href="./routes/blog-data.html" class="item" style="width:500px; margin-top: 8px;">
+                <a href="./routes/blog-data.html" class="item">
                     <img src="https://blog.rekhta.org/wp-content/uploads/2023/03/Womens-Day.jpg" alt="blog">
                     <span class=" text_md line_clamp_2">
                         When we look at the canon of Urdu literature, it doesn’t take much time to realise women are
                         abnormally absent from the picture. If we speak of the classical age, The important Tazkiras
                         like Khush-Marka-e-Zeba or Majmua-e-Naghz rarely mention a female.
                 </a>
-                <a href="./routes/blog-data.html" class="item" style="width:500px; margin-top: 8px;">
+                <a href="./routes/blog-data.html" class="item">
                     <img src="https://blog.rekhta.org/wp-content/uploads/2021/09/MeerTaqiMeer_Blog_Cover.jpg"
                         alt="blog">
                     <span class=" text_md line_clamp_2">
@@ -805,33 +804,37 @@
             loop: false,
             margin: 10,
             nav: true,
-            autoWidth: true,
-            items: 2.5,
             responsive: {
                 0: {
-                    items: 1.3,
+                    items: 1.2,
                     dots: true,
+                    autoWidth: false,
                 },
                 486: {
                     items: 2.3,
                     dots: true,
+                    autoWidth: false,
                 },
                 728: {
                     items: 3.3,
                     dots: true,
+                    autoWidth: false,
                 },
                 900: {
                     items: 4.5,
                     dots: true,
+                    autoWidth: true,
                 },
                 1200: {
                     items: 5.5,
                     dots: false,
+                    autoWidth: true,
 
                 },
                 1300: {
                     items: 6.5,
                     dots: false,
+                    autoWidth: true,
                 }
             }
         })
