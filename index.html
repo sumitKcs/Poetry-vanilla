@@ -31,10 +31,11 @@
         <div class="mobile_menu icon_xl" id="menu_icon">
             <i class="fa-solid fa-bars"></i>
         </div>
-        <a href="/" class="logo items_left">
+        <div href="/" class="logo items_left  items_between">
             <img src="https://i.postimg.cc/3RvKKHPh/logo.png" alt="logo">
-        </a>
-        <nav class="items_center text_large" id="main_navigation">
+
+        </div>
+        <nav class="items_left self_center text_md gap_md" id="main_navigation">
             <a key="collection" href="/routes/collections.html"> Collections </a>
             <a key="Shayari" href="/routes/mood.html"> Moods </a>
             <a key="Writers" href="/routes/category.html"> Categories </a>
@@ -42,7 +43,33 @@
             <a key="Posts" href="/routes/blog.html"> Blog </a>
 
         </nav>
-        <a href="/routes/login.html" class="login items_right text_large">Login</a>
+
+        <div class="search_wrapper items_right self_center" style="width: 100%; ">
+            <input type="text" placeholder="mohabbat, zindagi, raat" width="60%">
+            <span class="search_icon icon_xl"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+        <div class="action_buttons items_center self_center text_large gap_lg">
+            <div class="self_center" style="padding: 0 .5rem;">
+                <select name="select_language custom-select" id="select_language">
+                    <option value="english" selected>ENG</option>
+                    <option value="hindi">HIN</option>
+                    <option value="urdu">URD</option>
+                </select>
+            </div>
+            <a href="/routes/login.html" class="login items_center self_center text_large">
+                <img src="./assets/img/user.png" alt="user logo" height="50px" width="50px">
+            </a>
+
+            <div class=" items_right gap_lg text_sm">
+                <button
+                    style="padding: 2px 1rem; border-radius: .3rem; border:2px solid var(--primary-color); background: var(--primary-color); letter-spacing: 1.5px; color: rgb(255, 255, 255);">
+                    Download App</button>
+                <button
+                    style="padding: 2px 1rem; border-radius: .3rem; border:2px solid var(--primary-color); background: white;letter-spacing: 1.5px;">
+                    Donate</button>
+            </div>
+        </div>
+
     </header>
 
     <!-- mobile menu -->
@@ -819,6 +846,7 @@
             },
         });
     </script>
+
 
 </body>
 

@@ -1,68 +1,240 @@
-@import url(base.css);
-@import url(utility.css);
-@import url(swiper.css);
-@import url(header.css);
-@import url(search.css);
-@import url(category.css);
-@import url(latest_blog.css);
-@import url(bottom_menu.css);
-@import url(thought_of_the_day.css);
-@import url(app_download.css);
-@import url(login.css);
-@import url(footer.css);
+/*! CSS Used from: https://rekhtastaticcdn.pc.cdn.bitgravity.com/css/3_5_global.css?v=1.0.2 ; media=all */
+@media all {
 
-@font-face {
-    font-family: LatoXBold;
-    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-bold.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-bold-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-bold-webfont.woff) format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+    div,
+    h2,
+    p,
+    a {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    div,
+    h2,
+    p,
+    a {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
 }
 
-@font-face {
-    font-family: LatoXBold;
-    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-bold.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-bold-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-bold-webfont.woff) format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+/*! CSS Used from: https://rekhtastaticcdn.pc.cdn.bitgravity.com/css/3_5_xs.css?v=1.0.127 ; media=all */
+@media all {
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    h2,
+    p {
+        line-height: 1;
+        margin: 0 0;
+        padding: 0 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .highLtr.descMore .cntntDesPr p:after {
+        display: none;
+    }
+
+    .highLtr .cntntDesSeeMrLs {
+        text-align: center;
+        margin-top: 16px;
+    }
+
+    :invalid {
+        box-shadow: none;
+    }
+
+    .descMore .cntntDesPr {
+        max-height: 49px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .descMore.highLtrWdtImg .cntntDesPr {
+        max-height: 294px;
+    }
+
+    .didYKnowLayoutSliderWrap .descMore .cntntDesPr {
+        max-height: 127px;
+    }
+
+    .descMore .cntntDesPr p:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: -25px;
+        height: 70px;
+        width: 100%;
+        z-index: 1;
+        pointer-events: none;
+        background: rgba(255, 255, 255, 0);
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .56) 56%, rgba(255, 255, 255, 1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(56%, rgba(255, 255, 255, .56)), color-stop(100%, rgba(255, 255, 255, 1)));
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .56) 56%, rgba(255, 255, 255, 1) 100%);
+        background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .56) 56%, rgba(255, 255, 255, 1) 100%);
+        background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .56) 56%, rgba(255, 255, 255, 1) 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .56) 56%, rgba(255, 255, 255, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
+    }
+
+    .cntntDesSeeMrLs {
+        display: none;
+        text-align: right;
+    }
+
+    .descMore .descExpand,
+    .cntntDesSeeMrLs .descExpand {
+        font-size: 16px;
+        color: #0af;
+        line-height: 1;
+        font-family: 'latoxregular', 'NotoDevanagari', 'NotoNastaliqUrdu';
+        display: block;
+        text-transform: lowercase;
+        border-bottom: 1px solid #0af;
+        margin-bottom: 32px;
+        display: inline-block;
+    }
+
+    .highLtr {
+        padding: 24px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 972px;
+        height: 387px;
+        min-height: 387px;
+        margin-left: auto;
+        margin-right: auto;
+        white-space: normal;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        background: -moz-linear-gradient(45deg, rgba(142, 197, 252, 1) 0%, rgba(224, 195, 252, 1) 100%);
+        background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(142, 197, 252, 1)), color-stop(100%, rgba(224, 195, 252, 1)));
+        background: -webkit-linear-gradient(45deg, rgba(142, 197, 252, 1) 0%, rgba(224, 195, 252, 1) 100%);
+        background: -o-linear-gradient(45deg, rgba(142, 197, 252, 1) 0%, rgba(224, 195, 252, 1) 100%);
+        background: -ms-linear-gradient(45deg, rgba(142, 197, 252, 1) 0%, rgba(224, 195, 252, 1) 100%);
+        background: linear-gradient(45deg, rgba(142, 197, 252, 1) 0%, rgba(224, 195, 252, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0c3fc', endColorstr='#8ec5fc', GradientType=1);
+    }
+
+    .highLtr.ptHltr {
+        background: -moz-linear-gradient(45deg, rgba(255, 182, 168, 1) 0%, rgba(255, 204, 138, 1) 100%);
+        background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(255, 182, 168, 1)), color-stop(100%, rgba(255, 204, 138, 1)));
+        background: -webkit-linear-gradient(45deg, rgba(255, 182, 168, 1) 0%, rgba(255, 204, 138, 1) 100%);
+        background: -o-linear-gradient(45deg, rgba(255, 182, 168, 1) 0%, rgba(255, 204, 138, 1) 100%);
+        background: -ms-linear-gradient(45deg, rgba(255, 182, 168, 1) 0%, rgba(255, 204, 138, 1) 100%);
+        background: linear-gradient(45deg, rgba(255, 182, 168, 1) 0%, rgba(255, 204, 138, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcc8a', endColorstr='#ffb6a8', GradientType=1);
+    }
+
+    .highLtr h2 {
+        color: #fff;
+        font-size: 24px;
+        font-family: 'latoxbold', 'NotoDevanagaribold', 'NotoNastaliqUrdu';
+        text-transform: uppercase;
+        line-height: 1.2;
+    }
+
+    .highLtr p {
+        line-height: 1.6;
+        color: #000;
+        font-size: 14px;
+        margin: 16px 0 0 !important;
+        text-align: center;
+    }
+
+    .highLtr p a {
+        color: #000;
+        border-bottom: 1px solid #000;
+    }
+
+    .highLtr a:hover {
+        border-bottom: 1px solid transparent;
+    }
+
+    h2,
+    p {
+        line-height: 1;
+        margin: 0 0;
+        padding: 0 0;
+    }
 }
 
-@font-face {
-    font-family: NotoDevanagari;
-    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular-webfont.woff) format("woff");
-    font-display: swap;
+/*! CSS Used from: https://rekhtastaticcdn.pc.cdn.bitgravity.com/css-4/4_0_xs.css?v=1.0.113 ; media=all */
+@media all {
+
+    h2,
+    p {
+        line-height: 1;
+    }
+
+    a:focus {
+        outline: none;
+    }
+
+    ::placeholder {
+        color: #bebebe;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .highLtr h2 {
+        font-family: 'LatoXBold', 'NotoDevanagariBold', 'MehrNastaliqRegular';
+    }
+
+    .highLtr a {
+        font-family: 'LatoXRegular', 'NotoDevanagariRegular', 'MehrNastaliqRegular';
+    }
 }
 
-@font-face {
-    font-family: NotoDevanagari;
-    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular-webfont.woff) format("woff");
-    font-display: swap;
+/*! CSS Used from: https://rekhtastaticcdn.pc.cdn.bitgravity.com/css/sm.css?v=1.0.50 */
+@media screen and (min-width:992px) {
+    .highLtr {
+        padding: 36px 60px;
+        height: 462px;
+    }
+
+    .highLtr h2 {
+        font-size: 36px;
+    }
+
+    .highLtr p {
+        margin-top: 28px !important;
+        line-height: 30px;
+        font-size: 16px;
+        text-align: justify;
+        text-align-last: center;
+    }
 }
 
-@font-face {
-    font-family: MehrNastaliqRegular;
-    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.woff) format("woff");
-    font-display: swap;
+/*! CSS Used from: https://rekhtastaticcdn.pc.cdn.bitgravity.com/css/lg.css?v=1.0.43 */
+@media screen and (min-width:1200px) {
+    .descMore .descExpand {
+        font-size: 16px;
+    }
+
+    .descMore .descExpand:hover {
+        border-bottom: 1px solid transparent;
+    }
 }
 
-@font-face {
-    font-family: MehrNastaliqRegular;
-    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.woff) format("woff");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: NotoDevanagariRegular;
-    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular-webfont.woff) format("woff");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: NotoDevanagariRegular;
-    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular-webfont.woff) format("woff");
-    font-display: swap;
-}
-
+/*! CSS Used fontfaces */
 @font-face {
     font-family: latoxregular;
     src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-regular.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-regular-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-regular-webfont.woff) format("woff");
@@ -185,21 +357,4 @@
     font-family: NotoDevanagariRegular;
     src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular-webfont.woff) format("woff");
     font-display: swap;
-}
-
-:root {
-    --primary-color: #089efc;
-    --secondary-color: #4E31AA;
-    --third-color: #2F58CD;
-    --fourth-color: #3795BD;
-    --background-one: #f5f5fa;
-    --background-two: white;
-    --border-radius: .3rem;
-    --gap-2xl: 3rem;
-    --gap-2xl: 2.5rem;
-    --gap-xl: 2rem;
-    --gap-lg: 1.5rem;
-    --gap-md: 1rem;
-    --gap-sm: .5rem;
-    --gap-xs: .2rem;
 }

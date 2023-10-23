@@ -1,13 +1,15 @@
 header {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
     left: 0;
     z-index: 2;
     background-color: white;
+    column-gap: .5rem;
+    font-family: 'LatoXBold', 'NotoDevanagari', 'MehrNastaliqRegular', 'NotoDevanagariRegular';
 
 }
 
@@ -23,7 +25,8 @@ header a:hover {
 nav {
     display: flex;
     justify-content: space-evenly;
-    gap: 2rem;
+    gap: 1rem;
+    margin-right: 2rem;
 }
 
 nav a {
@@ -49,8 +52,40 @@ nav>a {
     color: var(--primary-color);
 }
 
+header .search_wrapper {
+    align-self: center;
+    width: 100%;
+    position: relative;
+}
+
+header .search_wrapper input {
+    width: 100%;
+    padding: .8rem 3rem;
+    border-radius: var(--border-radius);
+    font-size: medium;
+    outline: transparent;
+    border: 1px solid var(--primary-color)
+}
+
+
+header select,
+header select:focus {
+    width: 60px;
+    border: transparent;
+    background: transparent;
+    outline: transparent;
+}
+
+header select option {
+    padding: 0 .5rem;
+}
+
+
+
+
+
 @media only screen and (max-width: 640px) {
-    nav.items_center {
+    nav.items_left {
         display: none;
     }
 
@@ -109,4 +144,12 @@ nav>a {
         justify-items: center;
     }
 
+
+    header .search_wrapper {
+        display: none;
+    }
+
+    header .action_buttons {
+        display: none;
+    }
 }
