@@ -151,7 +151,7 @@
     object-fit: cover;
 }
 
-.caraousel a:any-link {
+.carousel a:any-link {
     font-size: 12px;
     color: black;
     font-family: 'serif'
@@ -173,28 +173,10 @@
 
 @media all {
 
-    .caraousel div,
-    .caraousel h2,
-    .caraousel p,
-    .caraousel a {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-
-    }
-
-    div,
-    h2,
-    p,
-    a {
+    .carousel div,
+    .carousel h2,
+    .carousel p,
+    .carousel a {
         margin: 0;
         padding: 0;
         border: 0;
@@ -202,22 +184,24 @@
         font: inherit;
         vertical-align: baseline;
     }
+
 }
 
+@media only screen and (max-width: 768px) {}
+
 @media all {
-    * {
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
+    .coupletBoxHeader {
+        width: 100% !important;
     }
 
-    h2,
-    p {
+    .carousel h2,
+    .carousel p {
         line-height: 1;
         margin: 0 0;
         padding: 0 0;
     }
 
-    a {
+    .carousel a {
         text-decoration: none;
     }
 
@@ -225,19 +209,18 @@
         box-shadow: none;
     }
 
-    .coupletBoxHeader {
-        width: 80vw;
+    .carousel .coupletBoxHeader {
         padding: 12px 0;
         position: relative;
     }
 
-    .coupletBoxHeader:before {
-
+    .carousel .coupletBoxHeader:before {
         position: absolute;
         bottom: 0;
         content: '';
         left: 0;
-        background: #eb0046;
+        /* background: #eb0046; */
+        background: var(--primary-color);
         height: 2px;
         width: 32px;
     }
@@ -268,8 +251,8 @@
         font-size: 18px;
     }
 
-    h2,
-    p {
+    .carousel h2,
+    .carousel p {
         line-height: 1;
         margin: 0 0;
         padding: 0 0;
@@ -278,12 +261,12 @@
 
 @media all {
 
-    h2,
-    p {
+    .carousel h2,
+    .carousel p {
         line-height: 1;
     }
 
-    a:focus {
+    .carousel a:focus {
         outline: none;
     }
 
@@ -291,7 +274,7 @@
         color: #bebebe;
     }
 
-    a {
+    .carousel a {
         text-decoration: none;
     }
 }

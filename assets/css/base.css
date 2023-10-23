@@ -43,17 +43,29 @@ body {
 
 main {
     height: fit-content;
-    width: 100vw;
+    width: 100vw !important;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: start;
     justify-items: center;
-    padding-bottom: 0rem;
-    gap: 20rem;
+    column-gap: 10rem;
+
 }
 
 main>section {
-    margin-top: 2rem;
+    width: 80% !important;
     gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 767px) {
+    main {
+        padding-bottom: 5rem !important;
+    }
+
+    main>section {
+        width: 90vw !important;
+        margin-bottom: .5rem;
+    }
 }
