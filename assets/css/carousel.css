@@ -55,14 +55,16 @@
     border: 2px solid black;
 }
 
-.owl-theme:hover .owl-nav [class*=owl-] {
+.owl-theme:hover .owl-nav [class*=owl-],
+.owl-theme:active .owl-nav [class*=owl-] {
 
     display: inline-block;
     background: white;
 }
 
 
-.owl-theme .owl-nav [class*=owl-]:hover {
+.owl-theme .owl-nav [class*=owl-]:hover,
+.owl-theme .owl-nav [class*=owl-]:active {
     background: var(--primary-color);
     color: #FFF;
     text-decoration: none;
