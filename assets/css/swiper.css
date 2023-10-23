@@ -5,6 +5,7 @@
 
 .swiper-slide img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -12,11 +13,25 @@
     background: white;
 }
 
+.swiper-button-prev,
+.swiper-button-next {}
 
 
 @media only screen and (max-width: 640px) {
     .swiper {
         width: 100%;
-        height: 18%;
+        height: 40vh;
+        background-color: black;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper .swiper-button-prev,
+    .swiper .swiper-button-next {
+        display: none;
     }
 }
