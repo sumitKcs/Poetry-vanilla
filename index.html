@@ -11,10 +11,17 @@
     <title>Lekhak</title>
     <meta name="description" content="A place to join poetry world">
     <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/caraousel.css">
     <link rel="stylesheet" href="./plugins/css/swiper-bundle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script src="https://kit.fontawesome.com/a12bd5cdcb.js" crossorigin="anonymous"></script>
     <script defer src="./assets/js/app.js"></script>
     <script src="./plugins/js/swiper-bundel.js"></script>
+
+
 
 </head>
 
@@ -95,9 +102,9 @@
     </bottom_menu>
 
 
-    <main class="gap_xl w_full">
+    <main class="gap_xl">
         <!-- Slider main container start-->
-        <swiper class="swiper">
+        <swiper class="swiper mt_xs" style="width: 98%;">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -124,298 +131,341 @@
             </div>
             <div class=" items_center"><button class="search_button">Search</button></div>
         </search>
-        <mood class="w_full flex_col gap_lg">
-            <div class="mood_title items_between w_full " id="mood_title">
-                <span class="text_xl text_bold">What's your mood</span>
-                <span><a href="/routes/mood.html">view all <span class="text-sm">&gt;</span></a></span>
+
+        <!-- collection -->
+        <section class=" caraousel flex_col">
+            <div class="coupletBoxHeader">
+                <h2>Collection</h2>
+                <p>Compilation of top 20 hand-picked Urdu shayari on the most sought-after subjects and poets</p>
+                <a class="ebookSeeAll" href="./routes/writers.html">
+                    See All
+                </a>
             </div>
-            <div class="mood_grid gap_lg items_center" id="mood_grid">
-                <!-- grid cards -->
-                <div class="flex_col gap_sm ">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-heart"></i></div>
+            <div class="owl-carousel owl-theme " style="width: 81vw;">
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/couplets-of-shakeel-badayuni_Medium.jpg"
+                            alt="">
+                        <p style="margin-top: 5px;">Couplets of Shakeel Badayuni</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/heart-break-shayari_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">heart Break Shayari</p>
+                    </div>
 
-                    </a>
-                    <span>Love</span>
-                </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/barish-shayari_Medium.jpg" alt="">
+                        <p style="margin-top: 5px;">Barish Shayari</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/kiss-shayari_Medium.jpg" alt="">
+                        <p style="margin-top: 5px;">Kiss Shayari</p>
+                    </div>
 
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class=" items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-bullseye"></i>
-                        </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/couplets-on-dua_Medium.jpg"
+                            alt="">
+                        <p style="margin-top: 5px;">Couplets on Dua</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/couplets-on-tears_Medium.jpg"
+                            alt="">
+                        <p style="margin-top: 5px;">Couplets on Tears</p>
+                    </div>
 
-                    </a>
-                    <span>Motivation</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-heart-crack"></i>
-                        </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/dard-shayari_Medium.jpg" alt="">
+                        <p style="margin-top: 5px;">Dard Shayari</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/couplets-of-zeb-ghauri_Medium.jpg"
+                            alt="">
+                        <p style="margin-top: 5px;">Couplets of Zeb Ghauri</p>
+                    </div>
 
-                    </a>
-                    <span>Breakup</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class=" mood_icon fa-solid fa-face-sad-tear"></i>
-                        </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/couplets-on-eyes_Medium.jpg"
+                            alt="">
+                        <p style="margin-top: 5px;">Couplets on Eyes</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
 
-                    </a>
-                    <span>Sad</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-handshake"></i></div>
-                    </a>
-                    <span>Friendship</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-heart"></i></div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
 
-                    </a>
-                    <span>Love</span>
-                </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
 
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class=" items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-bullseye"></i>
-                        </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
 
-                    </a>
-                    <span>Motivation</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-heart-crack"></i>
-                        </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
 
-                    </a>
-                    <span>Breakup</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class=" mood_icon fa-solid fa-face-sad-tear"></i>
-                        </div>
-
-                    </a>
-                    <span>Sad</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-handshake"></i></div>
-                    </a>
-                    <span>Friendship</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-heart"></i></div>
-
-                    </a>
-                    <span>Love</span>
-                </div>
-
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class=" items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-bullseye"></i>
-                        </div>
-
-                    </a>
-                    <span>Motivation</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-heart-crack"></i>
-                        </div>
-
-                    </a>
-                    <span>Breakup</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class=" mood_icon fa-solid fa-face-sad-tear"></i>
-                        </div>
-
-                    </a>
-                    <span>Sad</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-handshake"></i></div>
-                    </a>
-                    <span>Friendship</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-heart"></i></div>
-
-                    </a>
-                    <span>Love</span>
-                </div>
-
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class=" items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-bullseye"></i>
-                        </div>
-
-                    </a>
-                    <span>Motivation</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-heart-crack"></i>
-                        </div>
-
-                    </a>
-                    <span>Breakup</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class=" mood_icon fa-solid fa-face-sad-tear"></i>
-                        </div>
-
-                    </a>
-                    <span>Sad</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-handshake"></i></div>
-                    </a>
-                    <span>Friendship</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-heart"></i></div>
-
-                    </a>
-                    <span>Love</span>
-                </div>
-
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class=" items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-bullseye"></i>
-                        </div>
-
-                    </a>
-                    <span>Motivation</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class="mood_icon fa-solid fa-heart-crack"></i>
-                        </div>
-
-                    </a>
-                    <span>Breakup</span>
-                </div>
-                <div class="flex_col gap_sm">
-                    <a href="/routes/mood-data.html">
-                        <div class="items_center mood_box icon_xl"><i class=" mood_icon fa-solid fa-face-sad-tear"></i>
-                        </div>
-
-                    </a>
-                    <span>Sad</span>
-                </div>
-            </div>
-        </mood>
-        <collection class="flex_col gap_lg">
-            <div class="collection_title items_between w_full ">
-                <span class="text_xl text_bold">Browse Collections</span>
-                <span class="items_center self_center"><a href="./routes/collections.html">view all <span
-                            class="text-sm">&gt;</span></a></span>
-            </div>
-
-
-            <div class="collection_grid gap_sm items_center" id="collection_grid">
-                <!-- grid cards -->
-                <div class="flex_col gap_sm ">
-                    <a href="./routes/collections.html">
-                        <div class="items_center collection_box shadow">
-                            <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
-                                alt="[object" object]="">
-                        </div>
-                    </a>
-                    <span>Chand Shayari</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="./routes/collections.html">
-                        <div class="items_center collection_box shadow">
-                            <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
-                                alt="[object" object]="">
-                        </div>
-                    </a>
-                    <span>Chand Shayari</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="./routes/collections.html">
-                        <div class="items_center collection_box shadow">
-                            <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
-                                alt="[object" object]="">
-                        </div>
-                    </a>
-                    <span>Chand Shayari</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="./routes/collections.html">
-                        <div class="items_center collection_box shadow">
-                            <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
-                                alt="[object" object]="">
-                        </div>
-                    </a>
-                    <span>Chand Shayari</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="./routes/collections.html">
-                        <div class="items_center collection_box shadow">
-                            <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
-                                alt="[object" object]="">
-                        </div>
-                    </a>
-                    <span>Chand Shayari</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="./routes/collections.html">
-                        <div class="items_center collection_box shadow">
-                            <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
-                                alt="[object" object]="">
-                        </div>
-                    </a>
-                    <span>Chand Shayari</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="./routes/collections.html">
-                        <div class="items_center collection_box shadow">
-                            <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
-                                alt="[object" object]="">
-                        </div>
-                    </a>
-                    <span>Chand Shayari</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="./routes/collections.html">
-                        <div class="items_center collection_box shadow">
-                            <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/chaand-shayari_Medium.png"
-                                alt="[object" object]="">
-                        </div>
-                    </a>
-                    <span>Chand Shayari</span>
-                </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
 
 
             </div>
-        </collection>
-        <categories class="flex_col gap_lg item_container">
-            <div class="category_title items_between w_full ">
-                <span class="text_xl text_bold">Choose Category</span>
-                <span><a href="./routes/category.html">view all <span class="text-sm">&gt;</span></a></span>
+        </section>
+
+
+        <section class=" caraousel flex_col">
+            <div class="coupletBoxHeader">
+                <h2>Writers</h2>
+                <p>An array of Famouse Writers and literary criticism ever written in Urdu</p>
+                <a class="ebookSeeAll" href="./routes/writers.html">
+                    See All
+                </a>
             </div>
-            <div class="category_grid gap_sm items_center self_center" id="category">
-                <!-- grid cards -->
-                <div class="flex_col gap_sm category_item self_center" id="category">
+            <div class="owl-carousel owl-theme " style="width: 81vw;">
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+        <section class=" caraousel category flex_col ">
+            <div class="coupletBoxHeader">
+                <h2>Category</h2>
+                <p>Chackout various categories of literary </p>
+                <a class="ebookSeeAll" href="./routes/writers.html">
+                    See All
+                </a>
+            </div>
+            <div class="owl-carousel owl-theme " style="width: 80vw;">
+                <div class="item " style="width:200px; ">
                     <a href="./routes/category-data.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon">
                             </div>
 
                             <span class="category_text text_lg text_bold">Sher</span>
@@ -423,38 +473,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
+                <div class="item " style="width:200px; ">
                     <a href="./routes/category-data.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
-                            </div>
-
-                            <span class="category_text text_lg text_bold">Ghazal</span>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="./routes/category-data.html">
-                        <div class="items_left category_box self_center">
-                            <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
-                            </div>
-
-                            <span class="category_text text_lg text_bold">Nazam</span>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="./routes/category-data.html">
-                        <div class="items_left category_box self_center">
-                            <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon">
                             </div>
 
                             <span class="category_text text_lg text_bold">Sher</span>
@@ -462,12 +485,23 @@
                         </div>
                     </a>
                 </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
+                <div class="item " style="width:200px; ">
                     <a href="./routes/category-data.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon">
+                            </div>
+
+                            <span class="category_text text_lg text_bold">Nazm</span>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="item " style="width:200px; " id="category" class="item ">
+                    <a href="./routes/category-data.html">
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon">
                             </div>
 
                             <span class="category_text text_lg text_bold">Ghazal</span>
@@ -475,25 +509,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
+                <div class="item " style="width:200px; ">
                     <a href="./routes/category-data.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
-                            </div>
-
-                            <span class="category_text text_lg text_bold">Nazam</span>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="./routes/category-data.html">
-                        <div class="items_left category_box self_center">
-                            <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon">
                             </div>
 
                             <span class="category_text text_lg text_bold">Sher</span>
@@ -501,12 +521,23 @@
                         </div>
                     </a>
                 </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
+                <div class="item " style="width:200px; ">
                     <a href="./routes/category-data.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon">
+                            </div>
+
+                            <span class="category_text text_lg text_bold">Nazm</span>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="item " style="width:200px; " id="category" class="item ">
+                    <a href="./routes/category-data.html">
+                        <div class="items_left category_box self_center">
+                            <div class="category_image self_center">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon">
                             </div>
 
                             <span class="category_text text_lg text_bold">Ghazal</span>
@@ -514,25 +545,11 @@
                         </div>
                     </a>
                 </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
+                <div class="item " style="width:200px; ">
                     <a href="./routes/category-data.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
-                            </div>
-
-                            <span class="category_text text_lg text_bold">Nazam</span>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="./routes/category-data.html">
-                        <div class="items_left category_box self_center">
-                            <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon">
                             </div>
 
                             <span class="category_text text_lg text_bold">Sher</span>
@@ -540,251 +557,392 @@
                         </div>
                     </a>
                 </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
+                <div class="item " style="width:200px; ">
                     <a href="./routes/category-data.html">
                         <div class="items_left category_box self_center">
                             <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
+                                <img src="./assets/img/feather_light_blue.png" alt="category_icon">
                             </div>
 
-                            <span class="category_text text_lg text_bold">Ghazal</span>
+                            <span class="category_text text_lg text_bold">Nazm</span>
 
                         </div>
                     </a>
                 </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="./routes/category-data.html">
-                        <div class="items_left category_box self_center">
-                            <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
-                            </div>
-
-                            <span class="category_text text_lg text_bold">Nazam</span>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="./routes/category-data.html">
-                        <div class="items_left category_box self_center">
-                            <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
-                            </div>
-
-                            <span class="category_text text_lg text_bold">Sher</span>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="./routes/category-data.html">
-                        <div class="items_left category_box self_center">
-                            <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
-                            </div>
-
-                            <span class="category_text text_lg text_bold">Ghazal</span>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="./routes/category-data.html">
-                        <div class="items_left category_box self_center">
-                            <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
-                            </div>
-
-                            <span class="category_text text_lg text_bold">Nazam</span>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="./routes/category-data.html">
-                        <div class="items_left category_box self_center">
-                            <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
-                            </div>
-
-                            <span class="category_text text_lg text_bold">Sher</span>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="./routes/category-data.html">
-                        <div class="items_left category_box self_center">
-                            <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
-                            </div>
-
-                            <span class="category_text text_lg text_bold">Ghazal</span>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="flex_col gap_sm category_item self_center" id="category">
-                    <a href="./routes/category-data.html">
-                        <div class="items_left category_box self_center">
-                            <div class="category_image self_center">
-                                <img src="./assets/img/feather_light_blue.png" alt="category_icon" width="80"
-                                    height="80">
-                            </div>
-
-                            <span class="category_text text_lg text_bold">Nazam</span>
-
-                        </div>
-                    </a>
-                </div>
-
-
-
-
-
-
 
 
 
 
 
             </div>
-        </categories>
-        <blogs class="flex_col gap_lg item_container">
-            <div class="blogs_title items_between w_full ">
-                <span class="text_xl text_bold">Latest Blogs</span>
-                <span><a href="./routes/blogs.html">view all <span class="text-sm">&gt;</span></a></span>
+        </section>
+        <!-- blog -->
+        <section class=" caraousel latest_blog flex_col ">
+            <div class="coupletBoxHeader">
+                <h2>Latest Blogs</h2>
+                <p>Chackout various categories of literary </p>
+                <a class="ebookSeeAll" href="./routes/writers.html">
+                    See All
+                </a>
             </div>
-            <div class=" latest_blog gap_sm " id="latest_blog">
-                <!-- grid cards -->
-                <a href="./routes/blog-data.html">
+            <div class="owl-carousel owl-theme " style="width: 80vw;">
+
+                <a href="./routes/blog-data.html" class="item" style="width:500px; margin-top: 8px;">
                     <div class="shadow">
                         <div class="latest_blog_image_wrapper">
-                            <img src="https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/TTJJpgjCvlN8eJnOnGKna9gURgPOPjopH5nyTdeN.png"
+                            <img src="https://blog.rekhta.org/wp-content/uploads/2023/10/Artboard-1.png" alt="blog">
+                            <div class=" latest_blog_content flex_col gap_sm">
+                                <h3 class="text_lg text_clamp_1">یون فوسہ: ایک تعارف</h3>
+                                <p class="blog_description text_md" style="direction: rtl;">
+                                    سن 2023ء کا ادب کا نوبیل انعام ناروے کے ادیب یان فاسے (Jon Olav Fosse)نے حاصل کیا۔
+                                    اردو دنیا کے قارئین کے لیے یہ نام اجنبی ہے۔ ذیل میں ان کی شخصیت اور کام کا مختصر
+                                    تعارف پیش ہے۔ :تعارف یان فاسے 29 ستمبر 1959 ء کو ناروے میں پیدا ہوئے۔ان کا بچپن اور
+                                    لڑکپن اسٹین برم نامی قصبے میں بیتا۔ جہاں سات برس کی عمر میں مسلسل ہونے والے حادث
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="./routes/blog-data.html" class="item" style="width:500px; margin-top: 8px;">
+                    <div class="shadow">
+                        <div class="latest_blog_image_wrapper">
+                            <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/22nd-Aug-Blog-Cover.jpg"
                                 alt="blog">
                             <div class=" latest_blog_content flex_col gap_sm">
-                                <h3>बहर #8 बहर-ए-मुतक़ारिब मुसम्मन सालिम</h3>
-                                <p class="blog_description">
-                                    अकेले अकेले कहाँ जा रहे हो मोहम्मद रफ़ी साहब का ये गाना तो आपने सुना ही होगा। क्या आप
-                                    जानते हैं कि ये गाना भी बहर में है? और जिस बहर में है वो उर्दू शायरी की सबसे आसान और
-                                    ख़ूब इस्तेमाल की जाने वाली बहरों में से एक है। बहर सीरीज़ के इस आठवें ब्लॉग में हम बात
+                                <h3 class="text_lg line_clamp_1">Is Urdu a dying language?</h3>
+                                <p class="blog_description text_md">
+                                    In 1977, a well-known journalist and writer late, Kushwant Singh, called Urdu a
+                                    dying language. How did a language with such a rich history become the subject of
+                                    discussions about its ultimate decline? The situation may not be as dire as some
+                                    individuals intentionally portray it to be
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="./routes/blog-data.html" class="item" style="width:500px; margin-top: 8px;">
+                    <div class="shadow">
+                        <div class="latest_blog_image_wrapper">
+                            <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/Artboard-2.png" alt="blog">
+                            <div class=" latest_blog_content flex_col gap_sm">
+                                <h3 class="text_lg line_clamp_1">Mysticism and Sufism in Urdu Poetry: Finding Divinity
+                                    in Verses</h3>
+                                <p class="blog_description text_md">
+                                    Urdu poetry is a realm where words transcend their literal meanings, weaving a
+                                    tapestry of emotions, spirituality, and profound insights. At its heart lies a deep
+                                    connection to mysticism and Sufism, two interwoven threads that have illuminated the
+                                    path of countless poets, leading them on a journey to find divinity within verses.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="./routes/blog-data.html" class="item" style="width:500px; margin-top: 8px;">
+                    <div class="shadow">
+                        <div class="latest_blog_image_wrapper">
+                            <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/Blog-Cover-Azra-Naqvi.jpg"
+                                alt="blog">
+                            <div class=" latest_blog_content flex_col gap_sm">
+                                <h3 class="text_lg line_clamp_1">दिल के मौसम: अज़रा नक़्वी की शायरी</h3>
+                                <p class="blog_description text_md">
+                                    आसी ने ज़िंदगी की महरूमियों को क़बूल ज़रूर किया लेकिन कभी हालात के आगे झुके नहीं. कभी
+                                    ख़ुदकुशी करने की नहीं सोची. मुस्तक़िल उदासियों की सौगात ने आसी को हस्सास से हस्सासतर
+                                    बनाया और वे राह में आने वाले हर अजनबी से पूरे ख़ुलूस और मुहब्बत से मिले और यही वजह है
+                                    कि उनसे मिलने वाला हर अजनबी उनका अपना बन गया.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="./routes/blog-data.html" class="item" style="width:500px; margin-top: 8px;">
+                    <div class="shadow">
+                        <div class="latest_blog_image_wrapper">
+                            <img src="https://blog.rekhta.org/wp-content/uploads/2023/05/%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%DA%A9%DB%8C-%D8%A8%DB%8C%D9%B9%DB%8C-%DB%81%D9%86%D8%AF%D9%88%D8%B3%D8%AA%D8%A7%D9%86-%DA%A9%DB%8C-%D8%A8%DB%81%D9%88-Blog-Cover-1.jpg"
+                                alt="blog">
+                            <div class=" latest_blog_content flex_col gap_sm">
+                                <h3 class="text_lg line_clamp_1">ایران کی بیٹی ہندوستان کی بہو
+                                </h3>
+                                <p class="blog_description text_md">
+                                    अकेले अकेले कहाँ जा रहे हो मोहम्मद रफ़ी साहब का ये गाना तो आपने सुना ही होगा।
+                                    क्या आप
+                                    जानते हैं कि ये गाना भी बहर में है? और जिस बहर में है वो उर्दू शायरी की सबसे
+                                    आसान और
+                                    ख़ूब इस्तेमाल की जाने वाली बहरों में से एक है। बहर सीरीज़ के इस आठवें ब्लॉग में हम
+                                    बात
                                     करने जा रहे हैं इसी गाने की बहर बहर-ए-मुतक़ा
                                 </p>
                             </div>
                         </div>
                     </div>
+
                 </a>
-                <a href="./routes/blog-data.html">
+                <a href="./routes/blog-data.html" class="item" style="width:500px; margin-top: 8px;">
                     <div class="shadow">
                         <div class="latest_blog_image_wrapper">
                             <img src="https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/TTJJpgjCvlN8eJnOnGKna9gURgPOPjopH5nyTdeN.png"
                                 alt="blog">
                             <div class=" latest_blog_content flex_col gap_sm">
-                                <h3>बहर #8 बहर-ए-मुतक़ारिब मुसम्मन सालिम</h3>
-                                <p class="blog_description">
-                                    अकेले अकेले कहाँ जा रहे हो मोहम्मद रफ़ी साहब का ये गाना तो आपने सुना ही होगा। क्या आप
-                                    जानते हैं कि ये गाना भी बहर में है? और जिस बहर में है वो उर्दू शायरी की सबसे आसान और
-                                    ख़ूब इस्तेमाल की जाने वाली बहरों में से एक है। बहर सीरीज़ के इस आठवें ब्लॉग में हम बात
+                                <h3 class="text_lg line_clamp_1">बहर #8 बहर-ए-मुतक़ारिब मुसम्मन सालिम</h3>
+                                <p class="blog_description text_md">
+                                    अकेले अकेले कहाँ जा रहे हो मोहम्मद रफ़ी साहब का ये गाना तो आपने सुना ही होगा।
+                                    क्या आप
+                                    जानते हैं कि ये गाना भी बहर में है? और जिस बहर में है वो उर्दू शायरी की सबसे
+                                    आसान और
+                                    ख़ूब इस्तेमाल की जाने वाली बहरों में से एक है। बहर सीरीज़ के इस आठवें ब्लॉग में हम
+                                    बात
                                     करने जा रहे हैं इसी गाने की बहर बहर-ए-मुतक़ा
                                 </p>
                             </div>
                         </div>
                     </div>
+
                 </a>
-            </div><a href="/blog?बहर" #8="" बहर-ए-मुतक़ारिब="" मुसम्मन="" सालिम="">
-            </a>
-        </blogs>
-        <writers class="flex_col gap_lg item_container">
-            <div class="mood_title items_between w_full ">
-                <span class="text_xl text_bold">Writers</span>
-                <span><a href="/routes/writers.html">view all <span class="text-sm">&gt;</span></a></span>
-            </div>
+                <a href="./routes/blog-data.html" class="item" style="width:500px; margin-top: 8px;">
+                    <div class="shadow">
+                        <div class="latest_blog_image_wrapper">
+                            <img src="https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/TTJJpgjCvlN8eJnOnGKna9gURgPOPjopH5nyTdeN.png"
+                                alt="blog">
+                            <div class=" latest_blog_content flex_col gap_sm">
+                                <h3 class="text_lg line_clamp_1">बहर #8 बहर-ए-मुतक़ारिब मुसम्मन सालिम</h3>
+                                <p class="blog_description text_md">
+                                    अकेले अकेले कहाँ जा रहे हो मोहम्मद रफ़ी साहब का ये गाना तो आपने सुना ही होगा।
+                                    क्या आप
+                                    जानते हैं कि ये गाना भी बहर में है? और जिस बहर में है वो उर्दू शायरी की सबसे
+                                    आसान और
+                                    ख़ूब इस्तेमाल की जाने वाली बहरों में से एक है। बहर सीरीज़ के इस आठवें ब्लॉग में हम
+                                    बात
+                                    करने जा रहे हैं इसी गाने की बहर बहर-ए-मुतक़ा
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="./routes/blog-data.html" class="item" style="width:500px; margin-top: 8px;">
+                    <div class="shadow">
+                        <div class="latest_blog_image_wrapper">
+                            <img src="https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/TTJJpgjCvlN8eJnOnGKna9gURgPOPjopH5nyTdeN.png"
+                                alt="blog">
+                            <div class=" latest_blog_content flex_col gap_sm">
+                                <h3 class="text_lg line_clamp_1">बहर #8 बहर-ए-मुतक़ारिब मुसम्मन सालिम</h3>
+                                <p class="blog_description text_md">
+                                    अकेले अकेले कहाँ जा रहे हो मोहम्मद रफ़ी साहब का ये गाना तो आपने सुना ही होगा।
+                                    क्या आप
+                                    जानते हैं कि ये गाना भी बहर में है? और जिस बहर में है वो उर्दू शायरी की सबसे
+                                    आसान और
+                                    ख़ूब इस्तेमाल की जाने वाली बहरों में से एक है। बहर सीरीज़ के इस आठवें ब्लॉग में हम
+                                    बात
+                                    करने जा रहे हैं इसी गाने की बहर बहर-ए-मुतक़ा
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="./routes/blog-data.html" class="item" style="width:500px; margin-top: 8px;">
+                    <div class="shadow">
+                        <div class="latest_blog_image_wrapper">
+                            <img src="https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/TTJJpgjCvlN8eJnOnGKna9gURgPOPjopH5nyTdeN.png"
+                                alt="blog">
+                            <div class=" latest_blog_content flex_col gap_sm">
+                                <h3 class="text_lg line_clamp_1">बहर #8 बहर-ए-मुतक़ारिब मुसम्मन सालिम</h3>
+                                <p class="blog_description text_md">
+                                    अकेले अकेले कहाँ जा रहे हो मोहम्मद रफ़ी साहब का ये गाना तो आपने सुना ही होगा।
+                                    क्या आप
+                                    जानते हैं कि ये गाना भी बहर में है? और जिस बहर में है वो उर्दू शायरी की सबसे
+                                    आसान और
+                                    ख़ूब इस्तेमाल की जाने वाली बहरों में से एक है। बहर सीरीज़ के इस आठवें ब्लॉग में हम
+                                    बात
+                                    करने जा रहे हैं इसी गाने की बहर बहर-ए-मुतक़ा
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="./routes/blog-data.html" class="item" style="width:500px; margin-top: 8px;">
+                    <div class="shadow">
+                        <div class="latest_blog_image_wrapper">
+                            <img src="https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/TTJJpgjCvlN8eJnOnGKna9gURgPOPjopH5nyTdeN.png"
+                                alt="blog">
+                            <div class=" latest_blog_content flex_col gap_sm">
+                                <h3 class="text_lg line_clamp_1">बहर #8 बहर-ए-मुतक़ारिब मुसम्मन सालिम</h3>
+                                <p class="blog_description text_md">
+                                    अकेले अकेले कहाँ जा रहे हो मोहम्मद रफ़ी साहब का ये गाना तो आपने सुना ही होगा।
+                                    क्या आप
+                                    जानते हैं कि ये गाना भी बहर में है? और जिस बहर में है वो उर्दू शायरी की सबसे
+                                    आसान और
+                                    ख़ूब इस्तेमाल की जाने वाली बहरों में से एक है। बहर सीरीज़ के इस आठवें ब्लॉग में हम
+                                    बात
+                                    करने जा रहे हैं इसी गाने की बहर बहर-ए-मुतक़ा
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </a>
 
 
-            <div class="collection_grid gap_sm items_center" id="writer">
-                <!-- grid cards -->
-                <div class="flex_col gap_sm ">
-                    <a href="../routes/writer-profile.html" hafi="">
-                        <div class="items_center collection_box shadow">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/9JXQE0wy15H4jGOdJJogw20dhBy9CmNQBbenTEZ0.jpg"
-                                alt="Tehzeeb" hafi="">
-                        </div>
-                    </a>
-                    <span>Tehzeeb Hafi</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="../routes/writer-profile.html" ellia="">
-                        <div class="items_center collection_box shadow">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/kMtj4kd3xfXfEI4xNAwGE77hYivNKU5RN6AXroHR.jpg"
-                                alt="jaun" ellia="">
-                        </div>
-                    </a>
-                    <span>jaun Ellia</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="../routes/writer-profile.html" zoryun="">
-                        <div class="items_center collection_box shadow">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/lNKHFTFGfGJ7OCRnZwpvjSCvyXqijoMBgUmgOhmb.jpg"
-                                alt="Ali" zoryun="">
-                        </div>
-                    </a>
-                    <span>Ali Zoryun</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="../routes/writer-profile.html" ali="">
-                        <div class="items_center collection_box shadow">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/wiwbyvSKwxFWedde4VgBBKdUhZFctM6Y2f3EnHcT.jpg"
-                                alt="Zubair" ali="">
-                        </div>
-                    </a>
-                    <span>Zubair Ali</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="../routes/writer-profile.html" indauri="">
-                        <div class="items_center collection_box shadow">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/IPtyfoMSJWc3iILr9x1U8gcaZAoyMvmpDHqFoHla.png"
-                                alt="Rahat" indauri="">
-                        </div>
-                    </a>
-                    <span>Rahat Indauri</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="../routes/writer-profile.html" hafi="">
-                        <div class="items_center collection_box shadow">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/9JXQE0wy15H4jGOdJJogw20dhBy9CmNQBbenTEZ0.jpg"
-                                alt="Tehzeeb" hafi="">
-                        </div>
-                    </a>
-                    <span>Tehzeeb Hafi</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="../routes/writer-profile.html" ellia="">
-                        <div class="items_center collection_box shadow">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/kMtj4kd3xfXfEI4xNAwGE77hYivNKU5RN6AXroHR.jpg"
-                                alt="jaun" ellia="">
-                        </div>
-                    </a>
-                    <span>jaun Ellia</span>
-                </div>
-                <div class="flex_col gap_sm ">
-                    <a href="../routes/writer-profile.html" zoryun="">
-                        <div class="items_center collection_box shadow">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/lNKHFTFGfGJ7OCRnZwpvjSCvyXqijoMBgUmgOhmb.jpg"
-                                alt="Ali" zoryun="">
-                        </div>
-                    </a>
-                    <span>Ali Zoryun</span>
-                </div>
             </div>
-        </writers>
-        <thoughteoftheday class="w_full items_centers self_center">
+        </section>
+
+
+
+
+        <section class=" caraousel flex_col item_container ">
+            <div class="coupletBoxHeader">
+                <h2>Writers</h2>
+                <p>An array of Famouse Writers and literary criticism ever written in Urdu</p>
+                <a class="ebookSeeAll" href="./routes/writers.html">
+                    See All
+                </a>
+            </div>
+            <div class="owl-carousel owl-theme " style="width: 81vw;">
+
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg" style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg"
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg" style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg"
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg" style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg"
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg" style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg"
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg" style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg"
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg" style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg"
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg" style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg"
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg" style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg"
+                        style="padding: .5rem;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div class=" mb_lg" style="padding: .5rem; box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                            alt="">
+                        <p style="margin-top: 5px;">Sir Sayed Ahmed Khan</p>
+                    </div>
+                </a>
+
+
+            </div>
+        </section>
+        <section class="w_full items_centers self_center">
             <section class="w_full items_centers self_center">
                 <div class=" items_center self_center">
                     <div class="thought_of_the_day flex_col gap_lg" id="thought_of_the_day">
@@ -805,7 +963,7 @@
                     </div>
                 </div>
             </section>
-        </thoughteoftheday>
+        </section>
         <appdownload class="w_full items_center self_center">
             <div class="w_full app_download_wrapper gap_lg">
 
@@ -843,7 +1001,48 @@
     </footer>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: false,
+            margin: 10,
+            nav: true,
+            autoWidth: true,
+            items: 4,
+            responsive: {
+                0: {
+                    items: 2,
+                    dots: true,
+                },
+                486: {
+                    items: 2.3,
+                    dots: true,
+                },
+                728: {
+                    items: 3.3,
+                    dots: true,
+                },
+                900: {
+                    items: 4.5,
+                    dots: true,
+                },
+                1200: {
+                    items: 5.5,
+                    dots: false,
 
+                },
+                1300: {
+                    items: 6.5,
+                    dots: false,
+                }
+            }
+        })
+    </script>
 
     <script>
         const swiper = new Swiper(".swiper", {

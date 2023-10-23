@@ -38,7 +38,7 @@ body {
     height: 100dvh;
     position: relative;
     font-family: 'Inter', sans-serif;
-    background-color: #f5f5fa;
+
 }
 
 main {
@@ -49,7 +49,11 @@ main {
     flex-direction: column;
     justify-content: start;
     justify-items: center;
-    padding-bottom: 10rem;
+    padding-bottom: 0rem;
+    gap: 20rem;
 }
 
-
+main>section {
+    margin-top: 2rem;
+    gap: 1rem;
+}

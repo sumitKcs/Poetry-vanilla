@@ -11,6 +11,7 @@
 
 
 .thought_of_the_day p {
+    padding: 1rem;
     text-align: justify;
     word-spacing: 3px;
     line-height: 2rem;
