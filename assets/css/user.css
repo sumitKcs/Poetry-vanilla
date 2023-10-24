@@ -169,6 +169,10 @@
     display: none;
 }
 
+.user_profile.owl-carousel.hero_section_image_slider {
+    width: 80vw !important;
+}
+
 @media only screen and (max-width: 1024px) {
 
     .user_wrapper {
@@ -242,6 +246,10 @@
         justify-content: center;
         justify-items: center;
 
+    }
+
+    .user_profile.owl-carousel.hero_section_image_slider {
+        width: 100vw !important;
     }
 }
 
