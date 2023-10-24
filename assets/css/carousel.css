@@ -34,7 +34,9 @@
     font-display: swap;
 }
 
-
+.owl-theme {
+    z-index: 1;
+}
 
 .owl-theme .owl-nav {
     text-align: center;

@@ -6,7 +6,7 @@ header {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 99;
     background-color: white;
     column-gap: .5rem;
     font-family: 'LatoXBold', 'NotoDevanagari', 'MehrNastaliqRegular', 'NotoDevanagariRegular';
@@ -71,6 +71,7 @@ header .search_wrapper input {
 header select,
 header select:focus {
     width: 60px;
+    height: fit-content;
     border: transparent;
     background: transparent;
     outline: transparent;
@@ -78,6 +79,7 @@ header select:focus {
 
 header select option {
     padding: 0 .5rem;
+    height: 5rem;
 }
 
 
@@ -149,7 +151,20 @@ header select option {
         display: none;
     }
 
-    header .action_buttons {
+
+
+    header .login,
+    header .header_buttons {
         display: none;
     }
+
+    .action_buttons :first-child {
+        position: absolute;
+        right: 6px;
+        top: .5rem;
+        z-index: 20;
+    }
+
+
+
 }
