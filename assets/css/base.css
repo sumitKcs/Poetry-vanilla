@@ -71,6 +71,6 @@ main>section {
 
 * button,
 * button:focus {
-    border: transparent !important;
-    outline: transparent !important;
+    border: transparent;
+    outline: transparent;
 }
