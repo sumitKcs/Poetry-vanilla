@@ -10,7 +10,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lekhak</title>
         <meta name="description" content="A place to join poetry world">
+        <link rel="stylesheet" href="../assets/css/global.css">
         <link rel="stylesheet" href="../assets/css/user.css">
+
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/a12bd5cdcb.js" crossorigin="anonymous"></script>
         <script defer src="../assets/js/app.js"></script>
@@ -22,10 +24,11 @@
                 <div class="mobile_menu icon_xl" id="menu_icon">
                         <i class="fa-solid fa-bars"></i>
                 </div>
-                <a href="/" class="logo items_left">
+                <div href="/" class="logo items_left  items_between">
                         <img src="https://i.postimg.cc/3RvKKHPh/logo.png" alt="logo">
-                </a>
-                <nav class="items_center text_large" id="main_navigation">
+
+                </div>
+                <nav class="items_left self_center text_md gap_md" id="main_navigation">
                         <a key="collection" href="/routes/collections.html"> Collections </a>
                         <a key="Shayari" href="/routes/mood.html"> Moods </a>
                         <a key="Writers" href="/routes/category.html"> Categories </a>
@@ -33,7 +36,33 @@
                         <a key="Posts" href="/routes/blog.html"> Blog </a>
 
                 </nav>
-                <a href="/routes/login.html" class="login items_right text_large">Login</a>
+
+                <div class="search_wrapper items_right self_center" style="width: 100%; ">
+                        <input type="text" placeholder="mohabbat, zindagi, raat" width="60%">
+                        <span class="search_icon icon_xl"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+                <div class="action_buttons items_center self_center text_large gap_lg">
+                        <div class="self_center" style="padding: 0 .5rem;">
+                                <select name="select_language custom-select" id="select_language">
+                                        <option value="english" selected>ENG</option>
+                                        <option value="hindi">HIN</option>
+                                        <option value="urdu">URD</option>
+                                </select>
+                        </div>
+                        <a href="/routes/login.html" class="login items_center self_center text_large">
+                                <img src="./assets/img/user.png" alt="user logo" height="50px" width="50px">
+                        </a>
+
+                        <div class=" items_right gap_lg text_sm">
+                                <button
+                                        style="padding: 2px 1rem; border-radius: .3rem; border:2px solid var(--primary-color); background: var(--primary-color); letter-spacing: 1.5px; color: rgb(255, 255, 255);">
+                                        Download App</button>
+                                <button
+                                        style="padding: 2px 1rem; border-radius: .3rem; border:2px solid var(--primary-color); background: white;letter-spacing: 1.5px;">
+                                        Donate</button>
+                        </div>
+                </div>
+
         </header>
 
         <!-- mobile menu -->
@@ -45,18 +74,24 @@
                         <button class="close_button text_lg text_bold">X</button>
                 </div>
                 <div class="side_navigation_col1 gap_sm">
-                        <a href="/routes/search" class="items_left gap_sm "><i
-                                        class="fa-solid fa-magnifying-glass "></i><span>Search</span>
-                        </a>
-                        <a href="/routes/writers" class="items_left gap_sm"><i
+                        <!-- <a href="/routes/search" class="items_left gap_sm "><i
+                    class="fa-solid fa-magnifying-glass "></i><span>Search</span>
+            </a> -->
+                        <a href="./routes/writers.html" class="items_left gap_sm"><i
                                         class="fa-solid fa-feather-pointed "></i><span>Writers</span></a>
-                        <a href="/routes/blog" class="items_left gap_sm"><i
+                        <a href="./routes/blogs.html" class="items_left gap_sm"><i
                                         class="fa-regular fa-newspaper "></i><span>Blog</span></a>
-                        <a href="/routes/moods" class="items_left gap_sm"><i
+                        <a href="./routes/mood.html" class="items_left gap_sm"><i
                                         class="fa-regular fa-face-smile-wink "></i><span>Shayari
                                         Moods</span></a>
-                        <a href="/routes/store" class="items_left gap_sm"><i class="fa-solid fa-shop"></i><span>Store
-                                </span></a>
+                        <a href="./routes/mood.html" class="items_left gap_sm">
+                                <i class="fa-solid fa-grip"></i><span>
+                                        Categories</span></a>
+                        <a href="./routes/explore.html" class="items_left gap_sm">
+                                <i class="fa-solid fa-compass"></i><span>
+                                        Explore</span></a>
+                        <!-- <a href="/routes/store" class="items_left gap_sm"><i class="fa-solid fa-shop"></i><span>Store
+                </span></a> -->
                         <a href="https://whatsapp.com/channel/0029Va8lsG74tRrzqkQjUC3C" class="items_left gap_sm"><i
                                         class="fa-brands fa-whatsapp "></i><span>Whatsapp Community</span>
                         </a>
@@ -134,9 +169,17 @@
                         <!-- user tabs: posts, likes, saved, -->
                         <div class="user_content_wrapper shadow">
                                 <div class=" tab" onclick="firstTabHandler(event)">My Contents</div>
-                                <div class=" tab" onclick="secontTabHandler(event)">Liked</div>
+                                <div class=" tab" onclick="secondTabHandler(event)">Liked</div>
                                 <div class=" tab" onclick="thirdTabHandler(event)">Saved</div>
-
+                                <!-- user section: filter chips -->
+                        </div>
+                        <div class="items_center gap_lg">
+                                <button onclick="firstChipHandler(event)" class="text_md"
+                                        style="padding: .5rem 1rem; background:var(--primary-color);color: white; border-radius: .4rem;">Nazm</button>
+                                <button onclick="secondChipHandler(event)" class="text_md"
+                                        style="padding: .5rem 1rem; background:var(--primary-color);color: white; border-radius: .4rem;">Ghazal</button>
+                                <button onclick="thirdChipHandler(event)" class="text_md"
+                                        style="padding: .5rem 1rem; background:var(--primary-color);color: white; border-radius: .4rem;">Sher</button>
                         </div>
 
 
@@ -1436,6 +1479,1298 @@
 
 
                         </div>
+
+                        <!-- chip 1  item cards-->
+                        <div class="user_content_item_wrapper " id="chip_1">
+
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Princess
+                                                                Diana</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon_xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon_xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Princess
+                                                                Diana</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div key="2" class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Princess
+                                                                Diana</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Princess
+                                                                Diana</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Princess
+                                                                Diana</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Princess
+                                                                Diana</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Princess
+                                                                Diana</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Princess
+                                                                Diana</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Princess
+                                                                Diana</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Princess
+                                                                Diana</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Princess
+                                                                Diana</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Princess
+                                                                Diana</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Princess
+                                                                Diana</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Princess
+                                                                Diana</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+
+
+                        </div>
+
+                        <!-- chip 2 item card -->
+                        <div class="user_content_item_wrapper " id="chip_2">
+
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/WbMgySYr/cool-profile-picture.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Mr.
+                                                                Jonathan</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/WbMgySYr/cool-profile-picture.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Mr.
+                                                                Jonathan</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/WbMgySYr/cool-profile-picture.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Mr.
+                                                                Jonathan</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/WbMgySYr/cool-profile-picture.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Mr.
+                                                                Jonathan</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/WbMgySYr/cool-profile-picture.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Mr.
+                                                                Jonathan</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/WbMgySYr/cool-profile-picture.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Mr.
+                                                                Jonathan</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/WbMgySYr/cool-profile-picture.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Mr.
+                                                                Jonathan</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/WbMgySYr/cool-profile-picture.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Mr.
+                                                                Jonathan</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/WbMgySYr/cool-profile-picture.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Mr.
+                                                                Jonathan</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/WbMgySYr/cool-profile-picture.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Mr.
+                                                                Jonathan</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/WbMgySYr/cool-profile-picture.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Mr.
+                                                                Jonathan</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/WbMgySYr/cool-profile-picture.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">Mr.
+                                                                Jonathan</span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+
+
+                        </div>
+
+                        <!-- chip 3 item card -->
+                        <div class="user_content_item_wrapper " id="chip_3">
+
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/vZskRqYd/pexels-chloe-1043471.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">James
+                                                                Heisenberg
+                                                        </span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/vZskRqYd/pexels-chloe-1043471.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">James
+                                                                Heisenberg
+                                                        </span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/vZskRqYd/pexels-chloe-1043471.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">James
+                                                                Heisenberg
+                                                        </span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/vZskRqYd/pexels-chloe-1043471.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">James
+                                                                Heisenberg
+                                                        </span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/vZskRqYd/pexels-chloe-1043471.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">James
+                                                                Heisenberg
+                                                        </span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/vZskRqYd/pexels-chloe-1043471.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">James
+                                                                Heisenberg
+                                                        </span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/vZskRqYd/pexels-chloe-1043471.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">James
+                                                                Heisenberg
+                                                        </span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/vZskRqYd/pexels-chloe-1043471.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">James
+                                                                Heisenberg
+                                                        </span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/vZskRqYd/pexels-chloe-1043471.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">James
+                                                                Heisenberg
+                                                        </span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+                                <div class="user_content_card shadow">
+                                        <a href="/diana/post/102" class="flex_col gap_md text_justify">
+                                                <div class="items_left gap_sm">
+                                                        <div class="author_image"><img
+                                                                        src="https://i.postimg.cc/vZskRqYd/pexels-chloe-1043471.jpg"
+                                                                        alt="author_image" width="40" height="40">
+                                                        </div>
+                                                        <span class="author_name self_center text_xl">James
+                                                                Heisenberg
+                                                        </span>
+                                                </div>
+                                                <div class="content_text self_center items_center text_center ">
+                                                        <span>फिर एक रोज़ मुक़द्दर
+                                                                से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़" फिर एक
+                                                                रोज़
+                                                                मुक़द्दर से
+                                                                हार मानी गयी
+                                                                ज़बीन चूम के बोला गया "ख़ुदा हाफ़िज़"</span>
+                                                </div>
+                                        </a>
+                                        <div class="items_between content_action_buttons">
+                                                <span onclick="likeHandler(event)" class="like_button cursor_pointer"
+                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                                id="meow"></i></span>
+                                                <span class="comment_button cursor_pointer" id="comment_button"><i
+                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
+                                                        id="save_button"><i class="fa-regular fa-bookmark"></i></span>
+                                                <span class="share_button cursor_pointer" id="share_button"><i
+                                                                class="fa-regular fa-share-from-square icon-xl"></i></span>
+                                                <span class="download_button cursor_pointer" id="download_button"><i
+                                                                class="fa-solid fa-download icon-xl"></i></i></span>
+                                        </div>
+                                </div>
+
+
+                        </div>
+
 
 
 

@@ -7,6 +7,9 @@ const tab_container = document.getElementById("tab_container");
 const tab_1 = document.getElementById("tab_1");
 const tab_2 = document.getElementById("tab_2");
 const tab_3 = document.getElementById("tab_3");
+const chip_1 = document.getElementById("chip_1");
+const chip_2 = document.getElementById("chip_2");
+const chip_3 = document.getElementById("chip_3");
 
 // toggle mobile menu
 menu_icon.addEventListener("click", () => {
@@ -47,13 +50,15 @@ if (tab_1) {
   tab_container.appendChild(tab_1);
 }
 
+// tabs handler - profile section
+
 function firstTabHandler(e) {
   tab_1.style.display = "grid";
   tab_container.innerHTML = "";
   tab_container.appendChild(tab_1);
 }
 
-function secontTabHandler(e) {
+function secondTabHandler(e) {
   tab_2.style.display = "grid";
   tab_container.innerHTML = "";
   tab_container.appendChild(tab_2);
@@ -62,4 +67,22 @@ function thirdTabHandler(e) {
   tab_3.style.display = "grid";
   tab_container.innerHTML = "";
   tab_container.appendChild(tab_3);
+}
+
+// chips handler - profile section
+function firstChipHandler(e) {
+  chip_1.style.display = "grid";
+  tab_container.innerHTML = "";
+  tab_container.appendChild(chip_1);
+}
+
+function secondChipHandler(e) {
+  chip_2.style.display = "grid";
+  tab_container.innerHTML = "";
+  tab_container.appendChild(chip_2);
+}
+function thirdChipHandler(e) {
+  chip_3.style.display = "grid";
+  tab_container.innerHTML = "";
+  tab_container.appendChild(chip_3);
 }
