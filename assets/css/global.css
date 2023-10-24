@@ -13,6 +13,55 @@
 @import url(carousel.css);
 @import url(footer.css);
 
+
+@font-face {
+    font-family: merriweather_extendedLtIt;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/merriweatherextended-lightitalic.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/merriweatherextended-lightitalic-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/merriweatherextended-lightitalic-webfont.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: merriweather_extendedLtIt;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/merriweatherextended-lightitalic.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/merriweatherextended-lightitalic-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/merriweatherextended-lightitalic-webfont.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: lailaregular;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/laila-regular.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/laila-regular-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/laila-regular-webfont.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: lailaregular;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/laila-regular.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/laila-regular-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/laila-regular-webfont.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: NotoNastaliqUrdu;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: NotoNastaliqUrdu;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: MehrNastaliqRegular;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: MehrNastaliqRegular;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.woff) format("woff");
+    font-display: swap;
+}
+
 @font-face {
     font-family: LatoXBold;
     src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-bold.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-bold-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-bold-webfont.woff) format("woff");
@@ -196,6 +245,7 @@
     --fourth-color: #3795BD;
     --background-one: #f5f5fa;
     --background-two: white;
+    --card-color: #089efc0a;
     --border-radius: .3rem;
     --gap-2xl: 3rem;
     --gap-2xl: 2.5rem;

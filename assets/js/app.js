@@ -21,14 +21,14 @@ sidebar_close_button.addEventListener("click", () => {
 });
 
 function likeHandler(e) {
-  like_button.innerHTML = `<i class="fa-solid fa-heart  icon-xl text_red"></i>`;
+  like_button.innerHTML = `<i class="fa-solid fa-heart text_red"></i>`;
   like_button.removeEventListener("click", likeHandler);
   like_button.addEventListener("click", filledLikeHandler);
 }
 
 function filledLikeHandler(e) {
   like_button.innerHTML = `<i
-  class="fa-regular fa-heart icon-xl">`;
+  class="fa-regular fa-heart">`;
   like_button.removeEventListener("click", filledLikeHandler);
   like_button.addEventListener("click", likeHandler);
 }
@@ -41,7 +41,7 @@ function saveHandler(e) {
 }
 
 function filledSaveHandler(e) {
-  save_button.innerHTML = `<i class="fa-regular fa-bookmark icon-xl"></i>`;
+  save_button.innerHTML = `<i class="fa-regular fa-bookmark"></i>`;
   save_button.removeEventListener("click", filledSaveHandler);
   save_button.addEventListener("click", saveHandler);
 }

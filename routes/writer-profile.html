@@ -11,7 +11,12 @@
         <title>Lekhak</title>
         <meta name="description" content="A place to join poetry world">
         <link rel="stylesheet" href="../assets/css/global.css">
+        <link rel="stylesheet" href="../assets/css/carousel.css">
         <link rel="stylesheet" href="../assets/css/user.css">
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+                integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/a12bd5cdcb.js" crossorigin="anonymous"></script>
@@ -122,6 +127,8 @@
         </bottom_menu>
 
         <main>
+
+
                 <section class="user">
                         <div class="user_wrapper shadow">
                                 <a href="/routes/login" class="items_right"> <i
@@ -233,16 +240,16 @@
                                         </a>
                                         <div class="items_between content_action_buttons">
                                                 <span onclick="likeHandler(event)" class="like_button cursor_pointer"
-                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                        id="like_button"><i class="fa-regular fa-heart"
                                                                 id="meow"></i></span>
                                                 <span class="comment_button cursor_pointer" id="comment_button"><i
-                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                                class="fa-regular fa-comment"></i></span>
                                                 <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
                                                         id="save_button"><i class="fa-regular fa-bookmark"></i></span>
                                                 <span class="share_button cursor_pointer" id="share_button"><i
-                                                                class="fa-regular fa-share-from-square icon_xl"></i></span>
+                                                                class="fa-regular fa-share-from-square "></i></span>
                                                 <span class="download_button cursor_pointer" id="download_button"><i
-                                                                class="fa-solid fa-download icon_xl"></i></i></span>
+                                                                class="fa-solid fa-download"></i></i></span>
                                         </div>
                                 </div>
                                 <div class="user_content_card shadow">
@@ -1524,16 +1531,16 @@
                                         </a>
                                         <div class="items_between content_action_buttons">
                                                 <span onclick="likeHandler(event)" class="like_button cursor_pointer"
-                                                        id="like_button"><i class="fa-regular fa-heart icon-xl"
+                                                        id="like_button"><i class="fa-regular fa-heart"
                                                                 id="meow"></i></span>
                                                 <span class="comment_button cursor_pointer" id="comment_button"><i
-                                                                class="fa-regular fa-comment icon-xl"></i></span>
+                                                                class="fa-regular fa-comment"></i></span>
                                                 <span onclick="saveHandler(event)" class="comment_button cursor_pointer"
                                                         id="save_button"><i class="fa-regular fa-bookmark"></i></span>
                                                 <span class="share_button cursor_pointer" id="share_button"><i
-                                                                class="fa-regular fa-share-from-square icon_xl"></i></span>
+                                                                class="fa-regular fa-share-from-square"></i></span>
                                                 <span class="download_button cursor_pointer" id="download_button"><i
-                                                                class="fa-solid fa-download icon_xl"></i></i></span>
+                                                                class="fa-solid fa-download"></i></i></span>
                                         </div>
                                 </div>
                                 <div class="user_content_card shadow">
@@ -2804,12 +2811,182 @@
                                 <button class="load_more_button">Load More...</button>
                         </div>
 
+
+                </section>
+                <!-- writers -->
+                <section class=" carousel flex_col" style="width: 80%; height: 40vh;">
+                        <!-- cards -->
+                        <div class="coupletBoxHeader">
+                                <h2>Explore More Writers</h2>
+                                <a class="ebookSeeAll" href="./routes/writers.html">
+                                        See All
+                                </a>
+                        </div>
+                        <div class="owl-carousel owl-theme writers_carousel" style="width: 100%;">
+                                <a href="./routes/writer-profile.html" class="item" style="width:200px">
+                                        <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.2);">
+                                                <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                                                        alt="">
+                                                <p class="line_clamp_1" style="margin-top: 3px; text-align: center;">Sir
+                                                        Sayed
+                                                        Ahmed Khan</p>
+                                        </div>
+
+                                </a>
+                                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                                        <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.3);">
+                                                <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                                                        alt="">
+                                                <p class="line_clamp_1" style="margin-top: 5px; text-align: center;">Sir
+                                                        Sayed
+                                                        Ahmed Khan</p>
+                                        </div>
+                                </a>
+                                <a href="./routes/writer-profile.html" class="item" style="width:200px">
+                                        <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.2);">
+                                                <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                                                        alt="">
+                                                <p class="line_clamp_1" style="margin-top: 3px; text-align: center;">Sir
+                                                        Sayed
+                                                        Ahmed Khan</p>
+                                        </div>
+
+                                </a>
+                                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                                        <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.3);">
+                                                <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                                                        alt="">
+                                                <p class="line_clamp_1" style="margin-top: 5px; text-align: center;">Sir
+                                                        Sayed
+                                                        Ahmed Khan</p>
+                                        </div>
+                                </a>
+                                <a href="./routes/writer-profile.html" class="item" style="width:200px">
+                                        <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.2);">
+                                                <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                                                        alt="">
+                                                <p class="line_clamp_1" style="margin-top: 3px; text-align: center;">Sir
+                                                        Sayed
+                                                        Ahmed Khan</p>
+                                        </div>
+
+                                </a>
+                                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                                        <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.3);">
+                                                <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                                                        alt="">
+                                                <p class="line_clamp_1" style="margin-top: 5px; text-align: center;">Sir
+                                                        Sayed
+                                                        Ahmed Khan</p>
+                                        </div>
+                                </a>
+                                <a href="./routes/writer-profile.html" class="item" style="width:200px">
+                                        <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.2);">
+                                                <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                                                        alt="">
+                                                <p class="line_clamp_1" style="margin-top: 3px; text-align: center;">Sir
+                                                        Sayed
+                                                        Ahmed Khan</p>
+                                        </div>
+
+                                </a>
+                                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                                        <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.3);">
+                                                <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                                                        alt="">
+                                                <p class="line_clamp_1" style="margin-top: 5px; text-align: center;">Sir
+                                                        Sayed
+                                                        Ahmed Khan</p>
+                                        </div>
+                                </a>
+                                <a href="./routes/writer-profile.html" class="item" style="width:200px">
+                                        <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.2);">
+                                                <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                                                        alt="">
+                                                <p class="line_clamp_1" style="margin-top: 3px; text-align: center;">Sir
+                                                        Sayed
+                                                        Ahmed Khan</p>
+                                        </div>
+
+                                </a>
+                                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                                        <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.3);">
+                                                <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                                                        alt="">
+                                                <p class="line_clamp_1" style="margin-top: 5px; text-align: center;">Sir
+                                                        Sayed
+                                                        Ahmed Khan</p>
+                                        </div>
+                                </a>
+                                <a href="./routes/writer-profile.html" class="item" style="width:200px">
+                                        <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.2);">
+                                                <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/sir-syed-ahmad-khan_Medium.png"
+                                                        alt="">
+                                                <p class="line_clamp_1" style="margin-top: 3px; text-align: center;">Sir
+                                                        Sayed
+                                                        Ahmed Khan</p>
+                                        </div>
+
+                                </a>
+                                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                                        <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.3);">
+                                                <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/collectionSeries/Prose/mirza-farhatullah-beg_Medium.png"
+                                                        alt="">
+                                                <p class="line_clamp_1" style="margin-top: 5px; text-align: center;">Sir
+                                                        Sayed
+                                                        Ahmed Khan</p>
+                                        </div>
+                                </a>
+                                <!-- dummy card- keep it at last item of each carousel -->
+                                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                                </a>
+                                <!-- dummy card- keep it at last item of each carousel -->
+                        </div>
                 </section>
 
-
         </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+                integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+                integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+                $('.writers_carousel').owlCarousel({
+                        loop: false,
+                        margin: 10,
+                        nav: true,
+                        dots: false,
+                        responsive: {
+                                0: {
+                                        items: 1.3,
+
+                                },
+                                486: {
+                                        items: 2.3,
+
+                                },
+                                728: {
+                                        items: 3.3,
+
+                                },
+                                900: {
+                                        items: 4.5,
+
+                                },
+                                1200: {
+                                        items: 5.5,
 
 
+                                },
+                                1300: {
+                                        items: 6.5,
+
+                                }
+                        }
+                })
+        </script>
 
 
 </body>
