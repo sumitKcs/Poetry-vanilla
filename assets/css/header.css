@@ -6,7 +6,7 @@ header {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 2;
     background-color: white;
     column-gap: .5rem;
     font-family: 'LatoXBold', 'NotoDevanagari', 'MehrNastaliqRegular', 'NotoDevanagariRegular';
