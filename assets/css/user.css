@@ -260,7 +260,7 @@
 
     .user_content_card {
         align-self: center;
-        width: 350px;
+        width: 90vw;
         height: 220px;
         border: qpx solid green;
         display: flex;
