@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lekhak</title>
     <meta name="description" content="A place to join poetry world">
+    <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="../assets/css/collection_data.css">
     <script src="https://kit.fontawesome.com/a12bd5cdcb.js" crossorigin="anonymous"></script>
     <script defer src="../assets/js/app.js"></script>
@@ -87,224 +88,117 @@
     </bottom_menu>
 
     <main>
-        <section class="user">
-            <!-- user tabs: posts, likes, saved, -->
-
-            <div class="flex_col mt_sm gap_md ">
-                <h1 class="collection_title items_center text_center ">{APP_NAME} Writers</h1>
-                <h5 class="collection_description items_center self_center text_center text_lg text_gray">
-                    Lorem Ipsum is
-                    simply
-                    dummy text
-                    of the printing and typesetting
-                    industry. Lorem Ipsum has
-                    been the
-                    industry's standard dummy text ever since the 1500s, </h5>
+        <section class="flex_col_start self_center gap_lg mt_sm" style="width: 80vw; height: fit-content;">
+            <div class="t20SeriesHeader contentListHeader">
+                <h2>TOP-20 URDU SHER SERIES</h2>
+                <p>Carefully assorted selection of top 20 Urdu Shers by distinguished poets that you just can’t
+                    miss out on. Discover the 20 best sher of poets like Mir, Ghalib, Faiz, Jaun, Sahir and
+                    others brought together at one place, making it easy for the readers to access the best of
+                    Urdu sher o shayari.</p>
             </div>
+            <!-- card container -->
 
 
-
-
-
-
-
-            <section class="flex_col_center self_center" id="tab_container">
-                <!-- card container -->
-                <div class="user_content_item_wrapper " id="tab_1">
-
-
-                    <div class="collection_grid gap_sm items_center" id="writer">
-                        <!-- grid cards -->
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" hafi="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/9JXQE0wy15H4jGOdJJogw20dhBy9CmNQBbenTEZ0.jpg"
-                                        alt="Tehzeeb" hafi="">
-                                </div>
-                            </a>
-                            <span>Tehzeeb Hafi</span>
+            <div class="writers_card_wrapper self_center" style="flex-wrap: wrap;width: 80vw;">
+                <!-- grid cards -->
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%;">
+                        <div class="items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/9JXQE0wy15H4jGOdJJogw20dhBy9CmNQBbenTEZ0.jpg"
+                                alt="Tehzeeb" width="100%">
                         </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" ellia="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/kMtj4kd3xfXfEI4xNAwGE77hYivNKU5RN6AXroHR.jpg"
-                                        alt="jaun" ellia="">
-                                </div>
-                            </a>
-                            <span>jaun Ellia</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" zoryun="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/lNKHFTFGfGJ7OCRnZwpvjSCvyXqijoMBgUmgOhmb.jpg"
-                                        alt="Ali" zoryun="">
-                                </div>
-                            </a>
-                            <span>Ali Zoryun</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" ali="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/wiwbyvSKwxFWedde4VgBBKdUhZFctM6Y2f3EnHcT.jpg"
-                                        alt="Zubair" ali="">
-                                </div>
-                            </a>
-                            <span>Zubair Ali</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" indauri="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/IPtyfoMSJWc3iILr9x1U8gcaZAoyMvmpDHqFoHla.png"
-                                        alt="Rahat" indauri="">
-                                </div>
-                            </a>
-                            <span>Rahat Indauri</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" hafi="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/9JXQE0wy15H4jGOdJJogw20dhBy9CmNQBbenTEZ0.jpg"
-                                        alt="Tehzeeb" hafi="">
-                                </div>
-                            </a>
-                            <span>Tehzeeb Hafi</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" ellia="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/kMtj4kd3xfXfEI4xNAwGE77hYivNKU5RN6AXroHR.jpg"
-                                        alt="jaun" ellia="">
-                                </div>
-                            </a>
-                            <span>jaun Ellia</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" zoryun="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/lNKHFTFGfGJ7OCRnZwpvjSCvyXqijoMBgUmgOhmb.jpg"
-                                        alt="Ali" zoryun="">
-                                </div>
-                            </a>
-                            <span>Ali Zoryun</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" ali="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/wiwbyvSKwxFWedde4VgBBKdUhZFctM6Y2f3EnHcT.jpg"
-                                        alt="Zubair" ali="">
-                                </div>
-                            </a>
-                            <span>Zubair Ali</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" indauri="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/IPtyfoMSJWc3iILr9x1U8gcaZAoyMvmpDHqFoHla.png"
-                                        alt="Rahat" indauri="">
-                                </div>
-                            </a>
-                            <span>Rahat Indauri</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" hafi="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/9JXQE0wy15H4jGOdJJogw20dhBy9CmNQBbenTEZ0.jpg"
-                                        alt="Tehzeeb" hafi="">
-                                </div>
-                            </a>
-                            <span>Tehzeeb Hafi</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" ellia="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/kMtj4kd3xfXfEI4xNAwGE77hYivNKU5RN6AXroHR.jpg"
-                                        alt="jaun" ellia="">
-                                </div>
-                            </a>
-                            <span>jaun Ellia</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" zoryun="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/lNKHFTFGfGJ7OCRnZwpvjSCvyXqijoMBgUmgOhmb.jpg"
-                                        alt="Ali" zoryun="">
-                                </div>
-                            </a>
-                            <span>Ali Zoryun</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" ali="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/wiwbyvSKwxFWedde4VgBBKdUhZFctM6Y2f3EnHcT.jpg"
-                                        alt="Zubair" ali="">
-                                </div>
-                            </a>
-                            <span>Zubair Ali</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" indauri="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/IPtyfoMSJWc3iILr9x1U8gcaZAoyMvmpDHqFoHla.png"
-                                        alt="Rahat" indauri="">
-                                </div>
-                            </a>
-                            <span>Rahat Indauri</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" hafi="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/9JXQE0wy15H4jGOdJJogw20dhBy9CmNQBbenTEZ0.jpg"
-                                        alt="Tehzeeb" hafi="">
-                                </div>
-                            </a>
-                            <span>Tehzeeb Hafi</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" ellia="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/kMtj4kd3xfXfEI4xNAwGE77hYivNKU5RN6AXroHR.jpg"
-                                        alt="jaun" ellia="">
-                                </div>
-                            </a>
-                            <span>jaun Ellia</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" zoryun="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/lNKHFTFGfGJ7OCRnZwpvjSCvyXqijoMBgUmgOhmb.jpg"
-                                        alt="Ali" zoryun="">
-                                </div>
-                            </a>
-                            <span>Ali Zoryun</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" ali="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/wiwbyvSKwxFWedde4VgBBKdUhZFctM6Y2f3EnHcT.jpg"
-                                        alt="Zubair" ali="">
-                                </div>
-                            </a>
-                            <span>Zubair Ali</span>
-                        </div>
-                        <div class="flex_col gap_sm ">
-                            <a href="../routes/writer-profile.html" indauri="">
-                                <div class="items_center collection_box shadow">
-                                    <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/IPtyfoMSJWc3iILr9x1U8gcaZAoyMvmpDHqFoHla.png"
-                                        alt="Rahat" indauri="">
-                                </div>
-                            </a>
-                            <span>Rahat Indauri</span>
-                        </div>
-
-                    </div>
-
+                    </a>
+                    <span>Tehzeeb Hafi</span>
                 </div>
-            </section>
-
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%;">
+                        <div class="items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/kMtj4kd3xfXfEI4xNAwGE77hYivNKU5RN6AXroHR.jpg"
+                                alt="Tehzeeb" width="100%">
+                        </div>
+                    </a>
+                    <span>Jaun Ellia</span>
+                </div>
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%;">
+                        <div class="items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/lNKHFTFGfGJ7OCRnZwpvjSCvyXqijoMBgUmgOhmb.jpg"
+                                alt="Tehzeeb" width="100%">
+                        </div>
+                    </a>
+                    <span>Ali Zoryun</span>
+                </div>
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%;">
+                        <div class="items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/wiwbyvSKwxFWedde4VgBBKdUhZFctM6Y2f3EnHcT.jpg"
+                                alt="Tehzeeb" width="100%">
+                        </div>
+                    </a>
+                    <span>Zubair Ali</span>
+                </div>
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%;">
+                        <div class="items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/IPtyfoMSJWc3iILr9x1U8gcaZAoyMvmpDHqFoHla.png"
+                                alt="Tehzeeb" width="100%">
+                        </div>
+                    </a>
+                    <span>Rahat Indauri</span>
+                </div>
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%;">
+                        <div class="items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/9JXQE0wy15H4jGOdJJogw20dhBy9CmNQBbenTEZ0.jpg"
+                                alt="Tehzeeb" width="100%">
+                        </div>
+                    </a>
+                    <span>Tehzeeb Hafi</span>
+                </div>
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%;">
+                        <div class="items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/kMtj4kd3xfXfEI4xNAwGE77hYivNKU5RN6AXroHR.jpg"
+                                alt="Tehzeeb" width="100%">
+                        </div>
+                    </a>
+                    <span>Jaun Ellia</span>
+                </div>
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%;">
+                        <div class="items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/lNKHFTFGfGJ7OCRnZwpvjSCvyXqijoMBgUmgOhmb.jpg"
+                                alt="Tehzeeb" width="100%">
+                        </div>
+                    </a>
+                    <span>Ali Zoryun</span>
+                </div>
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%;">
+                        <div class="items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/wiwbyvSKwxFWedde4VgBBKdUhZFctM6Y2f3EnHcT.jpg"
+                                alt="Tehzeeb" width="100%">
+                        </div>
+                    </a>
+                    <span>Zubair Ali</span>
+                </div>
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%;">
+                        <div class="items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/IPtyfoMSJWc3iILr9x1U8gcaZAoyMvmpDHqFoHla.png"
+                                alt="Tehzeeb" width="100%">
+                        </div>
+                    </a>
+                    <span>Rahat Indauri</span>
+                </div>
+            </div>
             <!-- load more button-->
             <div class="load_more items_center self_center mt_lg">
                 <button class="load_more_button">Load More...</button>
             </div>
+        </section>
+
+
 
 
 
