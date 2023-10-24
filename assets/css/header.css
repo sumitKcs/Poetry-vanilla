@@ -161,7 +161,7 @@ header select option {
     .action_buttons :first-child {
         position: absolute;
         right: 6px;
-        top: .5rem;
+        top: .6rem;
         z-index: 20;
     }
 
