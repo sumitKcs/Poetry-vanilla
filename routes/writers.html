@@ -12,6 +12,11 @@
     <meta name="description" content="A place to join poetry world">
     <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="../assets/css/collection_data.css">
+    <link rel="stylesheet" href="../assets/css/carousel.css">
+    <link rel="stylesheet" href="collections.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/a12bd5cdcb.js" crossorigin="anonymous"></script>
     <script defer src="../assets/js/app.js"></script>
 
@@ -23,10 +28,11 @@
         <div class="mobile_menu icon_xl" id="menu_icon">
             <i class="fa-solid fa-bars"></i>
         </div>
-        <a href="/" class="logo items_left">
+        <div href="/" class="logo items_left  items_between">
             <img src="https://i.postimg.cc/3RvKKHPh/logo.png" alt="logo">
-        </a>
-        <nav class="items_center text_large" id="main_navigation">
+
+        </div>
+        <nav class="items_left self_center text_md gap_md" id="main_navigation">
             <a key="collection" href="/routes/collections.html"> Collections </a>
             <a key="Shayari" href="/routes/mood.html"> Moods </a>
             <a key="Writers" href="/routes/category.html"> Categories </a>
@@ -34,7 +40,33 @@
             <a key="Posts" href="/routes/blog.html"> Blog </a>
 
         </nav>
-        <a href="/routes/login.html" class="login items_right text_large">Login</a>
+
+        <div class="search_wrapper items_right self_center" style="width: 100%; ">
+            <input type="text" placeholder="mohabbat, zindagi, raat" width="60%">
+            <span class="search_icon icon_xl"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+        <div class="action_buttons items_center self_center text_large gap_lg">
+            <div class="self_center" style="padding: 0 .5rem;">
+                <select name="select_language custom-select" id="select_language">
+                    <option value="english" selected>ENG</option>
+                    <option value="hindi">HIN</option>
+                    <option value="urdu">URD</option>
+                </select>
+            </div>
+            <a href="/routes/login.html" class="login items_center self_center text_large">
+                <img src="./assets/img/user.png" alt="user logo" height="50px" width="50px">
+            </a>
+
+            <div class=" items_right gap_lg text_sm">
+                <button
+                    style="padding: 2px 1rem; border-radius: .3rem; border:2px solid var(--primary-color); background: var(--primary-color); letter-spacing: 1.5px; color: rgb(255, 255, 255);">
+                    Download App</button>
+                <button
+                    style="padding: 2px 1rem; border-radius: .3rem; border:2px solid var(--primary-color); background: white;letter-spacing: 1.5px;">
+                    Donate</button>
+            </div>
+        </div>
+
     </header>
 
     <!-- mobile menu -->
@@ -47,17 +79,23 @@
         </div>
         <div class="side_navigation_col1 gap_sm">
             <!-- <a href="/routes/search" class="items_left gap_sm "><i
-                    class="fa-solid fa-magnifying-glass "></i><span>Search</span>
-            </a> -->
-            <a href="./routes/writers" class="items_left gap_sm"><i
+                class="fa-solid fa-magnifying-glass "></i><span>Search</span>
+        </a> -->
+            <a href="./routes/writers.html" class="items_left gap_sm"><i
                     class="fa-solid fa-feather-pointed "></i><span>Writers</span></a>
-            <a href="/routes/blog" class="items_left gap_sm"><i
+            <a href="./routes/blogs.html" class="items_left gap_sm"><i
                     class="fa-regular fa-newspaper "></i><span>Blog</span></a>
-            <a href="/routes/moods" class="items_left gap_sm"><i
+            <a href="./routes/mood.html" class="items_left gap_sm"><i
                     class="fa-regular fa-face-smile-wink "></i><span>Shayari
                     Moods</span></a>
-            <a href="/routes/store" class="items_left gap_sm"><i class="fa-solid fa-shop"></i><span>Store
-                </span></a>
+            <a href="./routes/mood.html" class="items_left gap_sm">
+                <i class="fa-solid fa-grip"></i><span>
+                    Categories</span></a>
+            <a href="./routes/explore.html" class="items_left gap_sm">
+                <i class="fa-solid fa-compass"></i><span>
+                    Explore</span></a>
+            <!-- <a href="/routes/store" class="items_left gap_sm"><i class="fa-solid fa-shop"></i><span>Store
+            </span></a> -->
             <a href="https://whatsapp.com/channel/0029Va8lsG74tRrzqkQjUC3C" class="items_left gap_sm"><i
                     class="fa-brands fa-whatsapp "></i><span>Whatsapp Community</span>
             </a>
@@ -88,7 +126,7 @@
     </bottom_menu>
 
     <main>
-        <section class="flex_col_start self_center gap_lg mt_sm" style="width: 80vw; height: fit-content;">
+        <section class="writers flex_col_start self_center gap_lg mt_sm" style="width: 80vw; height: fit-content;">
             <div class="t20SeriesHeader contentListHeader">
                 <h2>TOP-20 URDU SHER SERIES</h2>
                 <p>Carefully assorted selection of top 20 Urdu Shers by distinguished poets that you just can’t
@@ -102,95 +140,353 @@
             <div class="writers_card_wrapper self_center" style="flex-wrap: wrap;width: 80vw;">
                 <!-- grid cards -->
                 <div class="writer_card flex_col gap_sm  ">
-                    <a href="../routes/writer-profile.html" style="width: 100%;">
-                        <div class="items_center shadow" style="width: 100%;">
+                    <a href="../routes/writer-profile.html" style="width: 100%; position: relative;">
+                        <div class="writer_image items_center shadow" style="width: 100%;">
                             <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/9JXQE0wy15H4jGOdJJogw20dhBy9CmNQBbenTEZ0.jpg"
                                 alt="Tehzeeb" width="100%">
                         </div>
-                    </a>
-                    <span>Tehzeeb Hafi</span>
-                </div>
-                <div class="writer_card flex_col gap_sm  ">
-                    <a href="../routes/writer-profile.html" style="width: 100%;">
-                        <div class="items_center shadow" style="width: 100%;">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/kMtj4kd3xfXfEI4xNAwGE77hYivNKU5RN6AXroHR.jpg"
-                                alt="Tehzeeb" width="100%">
+                        <div class="flex_col writer_details self_center  w_full gap_sm"
+                            style="width:100%;  position: absolute; bottom: 0">
+                            <span class="items_center text_white" style="width: 100%;">Tehzeeb
+                                Hafi</span>
+                            <div class="writer_stats items_center" style="background: grey; color: white; width: 100%;">
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Sher</span>
+                                    <span>20</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Nazm</span>
+                                    <span>14</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Ghazal</span>
+                                    <span>25</span>
+                                </div>
+                            </div>
                         </div>
                     </a>
-                    <span>Jaun Ellia</span>
                 </div>
+
+
                 <div class="writer_card flex_col gap_sm  ">
-                    <a href="../routes/writer-profile.html" style="width: 100%;">
-                        <div class="items_center shadow" style="width: 100%;">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/lNKHFTFGfGJ7OCRnZwpvjSCvyXqijoMBgUmgOhmb.jpg"
+                    <a href="../routes/writer-profile.html" style="width: 100%; position: relative;">
+                        <div class="writer_image items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_250x250/https://d1a1sxzos5rrmb.cloudfront.net/users-profile/ft3OfV6S2c2HHUz8MSi6mi3EuX4v515hQpLNQq2E.jpg"
                                 alt="Tehzeeb" width="100%">
                         </div>
-                    </a>
-                    <span>Ali Zoryun</span>
-                </div>
-                <div class="writer_card flex_col gap_sm  ">
-                    <a href="../routes/writer-profile.html" style="width: 100%;">
-                        <div class="items_center shadow" style="width: 100%;">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/wiwbyvSKwxFWedde4VgBBKdUhZFctM6Y2f3EnHcT.jpg"
-                                alt="Tehzeeb" width="100%">
+                        <div class="flex_col writer_details self_center  w_full gap_sm"
+                            style="width:100%;  position: absolute; bottom: 0">
+                            <span class="items_center text_white" style="width: 100%;">
+                                Dharam Barot</span>
+                            <div class="writer_stats items_center" style="background: grey; color: white; width: 100%;">
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Sher</span>
+                                    <span>45</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Nazm</span>
+                                    <span>31</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Ghazal</span>
+                                    <span>73</span>
+                                </div>
+                            </div>
                         </div>
                     </a>
-                    <span>Zubair Ali</span>
                 </div>
+
+
+
                 <div class="writer_card flex_col gap_sm  ">
-                    <a href="../routes/writer-profile.html" style="width: 100%;">
-                        <div class="items_center shadow" style="width: 100%;">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/IPtyfoMSJWc3iILr9x1U8gcaZAoyMvmpDHqFoHla.png"
+                    <a href="../routes/writer-profile.html" style="width: 100%; position: relative;">
+                        <div class="writer_image items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_250x250/https://d1a1sxzos5rrmb.cloudfront.net/users-profile/WFA3TtQl3obNSY0JHO7UjwCJvCi70H2x6OUdQY9I.jpg"
                                 alt="Tehzeeb" width="100%">
                         </div>
-                    </a>
-                    <span>Rahat Indauri</span>
-                </div>
-                <div class="writer_card flex_col gap_sm  ">
-                    <a href="../routes/writer-profile.html" style="width: 100%;">
-                        <div class="items_center shadow" style="width: 100%;">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/9JXQE0wy15H4jGOdJJogw20dhBy9CmNQBbenTEZ0.jpg"
-                                alt="Tehzeeb" width="100%">
+                        <div class="flex_col writer_details self_center  w_full gap_sm"
+                            style="width:100%;  position: absolute; bottom: 0">
+                            <span class="items_center text_white" style="width: 100%;">
+                                Abhijit Singh</span>
+                            <div class="writer_stats items_center" style="background: grey; color: white; width: 100%;">
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Sher</span>
+                                    <span>220</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Nazm</span>
+                                    <span>140</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Ghazal</span>
+                                    <span>8</span>
+                                </div>
+                            </div>
                         </div>
                     </a>
-                    <span>Tehzeeb Hafi</span>
                 </div>
+
+
+
                 <div class="writer_card flex_col gap_sm  ">
-                    <a href="../routes/writer-profile.html" style="width: 100%;">
-                        <div class="items_center shadow" style="width: 100%;">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/kMtj4kd3xfXfEI4xNAwGE77hYivNKU5RN6AXroHR.jpg"
+                    <a href="../routes/writer-profile.html" style="width: 100%; position: relative;">
+                        <div class="writer_image items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_250x250/https://d1a1sxzos5rrmb.cloudfront.net/users-profile/T6ibfAAjT8t6rVEDwl5tB3r5yi6bNdGtikezYj6W.jpg"
                                 alt="Tehzeeb" width="100%">
                         </div>
-                    </a>
-                    <span>Jaun Ellia</span>
-                </div>
-                <div class="writer_card flex_col gap_sm  ">
-                    <a href="../routes/writer-profile.html" style="width: 100%;">
-                        <div class="items_center shadow" style="width: 100%;">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/lNKHFTFGfGJ7OCRnZwpvjSCvyXqijoMBgUmgOhmb.jpg"
-                                alt="Tehzeeb" width="100%">
+                        <div class="flex_col writer_details self_center  w_full gap_sm"
+                            style="width:100%;  position: absolute; bottom: 0">
+                            <span class="items_center text_white" style="width: 100%;">
+                                Saurbh</span>
+                            <div class="writer_stats items_center" style="background: grey; color: white; width: 100%;">
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Sher</span>
+                                    <span>70</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Nazm</span>
+                                    <span>1</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Ghazal</span>
+                                    <span>29</span>
+                                </div>
+                            </div>
                         </div>
                     </a>
-                    <span>Ali Zoryun</span>
                 </div>
+
+
                 <div class="writer_card flex_col gap_sm  ">
-                    <a href="../routes/writer-profile.html" style="width: 100%;">
-                        <div class="items_center shadow" style="width: 100%;">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/wiwbyvSKwxFWedde4VgBBKdUhZFctM6Y2f3EnHcT.jpg"
+                    <a href="../routes/writer-profile.html" style="width: 100%; position: relative;">
+                        <div class="writer_image items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_250x250/https://d1a1sxzos5rrmb.cloudfront.net/users-profile/Eeq8d93a0WwMSvJ9vF8iqUB3AuCUtRfRvQAp8erK.jpg"
                                 alt="Tehzeeb" width="100%">
                         </div>
-                    </a>
-                    <span>Zubair Ali</span>
-                </div>
-                <div class="writer_card flex_col gap_sm  ">
-                    <a href="../routes/writer-profile.html" style="width: 100%;">
-                        <div class="items_center shadow" style="width: 100%;">
-                            <img src="https://poetistic.com/_ipx/f_webp,s_120x120/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/IPtyfoMSJWc3iILr9x1U8gcaZAoyMvmpDHqFoHla.png"
-                                alt="Tehzeeb" width="100%">
+                        <div class="flex_col writer_details self_center  w_full gap_sm"
+                            style="width:100%;  position: absolute; bottom: 0">
+                            <span class="items_center text_white" style="width: 100%;">
+                                Aadi Ratnam Yani</span>
+                            <div class="writer_stats items_center" style="background: grey; color: white; width: 100%;">
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Sher</span>
+                                    <span>30</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Nazm</span>
+                                    <span>3</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Ghazal</span>
+                                    <span>5</span>
+                                </div>
+                            </div>
                         </div>
                     </a>
-                    <span>Rahat Indauri</span>
                 </div>
+
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%; position: relative;">
+                        <div class="writer_image items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_250x250/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/lkLoaJxgI5gHZxhfwwiNzwKHJaRT0UaWjW3u2ZSJ.jpg"
+                                alt="Tehzeeb" width="100%">
+                        </div>
+                        <div class="flex_col writer_details self_center  w_full gap_sm"
+                            style="width:100%;  position: absolute; bottom: 0">
+                            <span class="items_center text_white" style="width: 100%;">
+                                Aadil Suleman</span>
+                            <div class="writer_stats items_center" style="background: grey; color: white; width: 100%;">
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Sher</span>
+                                    <span>45</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Nazm</span>
+                                    <span>64</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Ghazal</span>
+                                    <span>56</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%; position: relative;">
+                        <div class="writer_image items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_250x250/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/VCtFSjXVbqeLVrcn4IdlvkrDoI9ZMSSboZUX4VZI.jpg"
+                                alt="Tehzeeb" width="100%">
+                        </div>
+                        <div class="flex_col writer_details self_center  w_full gap_sm"
+                            style="width:100%;  position: absolute; bottom: 0">
+                            <span class="items_center text_white" style="width: 100%;">
+                                Raza Mansoori</span>
+                            <div class="writer_stats items_center" style="background: grey; color: white; width: 100%;">
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Sher</span>
+                                    <span>40</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Nazm</span>
+                                    <span>54</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Ghazal</span>
+                                    <span>66</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%; position: relative;">
+                        <div class="writer_image items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_250x250/https://d1a1sxzos5rrmb.cloudfront.net/users-profile/WDpdMhvJ4iliXDOE2noeDecOWwtK8v5faCfe59GE.jpg"
+                                alt="Tehzeeb" width="100%">
+                        </div>
+                        <div class="flex_col writer_details self_center  w_full gap_sm"
+                            style="width:100%;  position: absolute; bottom: 0">
+                            <span class="items_center text_white" style="width: 100%;">
+                                Akash Giri</span>
+                            <div class="writer_stats items_center" style="background: grey; color: white; width: 100%;">
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Sher</span>
+                                    <span>56</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Nazm</span>
+                                    <span>5</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Ghazal</span>
+                                    <span>35</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%; position: relative;">
+                        <div class="writer_image items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_250x250/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/PHKVpNBQL6bfiORcuWlJgggQJQWDHpguS3zhbiBO.png"
+                                alt="Tehzeeb" width="100%">
+                        </div>
+                        <div class="flex_col writer_details self_center  w_full gap_sm"
+                            style="width:100%;  position: absolute; bottom: 0">
+                            <span class="items_center text_white" style="width: 100%;">
+                                Ahmad Surror</span>
+                            <div class="writer_stats items_center" style="background: grey; color: white; width: 100%;">
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Sher</span>
+                                    <span>65</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Nazm</span>
+                                    <span>90</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Ghazal</span>
+                                    <span>78</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%; position: relative;">
+                        <div class="writer_image items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_250x250/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/BV2mJ2CKtgRiBur03d4D0VHqLWMSdv8ON5UytiVv.jpg"
+                                alt="Tehzeeb" width="100%">
+                        </div>
+                        <div class="flex_col writer_details self_center  w_full gap_sm"
+                            style="width:100%;  position: absolute; bottom: 0">
+                            <span class="items_center text_white" style="width: 100%;">
+                                Alam</span>
+                            <div class="writer_stats items_center" style="background: grey; color: white; width: 100%;">
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Sher</span>
+                                    <span>5</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Nazm</span>
+                                    <span>9</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Ghazal</span>
+                                    <span>8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%; position: relative;">
+                        <div class="writer_image items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_250x250/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/W2RnwpHQLplEW0Jzb4I03DkB7n89feZxCVrB4Uc2.jpg"
+                                alt="Tehzeeb" width="100%">
+                        </div>
+                        <div class="flex_col writer_details self_center  w_full gap_sm"
+                            style="width:100%;  position: absolute; bottom: 0">
+                            <span class="items_center text_white" style="width: 100%;">
+                                Alok Srivastav</span>
+                            <div class="writer_stats items_center" style="background: grey; color: white; width: 100%;">
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Sher</span>
+                                    <span>78</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Nazm</span>
+                                    <span>47</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Ghazal</span>
+                                    <span>42</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+
+                <div class="writer_card flex_col gap_sm  ">
+                    <a href="../routes/writer-profile.html" style="width: 100%; position: relative;">
+                        <div class="writer_image items_center shadow" style="width: 100%;">
+                            <img src="https://poetistic.com/_ipx/f_webp,s_250x250/https://d1a1sxzos5rrmb.cloudfront.net/writers-profile/MZPMIs1p1lUukEOhsIWW3lPiKbTxWtKGru5E0GME.jpg"
+                                alt="Tehzeeb" width="100%">
+                        </div>
+                        <div class="flex_col writer_details self_center  w_full gap_sm"
+                            style="width:100%;  position: absolute; bottom: 0">
+                            <span class="items_center text_white" style="width: 100%;">
+                                Amir Azhar</span>
+                            <div class="writer_stats items_center" style="background: grey; color: white; width: 100%;">
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Sher</span>
+                                    <span>3</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Nazm</span>
+                                    <span>56</span>
+                                </div>
+                                <div class="stats flex_col" style="background: #333333;">
+                                    <span>Ghazal</span>
+                                    <span>84</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
             </div>
             <!-- load more button-->
             <div class="load_more items_center self_center mt_lg">
@@ -200,17 +496,363 @@
 
 
 
+        <!-- blogs -->
 
+        <section class=" carousel latest_blog flex_col " style="width: 80%;">
+            <div class="coupletBoxHeader">
+                <h1 class="line_clamp_3">Latest Blogs</h1>
+                <p>Chackout various categories of literary </p>
+                <a class="ebookSeeAll" href="./blogs.html">
+                    See All
+                </a>
+            </div>
+            <div class="owl-carousel owl-theme blog_carousel" style="width: 100%;">
+                <!-- cards -->
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/Blog-Cover-Azra-Naqvi.jpg" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        आसी ने ज़िंदगी की महरूमियों को क़बूल ज़रूर किया लेकिन कभी हालात के आगे झुके नहीं. कभी
+                        ख़ुदकुशी करने की नहीं सोची. मुस्तक़िल उदासियों की सौगात ने आसी को हस्सास से हस्सासतर
+                        बनाया और वे राह में आने वाले हर अजनबी से पूरे ख़ुलूस और मुहब्बत से मिले और यही वजह है
+                        कि उनसे मिलने वाला हर अजनबी उनका अपना बन गया.
+                    </span>
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/02/Valentines-Day-Blog.jpg" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        उर्दू शायरी में इश्क़ के बारे में ये और ऐसे कई शे’र मशहूर हैं मगर ऐसा नहीं है कि इश्क़ और आशिक़ की
+                        बरबादी के क़िस्से सिर्फ़ उर्दू शायरी तक महदूद रह गए हैं। हिंदुस्तान की और ज़बानों और इलाक़ों में भी
+                        देखा जाए तो पंजाब की तरफ़ हीर-राँझा, सोहनी-महीवाल, मिर्ज़ा-साहिबा और सस्सी-पुन्नू के क़िस्से हमें
+                        ख़ूब मिलते हैं जिन का असर बॉलीवुड में भी बहुत है।
+                </a>
 
+                <a href="./routes/blog-data.html" class="item flex_col" height:500px ; 3>
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/10/Artboard-1.png" alt="blog">
+                    <span class=" text_md line_clamp_2" style="direction: rtl;">
+                        سن 2023ء کا ادب کا نوبیل انعام ناروے کے ادیب یان فاسے (Jon Olav Fosse)نے حاصل کیا۔
+                        اردو دنیا کے قارئین کے لیے یہ نام اجنبی ہے۔ ذیل میں ان کی شخصیت اور کام کا مختصر
+                        تعارف پیش ہے۔ :تعارف یان فاسے 29 ستمبر 1959 ء کو ناروے میں پیدا ہوئے۔ان کا بچپن اور
+                        لڑکپن اسٹین برم نامی قصبے میں بیتا۔ جہاں سات برس کی عمر میں مسلسل ہونے والے حادث
+                    </span>
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/22nd-Aug-Blog-Cover.jpg" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        In 1977, a well-known journalist and writer late, Kushwant Singh, called Urdu a
+                        dying language. How did a language with such a rich history become the subject of
+                        discussions about its ultimate decline? The situation may not be as dire as some
+                        individuals intentionally portray it to be
+                    </span>
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/Artboard-2.png" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        Urdu poetry is a realm where words transcend their literal meanings, weaving a
+                        tapestry of emotions, spirituality, and profound insights. At its heart lies a deep
+                        connection to mysticism and Sufism, two interwoven threads that have illuminated the
+                        path of countless poets, leading them on a journey to find divinity within verses.
+                    </span>
+                </a>
 
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/03/Womens-Day.jpg" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        When we look at the canon of Urdu literature, it doesn’t take much time to realise women are
+                        abnormally absent from the picture. If we speak of the classical age, The important Tazkiras
+                        like Khush-Marka-e-Zeba or Majmua-e-Naghz rarely mention a female.
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2021/09/MeerTaqiMeer_Blog_Cover.jpg"
+                        alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        किशोरावस्था में ही मिल जाने वाले इश्क़ के सबक़ को लेकर मीर उम्र भर जीते रहे। उनकी ज़िंदगी का कोई
+                        काम इश्क़ के शोर और वलवले से ख़ाली नहीं था। उन्होंने न सिर्फ़ पिता से ये नसीहतें सुनी थीं बल्कि
+                        इश्क़ में शराबोर उनके जीवन का नज़ारा भी किया था।
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/Artboard-2.png" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        Urdu poetry is a realm where words transcend their literal meanings, weaving a
+                        tapestry of emotions, spirituality, and profound insights. At its heart lies a deep
+                        connection to mysticism and Sufism, two interwoven threads that have illuminated the
+                        path of countless poets, leading them on a journey to find divinity within verses.
+                    </span>
+                </a>
 
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/03/Womens-Day.jpg" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        When we look at the canon of Urdu literature, it doesn’t take much time to realise women are
+                        abnormally absent from the picture. If we speak of the classical age, The important Tazkiras
+                        like Khush-Marka-e-Zeba or Majmua-e-Naghz rarely mention a female.
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2021/09/MeerTaqiMeer_Blog_Cover.jpg"
+                        alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        किशोरावस्था में ही मिल जाने वाले इश्क़ के सबक़ को लेकर मीर उम्र भर जीते रहे। उनकी ज़िंदगी का कोई
+                        काम इश्क़ के शोर और वलवले से ख़ाली नहीं था। उन्होंने न सिर्फ़ पिता से ये नसीहतें सुनी थीं बल्कि
+                        इश्क़ में शराबोर उनके जीवन का नज़ारा भी किया था।
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/Artboard-2.png" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        Urdu poetry is a realm where words transcend their literal meanings, weaving a
+                        tapestry of emotions, spirituality, and profound insights. At its heart lies a deep
+                        connection to mysticism and Sufism, two interwoven threads that have illuminated the
+                        path of countless poets, leading them on a journey to find divinity within verses.
+                    </span>
+                </a>
 
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/03/Womens-Day.jpg" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        When we look at the canon of Urdu literature, it doesn’t take much time to realise women are
+                        abnormally absent from the picture. If we speak of the classical age, The important Tazkiras
+                        like Khush-Marka-e-Zeba or Majmua-e-Naghz rarely mention a female.
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2021/09/MeerTaqiMeer_Blog_Cover.jpg"
+                        alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        किशोरावस्था में ही मिल जाने वाले इश्क़ के सबक़ को लेकर मीर उम्र भर जीते रहे। उनकी ज़िंदगी का कोई
+                        काम इश्क़ के शोर और वलवले से ख़ाली नहीं था। उन्होंने न सिर्फ़ पिता से ये नसीहतें सुनी थीं बल्कि
+                        इश्क़ में शराबोर उनके जीवन का नज़ारा भी किया था।
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/Artboard-2.png" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        Urdu poetry is a realm where words transcend their literal meanings, weaving a
+                        tapestry of emotions, spirituality, and profound insights. At its heart lies a deep
+                        connection to mysticism and Sufism, two interwoven threads that have illuminated the
+                        path of countless poets, leading them on a journey to find divinity within verses.
+                    </span>
+                </a>
+
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/03/Womens-Day.jpg" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        When we look at the canon of Urdu literature, it doesn’t take much time to realise women are
+                        abnormally absent from the picture. If we speak of the classical age, The important Tazkiras
+                        like Khush-Marka-e-Zeba or Majmua-e-Naghz rarely mention a female.
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2021/09/MeerTaqiMeer_Blog_Cover.jpg"
+                        alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        किशोरावस्था में ही मिल जाने वाले इश्क़ के सबक़ को लेकर मीर उम्र भर जीते रहे। उनकी ज़िंदगी का कोई
+                        काम इश्क़ के शोर और वलवले से ख़ाली नहीं था। उन्होंने न सिर्फ़ पिता से ये नसीहतें सुनी थीं बल्कि
+                        इश्क़ में शराबोर उनके जीवन का नज़ारा भी किया था।
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/Artboard-2.png" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        Urdu poetry is a realm where words transcend their literal meanings, weaving a
+                        tapestry of emotions, spirituality, and profound insights. At its heart lies a deep
+                        connection to mysticism and Sufism, two interwoven threads that have illuminated the
+                        path of countless poets, leading them on a journey to find divinity within verses.
+                    </span>
+                </a>
+
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/03/Womens-Day.jpg" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        When we look at the canon of Urdu literature, it doesn’t take much time to realise women are
+                        abnormally absent from the picture. If we speak of the classical age, The important Tazkiras
+                        like Khush-Marka-e-Zeba or Majmua-e-Naghz rarely mention a female.
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2021/09/MeerTaqiMeer_Blog_Cover.jpg"
+                        alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        किशोरावस्था में ही मिल जाने वाले इश्क़ के सबक़ को लेकर मीर उम्र भर जीते रहे। उनकी ज़िंदगी का कोई
+                        काम इश्क़ के शोर और वलवले से ख़ाली नहीं था। उन्होंने न सिर्फ़ पिता से ये नसीहतें सुनी थीं बल्कि
+                        इश्क़ में शराबोर उनके जीवन का नज़ारा भी किया था।
+                </a>
+
+            </div>
         </section>
+
+
+        <!-- collection -->
+        <section class=" carousel flex_col" style="width: 80%;">
+            <div class="coupletBoxHeader">
+                <h2>Collection</h2>
+                <p>Compilation of top 20 hand-picked Urdu shayari on the most sought-after
+                    subjects
+                    and
+                    poets</p>
+                <a class="ebookSeeAll" href="./routes/collections.html">
+                    See All
+                </a>
+            </div>
+            <div class="owl-carousel owl-theme collection_carousel" style="width: 100%;">
+                <!-- cards -->
+                <a href="./routes/writer-profile.html" class="item " style="width:500px">
+                    <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.2);">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/couplets-of-shakeel-badayuni_Medium.jpg"
+                            alt="">
+                        <p class="line_clamp_1" style="margin-top: 3px; text-align: center;">Couplets of Shakeel
+                            Badayuni</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:300px">
+                    <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.2);">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/heart-break-shayari_Medium.png"
+                            alt="">
+                        <p class="line_clamp_1" style="margin-top: 3px; text-align: center;">heart Break Shayari</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.2);">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/barish-shayari_Medium.jpg" alt="">
+                        <p class="line_clamp_1" style="margin-top: 3px; text-align: center;">Barish Shayari</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.2);">
+                        <img src=" https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/kiss-shayari_Medium.jpg" alt="">
+                        <p class="line_clamp_1" style="margin-top: 3px; text-align: center;">Kiss Shayari</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.2);">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/couplets-on-dua_Medium.jpg"
+                            alt="">
+                        <p class="line_clamp_1" style="margin-top: 3px; text-align: center;">Couplets on Dua</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.2);">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/couplets-on-tears_Medium.jpg"
+                            alt="">
+                        <p class="line_clamp_1" style="margin-top: 3px; text-align: center;">Couplets on Tears</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.2);">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/dard-shayari_Medium.jpg" alt="">
+                        <p class="line_clamp_1" style="margin-top: 3px; text-align: center;">Dard Shayari</p>
+                    </div>
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.2);">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/couplets-of-zeb-ghauri_Medium.jpg"
+                            alt="">
+                        <p class="line_clamp_1" style="margin-top: 3px; text-align: center;">Couplets of Zeb Ghauri</p>
+                    </div>
+
+                </a>
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                    <div style="padding: .4rem; border: 1px solid rgba(128, 128, 128, 0.2);">
+                        <img src="https://rekhta.pc.cdn.bitgravity.com/Images/Cms/T20/couplets-on-eyes_Medium.jpg"
+                            alt="">
+                        <p class="line_clamp_1" style="margin-top: 3px; text-align: center;">Couplets on Eyes</p>
+                    </div>
+                </a>
+                <!-- dummy card- keep it at last item of each carousel -->
+                <a href="./routes/writer-profile.html" class="item " style="width:200px">
+                </a>
+                <!-- dummy card- keep it at last item of each carousel -->
+            </div>
+        </section>
+
+
+
+
 
 
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <script>
+        $('.blog_carousel').owlCarousel({
+            loop: false,
+            margin: 10,
+            responsive: {
+                0: {
+                    items: 1.2,
+                    nav: true,
+                    dots: true,
+                    autoWidth: false,
+                },
+                486: {
+                    items: 2.3,
+                    nav: true,
+                    dots: true,
+                    autoWidth: false,
+                },
+                728: {
+                    items: 3.3,
+                    nav: true,
+                    dots: true,
+                    autoWidth: false,
+                },
+                900: {
+                    items: 4.5,
+                    nav: true,
+                    dots: true,
+                    autoWidth: true,
+                },
+                1200: {
+                    items: 5.5,
+                    nav: true,
+                    dots: false,
+                    autoWidth: true,
+
+                },
+                1300: {
+                    items: 6.5,
+                    nav: true,
+                    dots: false,
+                    autoWidth: true,
+                }
+            }
+        })
+
+        $('.collection_carousel').owlCarousel({
+            loop: false,
+            margin: 10,
+            nav: true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1.3,
+
+                },
+                486: {
+                    items: 2.3,
+
+                },
+                728: {
+                    items: 3.3,
+
+                },
+                900: {
+                    items: 4.5,
+
+                },
+                1200: {
+                    items: 5.5,
+
+
+                },
+                1300: {
+                    items: 6.5,
+
+                }
+            }
+        })
+    </script>
 
 </body>
 
