@@ -78,6 +78,7 @@
     font-display: swap;
 }
 
+
 @media all {
     [class^=rico-] {
         font-family: rIcons !important;
