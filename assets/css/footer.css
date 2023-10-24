@@ -1,18 +1,1255 @@
-footer {
-    align-self: center;
-    width: 100vw;
-    height: fit-content;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    justify-items: center;
-    text-align: center;
-    margin-top: 2rem;
-    background-color: rgba(255, 255, 255, 0.2);
+@font-face {
+    font-family: rIcons;
+    src: url('https://rekhta.pc.cdn.bitgravity.com/Content/3.5/fonts_new/rIcons.eot?v=20');
+    src: url('https://rekhta.pc.cdn.bitgravity.com/Content/3.5/fonts_new/rIcons.eot#iefix?v=20') format('embedded-opentype'), url('https://rekhta.pc.cdn.bitgravity.com/Content/3.5/fonts_new/rIcons.ttf?v=20') format('truetype'), url('https://rekhta.pc.cdn.bitgravity.com/Content/3.5/fonts_new/rIcons.woff?v=20') format('woff'), url('https://rekhta.pc.cdn.bitgravity.com/Content/3.5/fonts_new/rIcons.svg#rIcons?v=20') format('svg');
+    font-weight: 400;
+    font-style: normal;
 }
 
-@media only screen and (max-width: 640px) {
+@font-face {
+    font-family: latolight;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/lato-light.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/lato-light.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: latolight;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/lato-light.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/lato-light.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: LatoXBold;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-bold.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-bold-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-bold-webfont.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: LatoXBold;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-bold.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-bold-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-bold-webfont.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: MehrNastaliqRegular;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: MehrNastaliqRegular;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/MehrNastaliqWeb.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: LatoXRegular;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-regular.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-regular-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-regular-webfont.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: LatoXRegular;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-regular.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-regular-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/latox-regular-webfont.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: NotoDevanagariRegular;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular-webfont.woff) format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: NotoDevanagariRegular;
+    src: url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular.ttf) format("truetype"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular-webfont.woff2) format("woff2"), url(https://rekhtastaticcdn.pc.cdn.bitgravity.com/fonts/notosansdevanagari-regular-webfont.woff) format("woff");
+    font-display: swap;
+}
+
+@media all {
+    [class^=rico-] {
+        font-family: rIcons !important;
+        speak: none;
+        font-style: normal;
+        font-display: swap;
+        font-weight: 400;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 32px;
+    }
+
+    .rico-close:before {
+        content: "\e92a";
+    }
+
+    .rico-arrowright:before {
+        content: "\e930";
+    }
+
+    .rico-paperplane:before {
+        content: "\e937";
+    }
+
+    .rico-critique:before {
+        content: "\e96f";
+    }
+
+    .rico-facebook:before {
+        content: "\e991";
+    }
+
+    .rico-twitter:before {
+        content: "\e992";
+    }
+
+    .rico-youtube:before {
+        content: "\e994";
+    }
+
+    .rico-instagram:before {
+        content: "\e995";
+    }
+
+    .rico-telegram:before {
+        content: "\e99e";
+    }
+}
+
+@media all {
+
+    div,
+    span,
+    h2,
+    h3,
+    h4,
+    p,
+    a,
+    i,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    footer,
+    nav {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    footer,
+    nav {
+        display: block;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    div,
+    span,
+    h2,
+    h3,
+    h4,
+    p,
+    a,
+    i,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    footer,
+    nav {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    footer,
+    nav {
+        display: block;
+    }
+
+    ul {
+        list-style: none;
+    }
+}
+
+@media all {
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    h2,
+    h3,
+    h4,
+    p,
+    ul {
+        line-height: 1;
+        margin: 0 0;
+        padding: 0 0;
+    }
+
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+    }
+
     footer {
+        text-align: center;
+    }
+
+    .formField {
+        position: relative;
+    }
+
+    .formField p {
+        font-size: 16px;
+        font-family: 'latolight';
+        color: #b2b2b2;
+        text-transform: uppercase;
+        position: absolute;
+        top: 24px;
+        text-align: left;
+        pointer-events: none;
+        -moz-transition: all .3s;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .formField:after {
+        content: "";
+        width: 0;
+        height: 1px;
+        background: #0af;
+        position: absolute;
+        bottom: 16px;
+        left: 0;
+        -moz-transition: all .5s;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+
+    .formField input[type="text"],
+    .formField input[type="email"],
+    .formField select {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #b2b2b2;
+        height: 64px;
+        font-size: 16px;
+        font-family: 'latolight';
+        background: none;
+        margin-bottom: 16px;
+    }
+
+    .overlay,
+    .newsLetterOverlay {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, .5);
         display: none;
+    }
+
+    .screenLoader {
+        animation: rotator 2.5s linear infinite;
+        position: fixed;
+        left: 50%;
+        margin-left: -25px;
+        top: 50%;
+        margin-top: -25px;
+        z-index: 1;
+    }
+
+    .path {
+        stroke-dasharray: 200;
+        stroke-dashoffset: 0;
+        transform-origin: center;
+        animation: dash 2.5s ease-in-out infinite, colors 10s ease-in-out infinite;
+    }
+
+    .screenLoader .path {
+        stroke-dasharray: 200;
+        stroke-dashoffset: 0;
+        transform-origin: center;
+        animation: dashLoader 2.5s ease-in-out infinite, colorsLoader 10s ease-in-out infinite;
+    }
+
+    :invalid {
+        box-shadow: none;
+    }
+
+    h2,
+    h3,
+    h4,
+    p,
+    ul {
+        line-height: 1;
+        margin: 0 0;
+        padding: 0 0;
+    }
+}
+
+@media all {
+
+    h2,
+    h3,
+    h4,
+    p,
+    ul {
+        line-height: 1;
+    }
+
+    a:focus {
+        outline: none;
+    }
+
+    ::placeholder {
+        color: #bebebe;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .subContainer {
+        width: 100%;
+        max-width: 1100px;
+        padding: 0 16px;
+        margin: auto;
+        box-sizing: border-box;
+    }
+
+    .subContainer.nwsLtrSubCont {
+        max-width: 500px;
+    }
+
+    .newsletterWrap {
+        background: #444;
+        padding: 24px 0;
+    }
+
+    .newsletterWrap h3 {
+        font-size: 16px;
+        color: #fee5ae;
+        font-family: 'LatoXBold', 'NotoDevanagariBold', 'MehrNastaliqRegular';
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .newsletterWrap h4 {
+        font-size: 12px;
+        color: #fff;
+        font-family: 'LatoXRegular', 'NotoDevanagariRegular', 'MehrNastaliqRegular';
+        margin-bottom: 12px;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .newsletterWrap input[type="email"] {
+        height: 36px;
+        padding: 0 12px 0 12px;
+        font-size: 14px;
+        color: #000;
+        border: none;
+        width: calc(100% - 92px);
+        box-sizing: border-box;
+        outline: none !important;
+        border-radius: 2px 0 0 2px;
+        display: block;
+        float: left;
+        font-family: 'LatoXRegular', 'NotoDevanagariRegular', 'MehrNastaliqRegular';
+    }
+
+    .newsletterWrap input[type="submit"] {
+        height: 36px;
+        font-size: 12px;
+        background: #0af;
+        width: 92px;
+        border-radius: 0 2px 2px 0;
+        display: block;
+        float: left;
+        box-shadow: none;
+        border: none;
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+        outline: none;
+        cursor: pointer;
+        font-family: 'LatoXBold', 'NotoDevanagariBold', 'MehrNastaliqRegular';
+        -webkit-appearance: none;
+    }
+
+    .NLFInput {
+        margin-bottom: 12px;
+        position: relative;
+    }
+
+    .navContactSocial {
+        padding: 36px 0 0;
+        background: #4c4c4c;
+    }
+
+    .footerNavTitle {
+        font-size: 14px;
+        color: #fee5ae;
+        font-family: 'LatoXBold', 'NotoDevanagariBold', 'MehrNastaliqRegular';
+        text-transform: uppercase;
+        margin-bottom: 26px;
+    }
+
+    .footerNavigation li {
+        font-size: 14px;
+        color: #fff;
+        font-family: 'LatoXRegular', 'NotoDevanagariRegular', 'MehrNastaliqRegular';
+        margin-bottom: 26px;
+        display: block;
+    }
+
+    .footerNavigation li a {
+        color: #fff;
+        display: inline-block;
+    }
+
+    .footerNavigation nav {
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+        margin-bottom: 32px;
+        text-align: left;
+    }
+
+    .footerNavigation .moreNavType {
+        float: right;
+    }
+
+    .footerNavigation .moreNavType {
+        clear: both;
+        float: none;
+        width: 100%;
+    }
+
+    .moreNavType li {
+        float: left;
+        width: 50%;
+    }
+
+    .RHPNCheckBoxWrap input {
+        margin: 0 4px 0 0;
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .checkMark {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        height: 12px;
+        width: 12px;
+        background-color: #e8e8e8;
+        border: 1px solid #e8e8e8;
+        border-radius: 2px;
+    }
+
+    .RHPNCheckBoxWrap label:hover input~.checkMark {
+        background-color: #ccc;
+    }
+
+    .RHPNCheckBoxWrap label input:checked~.checkMark {
+        background-color: #2196f3;
+        border: 1px solid #2196f3;
+    }
+
+    .checkMark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    .RHPNCheckBoxWrap input:checked~.checkMark:after {
+        display: block;
+    }
+
+    .RHPNCheckBoxWrap .checkMark:after {
+        left: 6px;
+        top: 2px;
+        width: 3px;
+        height: 6px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .RHPNCheckBoxWrap label input:checked~.checkMark:after {
+        left: 3px;
+        top: 0;
+    }
+
+    .RHPNCheckBoxWrap label {
+        display: block;
+        margin-right: 24px;
+        font-size: 14px;
+        text-align: left;
+        padding-left: 24px;
+        margin-bottom: 4px;
+        line-height: 20px;
+        position: relative;
+        direction: ltr;
+        user-select: none;
+        color: #404040;
+        font-family: 'LatoXRegular', 'NotoDevanagariRegular', 'MehrNastaliqRegular';
+    }
+
+    .newsletterWrap .RHPNCheckBoxWrap label {
+        color: #fff;
+    }
+
+    .RHPNCheckBoxWrap label a {
+        color: #0af;
+    }
+
+    .socialMediaShare,
+    .footerAppNotification {
+        padding: 24px 0;
+        text-align: center;
+    }
+
+    .socialMediaShare h4,
+    .footerAppNotification h4 {
+        font-size: 14px;
+        color: #fee5ae;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        font-family: 'LatoXBold', 'NotoDevanagariBold', 'MehrNastaliqRegular';
+    }
+
+    .socialMediaShare a {
+        color: #fff;
+        margin: 0 6px;
+    }
+
+    .footerSecondaryNavigation {
+        padding: 28px 0;
+        background: #0d0d0d;
+        text-align: center;
+    }
+
+    .footerSecondaryNavigation a {
+        font-size: 10px;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 0 6px;
+        font-family: 'LatoXRegular', 'NotoDevanagariRegular', 'MehrNastaliqRegular';
+    }
+
+    .sbFtrCpr {
+        margin-top: 2px;
+        font-size: 12px;
+        color: #fff;
+        margin: 16px 0 0;
+        font-family: 'LatoXRegular', 'NotoDevanagariRegular', 'MehrNastaliqRegular';
+        direction: ltr;
+    }
+
+    .cFOverlay {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 99999;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, .5);
+        display: none;
+    }
+
+    .contactUsFormWrap {
+        display: none;
+        background: #fff;
+        position: fixed;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        max-width: 320px;
+        width: 100%;
+        margin: auto;
+        padding: 24px 12px 12px 12px;
+        border-radius: 4px;
+        z-index: 99999;
+        height: 508px;
+        max-height: 95%;
+        overflow: auto;
+        box-sizing: border-box;
+    }
+
+    .deviceCFBtn,
+    .submitFormBtn {
+        font-size: 14px;
+        color: #fff;
+        font-family: 'LatoXRegular', 'NotoDevanagariRegular', 'MehrNastaliqRegular';
+        line-height: 46px;
+        width: 100%;
+        max-width: 328px;
+        margin: 0 auto;
+        background: #00bfff;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 3px;
+    }
+
+    .deviceCFBtn i,
+    .submitFormBtn i {
+        vertical-align: middle;
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    .submitFormBtn {
+        max-width: 206px;
+        margin-top: 10px;
+    }
+
+    .formField.ftrFrmSbmt {
+        text-align: right;
+    }
+
+    .contactUsForm {
+        text-align: center;
+        padding-bottom: 36px;
+        clear: both;
+    }
+
+    .contactUsForm h4 {
+        font-size: 14px;
+        color: #000;
+        font-family: 'LatoXBold', 'NotoDevanagariBold', 'MehrNastaliqRegular';
+        text-transform: uppercase;
+        margin-bottom: 26px;
+    }
+
+    .contactUsForm input[type="text"],
+    .contactUsForm input[type="email"],
+    .contactUsForm textarea {
+        height: 36px;
+        padding: 0 12px 0 12px;
+        font-size: 14px;
+        color: #000;
+        border: 1px solid #e8e8e8;
+        width: 100%;
+        box-sizing: border-box;
+        outline: none !important;
+        border-radius: 2px;
+        display: block;
+        background: #fff;
+        font-family: 'LatoXRegular', 'NotoDevanagariRegular', 'MehrNastaliqRegular';
+    }
+
+    .contactUsForm textarea {
+        height: 145px;
+        padding: 9px 12px 0 12px;
+    }
+
+    .formField {
+        position: relative;
+        margin-bottom: 16px;
+    }
+
+    .contactUsForm .RHPNCheckBoxWrap label {
+        margin-bottom: 0;
+        color: #000;
+    }
+
+    .cFPP {
+        margin-bottom: 6px;
+    }
+
+    .NLFInput input::placeholder {
+        color: #ccc;
+        opacity: 1;
+    }
+
+    .contactUsFormWrap .cFWCloseBtn {
+        position: absolute;
+        right: 6px;
+        top: 6px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nLError {
+        display: none;
+        color: #ff0005;
+        font-size: 14px;
+        font-family: 'LatoXRegular', 'NotoDevanagariRegular', 'MehrNastaliqRegular';
+        background: #fff;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        pointer-events: none;
+    }
+
+    .nLError i,
+    .nLError span {
+        vertical-align: middle;
+    }
+
+    .pPCheck {
+        display: none;
+        color: #ff0005;
+        font-size: 14px;
+        font-family: 'LatoXRegular', 'NotoDevanagariRegular', 'MehrNastaliqRegular';
+        line-height: 1.3;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    .nLThanksMsg {
+        display: none;
+        padding: 24px 0;
+    }
+
+    .nLThanksMsg h2 {
+        font-size: 16px;
+        color: #fff;
+        font-family: 'LatoXBold', 'NotoDevanagariBold', 'MehrNastaliqRegular';
+        line-height: 1.2;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+    }
+
+    .nLThanksMsg p {
+        font-size: 14px;
+        color: #fff;
+        font-family: 'LatoXRegular', 'NotoDevanagariRegular', 'MehrNastaliqRegular';
+        line-height: 1.2;
+    }
+
+    .contactUsThanks {
+        display: none;
+        padding: 24px 0;
+    }
+
+    .contactUsThanks h2 {
+        font-size: 15px;
+        color: #fff;
+        font-family: 'LatoXBold', 'NotoDevanagariBold', 'MehrNastaliqRegular';
+        line-height: 1.2;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        direction: ltr;
+    }
+
+    .contactUsThanks p {
+        font-size: 14px;
+        color: #fff;
+        font-family: 'LatoXRegular', 'NotoDevanagariRegular', 'MehrNastaliqRegular';
+        line-height: 1.2;
+    }
+
+    .contactUsForm .nLError {
+        background: #fff;
+        display: none;
+        color: #ff0005;
+        font-size: 14px;
+        font-family: 'LatoXRegular', 'NotoDevanagariRegular', 'MehrNastaliqRegular';
+        position: absolute;
+        top: 2px;
+        left: 1px;
+        pointer-events: none;
+        width: calc(100% - 2px);
+    }
+
+    .contactUsForm .pPCheck {
+        display: none;
+        color: #ff0005;
+        font-size: 14px;
+        font-family: 'LatoXRegular', 'NotoDevanagariRegular', 'MehrNastaliqRegular';
+        line-height: 1.3;
+        margin-bottom: 5px;
+        text-align: left;
+        position: static;
+        text-transform: none;
+    }
+
+    .footerAppNotification {
+        display: none;
+    }
+
+    footer {
+        padding-bottom: 50px;
+    }
+
+    #footer_astonband {
+        position: fixed;
+        bottom: 0;
+        z-index: 99;
+        width: 100%;
+        display: flex;
+    }
+
+    .jer_DonationStrip {
+        background: #381d48;
+        padding: 14px 10px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        direction: ltr;
+    }
+
+    .jer_DonationStrip p {
+        color: #fff;
+        font-family: 'LatoXRegular';
+        font-size: 12px;
+        line-height: 16px;
+        text-align: left;
+    }
+
+    .jer_DonationStrip a {
+        padding: 0;
+        font-size: 12px;
+        border-radius: 6px;
+        color: #ff4d9a;
+        margin-left: 5px;
+    }
+
+    .jer_DonationStrip a span {
+        display: none;
+    }
+
+    @media screen and (min-width:1200px) {
+        footer {
+            padding-bottom: 0;
+        }
+
+        #footer_astonband,
+        .jer_DonationStrip a i {
+            display: none;
+        }
+
+        .jer_DonationStrip p {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        .jer_DonationStrip a {
+            background: #ff4d9a;
+            padding: 7px 14px;
+            color: #fff;
+            margin-left: 30px;
+        }
+
+        .jer_DonationStrip a span {
+            display: block;
+        }
+    }
+
+    .formField.ttt {
+        margin-bottom: 0;
+    }
+
+    .contactUsForm {
+        position: relative;
+    }
+
+    .footerFormLoder {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99999;
+        display: none;
+    }
+}
+
+@media screen and (min-width:992px) {
+
+    input:focus,
+    textarea:focus {
+        outline: none;
+    }
+
+    .formField p {
+        font-size: 18px;
+    }
+
+    .formField:after {
+        bottom: 24px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .footerFormLoder {
+        position: fixed;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .overlayRCritiqueForm {
+        position: fixed;
+        height: 100%;
+        width: 376px;
+        z-index: 9999;
+        left: auto;
+        top: 0;
+        background: rgba(245, 245, 245, .8);
+        display: block;
+        right: -376px;
+        transition: all ease .4s;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .newsletterWrap h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .newsletterWrap h4 {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .newsletterWrap input[type="email"] {
+        padding: 0 12px 0 18px;
+        width: calc(100% - 136px);
+    }
+
+    .newsletterWrap input[type="submit"] {
+        font-size: 14px;
+        width: 120px;
+        margin-left: 0;
+    }
+
+    .footerNavigation {
+        float: left;
+        width: 62%;
+    }
+
+    .contactUsForm {
+        float: right;
+        width: 38%;
+        clear: none;
+    }
+
+    .socialMediaShare,
+    .footerAppNotification {
+        float: left;
+        background: none;
+        text-align: left;
+    }
+
+    .footerNavigation nav,
+    .footerNavigation .moreNavType {
+        float: left;
+        clear: none;
+        width: 33.33%;
+        padding-right: 42px;
+        box-sizing: border-box;
+    }
+
+    .moreNavType li {
+        float: none;
+        width: auto;
+    }
+
+    .footerNavigation li a {
+        border-bottom: 1px solid transparent;
+    }
+
+    .footerNavigation li:hover a {
+        border-bottom: 1px solid #fff;
+    }
+
+    .deviceCFBtn {
+        display: none;
+    }
+
+    .contactUsFormWrap {
+        display: block;
+        background: none;
+        position: relative;
+        bottom: auto;
+        top: auto;
+        left: auto;
+        right: auto;
+        max-width: none;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        z-index: 9;
+        height: auto;
+        max-height: none;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .contactUsForm h4 {
+        color: #fee5ae;
+    }
+
+    .contactUsForm .RHPNCheckBoxWrap label {
+        color: #fff;
+    }
+
+    .footerSecondaryNavigation a:hover {
+        text-decoration: underline;
+    }
+
+    .contactUsForm {
+        text-align: left;
+        min-height: 418px;
+        padding-bottom: 0;
+    }
+
+    .footerSecondaryNavigation {
+        padding: 16px 0;
+        background: #313131;
+    }
+
+    .contactUsFormWrap .cFWCloseBtn {
+        display: none;
+    }
+
+    .sbFtrMn {
+        float: left;
+        margin-left: -6px;
+    }
+
+    .sbFtrCpr {
+        float: right;
+        margin: 0;
+    }
+
+    .subContainer.subConSocApp {
+        margin-top: -128px;
+        max-height: 168px;
+    }
+
+    .footerAppNotification a {
+        display: inline-block;
+        vertical-align: middle;
+        width: 114px;
+        height: 36px;
+        margin: 0 4px;
+    }
+
+    .appAndriod {
+        background: url(https://www.rekhta.org/Content/4.0/images/googlePlayStore.png) no-repeat center center;
+    }
+
+    .appIos {
+        background: url(https://www.rekhta.org/Content/4.0/images/appStore.png) no-repeat center center;
+    }
+
+    .footerAppNotification {
+        padding-top: 24px;
+        display: block;
+        margin-left: 80px;
+    }
+
+    .contactUsThanks h2,
+    .contactUsThanks p {
+        color: #fff;
+    }
+}
+
+.contactUsForm {
+    position: relative;
+}
+
+.footerFormLoder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+    display: none;
+}
+
+select#drpCategory {
+    height: 36px;
+    line-height: 36px;
+    padding: 0px 12px 0 9px;
+    font-size: 13px;
+    font-family: 'LatoXRegular', 'NotoDevanagariRegular', 'MehrNastaliqRegular';
+    background: #fff;
+    color: #b3b0b0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: 1px solid #e8e8e8;
+    -webkit-border-before: 1px solid #e8e8e8;
+    -webkit-border-before: 1px solid #e8e8e8;
+    -webkit-border-before: solid solid #e8e8e8;
+}
+
+select#drpCategory:focus {
+    outline: none;
+}
+
+.RHPNCheckBoxWrap label {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes rotator {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 200;
+    }
+
+    50% {
+        stroke-dashoffset: 50;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        stroke-dashoffset: 200;
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes colors {
+    0% {
+        stroke: #fff;
+    }
+
+    25% {
+        stroke: #fff;
+    }
+
+    50% {
+        stroke: #fff;
+    }
+
+    75% {
+        stroke: #fff;
+    }
+
+    100% {
+        stroke: #fff;
+    }
+}
+
+@keyframes dashLoader {
+    0% {
+        stroke-dashoffset: 200;
+    }
+
+    50% {
+        stroke-dashoffset: 50;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        stroke-dashoffset: 200;
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes colorsLoader {
+    0% {
+        stroke: #0af;
+    }
+
+    25% {
+        stroke: #0af;
+    }
+
+    50% {
+        stroke: #0af;
+    }
+
+    75% {
+        stroke: #0af;
+    }
+
+    100% {
+        stroke: #0af;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        display: none
     }
 }

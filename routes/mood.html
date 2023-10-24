@@ -17,106 +17,106 @@
 </head>
 
 <body>
-  <!-- main menu -->
-  <header class="shadow" id="header">
-    <div class="mobile_menu icon_xl" id="menu_icon">
-        <i class="fa-solid fa-bars"></i>
-    </div>
-    <div href="/" class="logo items_left  items_between">
-        <img src="https://i.postimg.cc/3RvKKHPh/logo.png" alt="logo">
-
-    </div>
-    <nav class="items_left self_center text_md gap_md" id="main_navigation">
-        <a key="collection" href="http://127.0.0.1:5500/routes/collections.html"> Collections </a>
-        <a key="Writers" href="http://127.0.0.1:5500/routes/category.html"> Categories </a>
-        <a key="Writers" href="http://127.0.0.1:5500/routes/writers.html"> Writers </a>
-        <a key="Posts" href="http://127.0.0.1:5500/routes/blogs.html"> Blog </a>
-
-    </nav>
-
-    <div class="search_wrapper items_right self_center" style="width: 100%; ">
-        <input type="text" placeholder="mohabbat, zindagi, raat" width="60%">
-        <span class="search_icon icon_xl"><i class="fa-solid fa-magnifying-glass"></i></span>
-    </div>
-    <div class="action_buttons items_center self_center text_large gap_lg">
-        <div class="self_center" style="padding: 0 .5rem;">
-            <select name="select_language custom-select" id="select_language">
-                <option value="english" selected>ENG</option>
-                <option value="hindi">HIN</option>
-                <option value="urdu">URD</option>
-            </select>
+    <!-- main menu -->
+    <header class="shadow" id="header">
+        <div class="mobile_menu icon_xl" id="menu_icon">
+            <i class="fa-solid fa-bars"></i>
         </div>
-        <a href="http://127.0.0.1:5500/routes/login.html" class="login items_center self_center text_large">
-            <img src="http://127.0.0.1:5500/assets/img/user.png" alt="user logo" height="50px" width="50px">
-        </a>
-
-        <div class=" items_right gap_lg text_sm">
-            <button
-                style="padding: 2px 1rem; border-radius: .3rem; border:2px solid var(--primary-color); background: var(--primary-color); letter-spacing: 1.5px; color: rgb(255, 255, 255);">
-                Download App</button>
-            <button
-                style="padding: 2px 1rem; border-radius: .3rem; border:2px solid var(--primary-color); background: white;letter-spacing: 1.5px;">
-                Donate</button>
-        </div>
-    </div>
-
-</header>
-
-<!-- mobile menu -->
-<aside class="side_navigation text_lg shadow" id="side_bar" style="display: none;">
-    <div class=" items_between" id="sidebar_close_button">
-        <div class="self_center items_center">
+        <div href="/" class="logo items_left  items_between">
             <img src="https://i.postimg.cc/3RvKKHPh/logo.png" alt="logo">
+
         </div>
-        <button class="close_button text_lg text_bold">X</button>
-    </div>
-    <div class="side_navigation_col1 gap_sm">
-        <!-- <a href="/routes/search" class="items_left gap_sm "><i
+        <nav class="items_left self_center text_md gap_md" id="main_navigation">
+            <a key="collection" href="http://127.0.0.1:5500/routes/collections.html"> Collections </a>
+            <a key="Writers" href="http://127.0.0.1:5500/routes/category.html"> Categories </a>
+            <a key="Writers" href="http://127.0.0.1:5500/routes/writers.html"> Writers </a>
+            <a key="Posts" href="http://127.0.0.1:5500/routes/blogs.html"> Blog </a>
+
+        </nav>
+
+        <div class="search_wrapper items_right self_center" style="width: 100%; ">
+            <input type="text" placeholder="mohabbat, zindagi, raat" width="60%">
+            <span class="search_icon icon_xl"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+        <div class="action_buttons items_center self_center text_large gap_lg">
+            <div class="self_center" style="padding: 0 .5rem;">
+                <select name="select_language custom-select" id="select_language">
+                    <option value="english" selected>ENG</option>
+                    <option value="hindi">HIN</option>
+                    <option value="urdu">URD</option>
+                </select>
+            </div>
+            <a href="http://127.0.0.1:5500/routes/login.html" class="login items_center self_center text_large">
+                <img src="http://127.0.0.1:5500/assets/img/user.png" alt="user logo" height="50px" width="50px">
+            </a>
+
+            <div class=" items_right gap_lg text_sm">
+                <button
+                    style="padding: 2px 1rem; border-radius: .3rem; border:2px solid var(--primary-color); background: var(--primary-color); letter-spacing: 1.5px; color: rgb(255, 255, 255);">
+                    Download App</button>
+                <button
+                    style="padding: 2px 1rem; border-radius: .3rem; border:2px solid var(--primary-color); background: white;letter-spacing: 1.5px;">
+                    Donate</button>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- mobile menu -->
+    <aside class="side_navigation text_lg shadow" id="side_bar" style="display: none;">
+        <div class=" items_between" id="sidebar_close_button">
+            <div class="self_center items_center">
+                <img src="https://i.postimg.cc/3RvKKHPh/logo.png" alt="logo">
+            </div>
+            <button class="close_button text_lg text_bold">X</button>
+        </div>
+        <div class="side_navigation_col1 gap_sm">
+            <!-- <a href="/routes/search" class="items_left gap_sm "><i
                 class="fa-solid fa-magnifying-glass "></i><span>Search</span>
         </a> -->
-        <a href="http://127.0.0.1:5500/routes/writers.html" class="items_left gap_sm"><i
-                class="fa-solid fa-feather-pointed "></i><span>Writers</span></a>
-        <a href="http://127.0.0.1:5500/routes/blogs.html" class="items_left gap_sm"><i
-                class="fa-regular fa-newspaper "></i><span>Blog</span></a>
-        <a href="http://127.0.0.1:5500//routes/mood.html" class="items_left gap_sm"><i
-                class="fa-regular fa-face-smile-wink "></i><span>Shayari
-                Moods</span></a>
-        <a href="http://127.0.0.1:5500//routes/mood.html" class="items_left gap_sm">
-            <i class="fa-solid fa-grip"></i><span>
-                Categories</span></a>
-        <a href="http://127.0.0.1:5500//routes/explore.html" class="items_left gap_sm">
-            <i class="fa-solid fa-compass"></i><span>
-                Explore</span></a>
-        <!-- <a href="/routes/store" class="items_left gap_sm"><i class="fa-solid fa-shop"></i><span>Store
+            <a href="http://127.0.0.1:5500/routes/writers.html" class="items_left gap_sm"><i
+                    class="fa-solid fa-feather-pointed "></i><span>Writers</span></a>
+            <a href="http://127.0.0.1:5500/routes/blogs.html" class="items_left gap_sm"><i
+                    class="fa-regular fa-newspaper "></i><span>Blog</span></a>
+            <a href="http://127.0.0.1:5500//routes/mood.html" class="items_left gap_sm"><i
+                    class="fa-regular fa-face-smile-wink "></i><span>Shayari
+                    Moods</span></a>
+            <a href="http://127.0.0.1:5500//routes/mood.html" class="items_left gap_sm">
+                <i class="fa-solid fa-grip"></i><span>
+                    Categories</span></a>
+            <a href="http://127.0.0.1:5500//routes/explore.html" class="items_left gap_sm">
+                <i class="fa-solid fa-compass"></i><span>
+                    Explore</span></a>
+            <!-- <a href="/routes/store" class="items_left gap_sm"><i class="fa-solid fa-shop"></i><span>Store
             </span></a> -->
-        <a href="https://whatsapp.com/channel/0029Va8lsG74tRrzqkQjUC3C" class="items_left gap_sm"><i
-                class="fa-brands fa-whatsapp "></i><span>Whatsapp Community</span>
-        </a>
+            <a href="https://whatsapp.com/channel/0029Va8lsG74tRrzqkQjUC3C" class="items_left gap_sm"><i
+                    class="fa-brands fa-whatsapp "></i><span>Whatsapp Community</span>
+            </a>
 
-    </div>
-
-    <div class="w-full side_navigation_col2 gap_lg ">
-        <div>
-            <hr>
         </div>
-        <div class=" w-full items_center gap_lg ">
-            <a href=""><i class="fa-brands fa-youtube icon_lg"></i></a>
-            <a href=""><i class="fa-brands fa-facebook icon_lg"></i></a>
-            <a href=""><i class="fa-brands fa-square-instagram icon_lg"></i></a>
-            <a href=""><i class="fa-brands fa-discord icon_lg"></i></a>
-        </div>
-    </div>
-</aside>
 
-<bottom_menu class="bottom_menu shadow">
-    <div class="bottom_menu_items icon_lg" id="bottom_menu">
-        <a href="/"><i class="fa-solid fa-house"></i></a>
-        <a href="http://127.0.0.1:5500/routes/explore.html"><i class="fa-solid fa-compass"></i></a>
-        <a href="http://127.0.0.1:5500/routes/write.html"><i class="fa-solid fa-pen-to-square"></i></a>
-        <a href="http://127.0.0.1:5500/routes/store.html"><i class="fa-solid fa-store"></i></a>
-        <a href="http://127.0.0.1:5500/routes/user.html"><i class="fa-solid fa-user"></i></a>
-    </div>
-</bottom_menu>
+        <div class="w-full side_navigation_col2 gap_lg ">
+            <div>
+                <hr>
+            </div>
+            <div class=" w-full items_center gap_lg ">
+                <a href=""><i class="fa-brands fa-youtube icon_lg"></i></a>
+                <a href=""><i class="fa-brands fa-facebook icon_lg"></i></a>
+                <a href=""><i class="fa-brands fa-square-instagram icon_lg"></i></a>
+                <a href=""><i class="fa-brands fa-discord icon_lg"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <bottom_menu class="bottom_menu shadow">
+        <div class="bottom_menu_items icon_lg" id="bottom_menu">
+            <a href="/"><i class="fa-solid fa-house"></i></a>
+            <a href="http://127.0.0.1:5500/routes/explore.html"><i class="fa-solid fa-compass"></i></a>
+            <a href="http://127.0.0.1:5500/routes/write.html"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a href="http://127.0.0.1:5500/routes/store.html"><i class="fa-solid fa-store"></i></a>
+            <a href="http://127.0.0.1:5500/routes/user.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </bottom_menu>
 
     <main>
         <section class=" mood_page items_center self_center ">
@@ -301,7 +301,275 @@
             <a href="./routes/user.html"><i class="fa-solid fa-user"></i></a>
         </div>
     </bottom_menu>
+    <footer id="footer">
 
+
+
+        <div class="newsletterWrap">
+            <div class="subContainer nwsLtrSubCont clearfix">
+                <div class="newsLetterTitle">
+                    <h3>Subscribe to our newsletter</h3>
+                    <h4>Get latest updates and all notifications directly into your mail-box </h4>
+                </div>
+                <div class="newsLetterForm">
+                    <fieldset>
+                        <form id="newsLetterForm" name="newsLetterForm" method="post">
+                            <div class="NLFInput clearfix">
+
+                                <input type="email" name="email" placeholder="YOUR E-MAIL HERE" id="nlEmail">
+                                <span class="submitButn">
+                                    <input type="submit" value="SUBSCRIBE" class="nLSubmitBtn" id="nLSubmitBtn">
+                                </span>
+                                <p class="nLError"><i class="rico-critique"></i><span>Incorrect email address</span></p>
+
+                            </div>
+                        </form>
+                    </fieldset>
+                    <div class="NLFField">
+
+                        <div class="RHPNCheckBoxWrap clearfix">
+
+                            <label class="">
+                                <input type="checkbox" id="nLSuH">
+                                <span class="checkMark"></span>
+                                I have read and I agree to Rekhta <a href="/cms/privacy-policy" class="RHPNPrivacyPBtn"
+                                    target="_blank" rel="noopener"> Privacy Policy</a>
+
+
+                            </label>
+                        </div>
+                        <p class="pPCheck">Please check notification related information</p>
+
+                    </div>
+                </div>
+
+                <div class="nLThanksMsg">
+                    <h2>THANK YOU FOR YOUR SUBSCRIPTION!</h2>
+                    <p>We will connect to you shortly</p>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+        <div class="navContactSocial">
+
+            <div class="subContainer clearfix">
+
+                <div class="footerNavigation">
+
+                    <nav class="FNPoetryType">
+                        <h4 class="footerNavTitle">Quick links</h4>
+                        <ul>
+                            <li><a title="Qaafiya Dictionary" aria-label="Qaafiya Dictionary" href="/qaafiya">Qaafiya
+                                    Dictionary</a></li>
+                            <li><a title="Taqti" aria-label="Taqti" href="/taqti">Taqti</a></li>
+                            <li><a title="Urdu Resources" aria-label="Urdu Resources" href="/urdu-resources">Urdu
+                                    Resources</a></li>
+
+                            <li><a href="/donate" title="Donate" aria-label="Donate" rel="noopener">Donate</a></li>
+                            <li><a title="Newsletter Archives" aria-label="Newsletter Archives"
+                                    href="/news-letter">Newsletter Archives</a></li>
+                            <li><a title="Submit Poetry" aria-label="Submit Poetry"
+                                    href="/publish-content/ghazal">Submit Poetry</a></li>
+
+                        </ul>
+                    </nav>
+
+
+
+                    <nav class="infoNavType">
+
+                        <h4 class="footerNavTitle">SITE INFO</h4>
+                        <ul class="clearfix">
+
+                            <li><a title="Rekhta Foundation" aria-label="Rekhta Foundation"
+                                    href="/cms/about-site">Rekhta Foundation</a></li>
+                            <li><a title="About The Founder" aria-label="About The Founder"
+                                    href="/cms/about-founder">About The Founder</a></li>
+                            <li><a title="Contact Us" aria-label="Contact Us" href="/contactus">Contact Us</a></li>
+                            <li><a title="Career" aria-label="Career" href="/career">Career</a></li>
+
+                        </ul>
+
+
+                    </nav>
+
+
+                    <nav class="moreNavType">
+
+
+                        <h4 class="footerNavTitle">Our websites</h4>
+                        <ul>
+                            <li><a title="Hindwi" aria-label="Hindwi" target="_blank"
+                                    href="https://hindwi.org/">Hindwi</a></li>
+                            <li><a title="Sufinama" aria-label="Sufinama" target="_blank"
+                                    href="https://sufinama.org/">Sufinama</a></li>
+                            <li><a title="Rekhta Dictionary" aria-label="Rekhta Dictionary" target="_blank"
+                                    href="https://rekhtadictionary.com/">Our Dictionary</a></li>
+                            <li><a title="Aamozish" aria-label="Aamozish" target="_blank"
+                                    href="https://aamozish.com/">Aamozish</a></li>
+
+                            <li><a title="Rekhta Books" aria-label="Rekhta Books" target="_blank"
+                                    href="https://rekhtabooks.com/?ref=rekhta&amp;cid=f">Our Books</a></li>
+
+
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+
+                <div class="contactUsForm">
+
+                    <div class="cFOverlay"></div>
+
+                    <div class="contactUsFormWrap">
+
+                        <i class="rico-close cFWCloseBtn"></i>
+
+                        <h4>WRITE TO US</h4>
+
+                        <form action="/Home/LayoutPopupContactUs" method="post">
+                            <div class="contactFormWrap">
+
+                                <div class="formField cFNameField">
+                                    <input type="text" id="cFName" name="cFName" placeholder="NAME">
+
+                                    <p class="nLError"><i class="rico-critique"></i><span>Incorrect email address</span>
+                                    </p>
+                                </div>
+
+
+                                <div class="formField cFEmailField">
+                                    <input type="email" id="cFEmail" name="cFEmail" placeholder="E-MAIL" required>
+                                    <p class="nLError"><i class="rico-critique"></i><span>Incorrect email address</span>
+                                    </p>
+                                </div>
+
+
+                                <div class="formField ttt">
+                                    <select id="drpCategory">
+                                        <option selected="selected">SELECT CATEGORY</option>
+                                        <option value="contact@rekhta.org">General</option>
+                                        <option value="events@rekhta.org">Events</option>
+                                        <option value="collaborate@rekhta.org">Partnership/Collaborations</option>
+                                        <option value="career@rekhta.org">Work with Us</option>
+                                        <option value="shayari@rekhta.org">Publish Poetry</option>
+                                        <option value="social@rekhta.org">Social Media Related Queries</option>
+
+                                    </select>
+                                    <p class="nLError"><i class="rico-critique"></i><span>Please Select Type</span></p>
+
+                                </div>
+
+                                <div class="formField cFMsgField">
+                                    <textarea cols="1" rows="1" id="cFMsg" placeholder="MESSAGE"></textarea>
+
+
+                                    <p class="nLError"><i class="rico-critique"></i><span>Incorrect email address</span>
+                                    </p>
+                                </div>
+
+                                <div class="formField cFPP">
+                                    <div class="RHPNCheckBoxWrap clearfix">
+                                        <label class="">
+                                            <input type="checkbox" id="cFSU" value="">
+                                            <span class="checkMark"></span>
+                                            I have read and I agree to Rekhta <a href="#" class="RHPNPrivacyPBtn"
+                                                target="_blank" rel="noopener"> Privacy
+                                                Policy</a>
+
+
+                                        </label>
+
+
+
+                                    </div>
+                                    <p class="pPCheck">Please check notification related information</p>
+                                </div>
+
+
+                                <div class="formField ftrFrmSbmt">
+                                    <a href="javascript:void(0);" value="SUBMIT" class="submitFormBtn"><i
+                                            class="rico-paperplane"></i>SEND MESSAGE </a>
+
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="contactUsThanks">
+                        <h2>thank you for connecting with us!</h2>
+                        <p>We will get back to you shortly</p>
+                    </div>
+
+                    <a href="javascript:void(0);" class="deviceCFBtn"><i class="rico-paperplane"></i>WRITE TO US</a>
+                    <svg class="screenLoader footerFormLoder" width="50px" height="50px" viewBox="0 0 80 80">
+                        <circle class="path" fill="none" stroke-width="5" stroke-linecap="square" cx="40" cy="40"
+                            r="30"></circle>
+                    </svg>
+
+
+                </div>
+            </div>
+            <div class="subContainer subConSocApp clearfix">
+
+                <div class="socialMediaShare">
+
+                    <h4> FOLLOW US</h4>
+                    <a title="facebook" aria-label="facebook" href="#" target="_blank" rel="noopener"
+                        class="rico-facebook"></a>
+                    <a title="twitter" aria-label="twitter" href="#" target="_blank" rel="noopener"
+                        class="rico-twitter"></a>
+                    <a title="youtube" aria-label="youtube" href="#" target="_blank" rel="noopener"
+                        class="rico-youtube"></a>
+                    <a title="instagram" aria-label="instagram" href="#" target="_blank" rel="noopener"
+                        class="rico-instagram"></a>
+                    <a title="telegram" aria-label="telegram" href=#" target="_blank" rel="noopener"
+                        class="rico-telegram"></a>
+
+                </div>
+                <div class="footerAppNotification">
+
+                    <h4>Download Our App</h4>
+                    <a title="appAndriod" aria-label="appAndriod" href="https://rek.ht/rekhta-android-app?ref=rweb"
+                        target="_blank" rel="noopener" class="appAndriod"></a>
+                    <a title="appIos" aria-label="appIos" href="https://rek.ht/rekhta-ios-app?ref=rweb" target="_blank"
+                        rel="noopener" class="appIos"></a>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footerSecondaryNavigation">
+            <div class="subContainer clearfix">
+                <div class="sbFtrMn">
+                    <a title="PRIVACY POLICY" aria-label="PRIVACY POLICY" href="/privacy-policy">PRIVACY POLICY</a>
+                    <a title="TERMS OF USE" aria-label="TERMS OF USE" href="/disclaimer">TERMS OF USE</a>
+
+                    <a title="COPYRIGHT" aria-label="COPYRIGHT" href="#">COPYRIGHT</a>
+
+                </div>
+                <p class="sbFtrCpr">© 2023 All rights reserved.</p>
+            </div>
+        </div>
+
+
+
+
+        <div class="overlay"></div>
+        <div class="newsLetterOverlay"></div>
+        <div class="overlayRCritiqueForm"></div>
+
+    </footer>
 </body>
 
 </html>
