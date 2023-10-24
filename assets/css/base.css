@@ -69,3 +69,9 @@ main>section {
         margin-bottom: .5rem;
     }
 }
+
+* button,
+* button:focus {
+    border: transparent !important;
+    outline: transparent !important;
+}
