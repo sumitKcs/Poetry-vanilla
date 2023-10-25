@@ -2,7 +2,6 @@
 @import url(load_more_button.css);
 
 
-@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@300&display=swap');
 
 
 .user {
@@ -17,6 +16,8 @@
     gap: 2rem;
 
 }
+
+
 
 .user_wrapper {
     margin-top: 8rem;
@@ -102,18 +103,7 @@
     border-bottom: 3px solid var(--primary-color);
 }
 
-.user_content_item_wrapper {
-    align-self: center;
-    width: 80vw;
-    height: fit-content;
-    display: none;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-    place-content: center;
-    row-gap: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
+
 
 .user_content_card {
     align-self: center;
@@ -169,11 +159,35 @@
     display: none;
 }
 
+.user_content_item_wrapper {
+
+    align-self: center;
+    width: 60vw;
+    height: fit-content;
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    column-gap: .5rem;
+    row-gap: .5rem;
+}
+
+
+.user_content_item_wrapper div {
+    color: rgba(0, 0, 0, 0.837);
+}
+
 .user_profile.owl-carousel.hero_section_image_slider {
     width: 80vw !important;
 }
 
 @media only screen and (max-width: 1024px) {
+
+    .user_content_item_wrapper>div {
+
+        align-self: center;
+        width: 70vw;
+
+    }
 
     .user_wrapper {
         margin-top: 6rem;
@@ -230,7 +244,7 @@
 
     .user_content_item_wrapper {
         align-self: center;
-        width: 80vw;
+        width: 90vw;
         grid-template-columns: 1fr 1fr;
         place-items: center;
         place-content: center;
@@ -258,19 +272,22 @@
 
 
     .user_content_item_wrapper {
+
         align-self: center;
-        width: 80vw;
-        grid-template-columns: 1fr;
-        place-items: center;
-        place-content: center;
-        row-gap: 1rem;
+        height: fit-content;
+        padding: 0;
+        column-gap: .5rem;
+        row-gap: .5rem;
+    }
+
+    .user_content_item_wrapper>div {
+        width: 90vw;
     }
 
     .user_content_card {
         align-self: center;
         width: 90vw;
         height: 220px;
-        border: qpx solid green;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

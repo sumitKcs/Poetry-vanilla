@@ -10,6 +10,14 @@ const tab_3 = document.getElementById("tab_3");
 const chip_1 = document.getElementById("chip_1");
 const chip_2 = document.getElementById("chip_2");
 const chip_3 = document.getElementById("chip_3");
+const reaction_icons = document.querySelectorAll(".reaction_icons");
+console.log("reactionicon", reaction_icons);
+
+if (tab_1) {
+  tab_1.style.display = "flex";
+  tab_container.innerHTML = "";
+  tab_container.appendChild(tab_1);
+}
 
 // toggle mobile menu
 menu_icon.addEventListener("click", () => {
@@ -20,69 +28,58 @@ sidebar_close_button.addEventListener("click", () => {
   side_bar.style.display = "none";
 });
 
-function likeHandler(e) {
-  like_button.innerHTML = `<i class="fa-solid fa-heart text_red"></i>`;
-  like_button.removeEventListener("click", likeHandler);
-  like_button.addEventListener("click", filledLikeHandler);
-}
-
-function filledLikeHandler(e) {
-  like_button.innerHTML = `<i
-  class="fa-regular fa-heart">`;
-  like_button.removeEventListener("click", filledLikeHandler);
-  like_button.addEventListener("click", likeHandler);
-}
-
-function saveHandler(e) {
-  save_button.innerHTML = `<i class="fa-solid fa-bookmark text_red"></i>`;
-  save_button.removeEventListener("click", saveHandler);
-  save_button.addEventListener("click", filledSaveHandler);
-  console.log("called");
-}
-
-function filledSaveHandler(e) {
-  save_button.innerHTML = `<i class="fa-regular fa-bookmark"></i>`;
-  save_button.removeEventListener("click", filledSaveHandler);
-  save_button.addEventListener("click", saveHandler);
-}
-if (tab_1) {
-  tab_1.style.display = "grid";
-  tab_container.appendChild(tab_1);
-}
-
 // tabs handler - profile section
 
 function firstTabHandler(e) {
-  tab_1.style.display = "grid";
+  tab_1.style.display = "flex";
   tab_container.innerHTML = "";
   tab_container.appendChild(tab_1);
 }
 
 function secondTabHandler(e) {
-  tab_2.style.display = "grid";
+  tab_2.style.display = "flex";
   tab_container.innerHTML = "";
   tab_container.appendChild(tab_2);
 }
 function thirdTabHandler(e) {
-  tab_3.style.display = "grid";
+  tab_3.style.display = "flex";
   tab_container.innerHTML = "";
   tab_container.appendChild(tab_3);
 }
 
 // chips handler - profile section
 function firstChipHandler(e) {
-  chip_1.style.display = "grid";
+  chip_1.style.display = "flex";
   tab_container.innerHTML = "";
   tab_container.appendChild(chip_1);
 }
 
 function secondChipHandler(e) {
-  chip_2.style.display = "grid";
+  chip_2.style.display = "flex";
   tab_container.innerHTML = "";
   tab_container.appendChild(chip_2);
 }
 function thirdChipHandler(e) {
-  chip_3.style.display = "grid";
+  chip_3.style.display = "flex";
   tab_container.innerHTML = "";
   tab_container.appendChild(chip_3);
 }
+
+// sher card reaction button toggling
+// Define a click event handler function
+function toggleFill() {
+  // Check if the SVG is currently filled with red
+  const currentFill = this.getAttribute("fill");
+  if (currentFill === "red") {
+    // If it's already red, change it back to white (or any other color)
+    this.setAttribute("fill", "white");
+  } else {
+    // If it's not red, fill it with red
+    this.setAttribute("fill", "red");
+  }
+}
+
+// Add the click event listener to each SVG element
+reaction_icons.forEach((icon) => {
+  icon.addEventListener("click", toggleFill);
+});
