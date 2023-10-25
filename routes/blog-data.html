@@ -10,8 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lekhak</title>
     <meta name="description" content="A place to join poetry world">
+    <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="../assets/css/blog-data.css">
-
+    <link rel="stylesheet" href="./assets/css/carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/a12bd5cdcb.js" crossorigin="anonymous"></script>
     <script defer src="../assets/js/app.js"></script>
 
@@ -139,9 +143,10 @@
                             <div class=" items_center self_center gap_sm">
                                 <img src="https://i.postimg.cc/zDxkTXHH/pexels-pixabay-415829.jpg" alt="blog_thumbnail"
                                     style="height: 50px; width:50px; border-radius:50%; border: 3px solid var(--primary-color);">
-                                <span class="blog_detail self_center text_center text_lg text_bold gap_lg"><span
-                                        class="blog_author_name">Princess
-                                        diana</span>
+                                <span class="blog_detail self_center text_center text_lg text_bold gap_xl "><span
+                                        class="blog_author_name">Princess diana
+                                    </span>
+                                    &nbsp; &nbsp; &nbsp;
                                     <span class="blog_publish_date self_center text_center text_bold text_md "
                                         style="color: rgba(0, 0, 0, 0.8)">June 29, 2023</span>
                                 </span>
@@ -223,138 +228,188 @@
                         </div>
                     </div>
 
-                    <div class="more_blogs mt_md gap_lg">
-                        <div class="more_blogs_title_wrapper">
-                            <h2 class="more_blogs_title">More Blogs</h2>
-
-                        </div>
-                        <div class="more_articles_wrapper ">
-                            <a href="../routes/blog-data.html" class="more_blog_card shadow">
-
-                                <img class="more_blog_thumbnail"
-                                    src="https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/H58t2KNlUXjBYzahHER34W9m0GS39wOfyH8BR9Jp.png"
-                                    alt="blog_thumbnail" width="300px" height="300px">
-
-                                <span class="more_blog_description items_center text_center">Lorem ipsum dolor sit amet,
-                                    officia excepteur ex
-                                    fugiat
-                                    reprehenderit enim labore
-                                    culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.</span>
-                            </a>
-                            <a href="../routes/blog-data.html" class="more_blog_card shadow">
-
-                                <img class="more_blog_thumbnail"
-                                    src="https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/H58t2KNlUXjBYzahHER34W9m0GS39wOfyH8BR9Jp.png"
-                                    alt="blog_thumbnail" width="300px" height="300px">
-
-                                <span class="more_blog_description items_center text_center">Lorem ipsum dolor sit amet,
-                                    officia excepteur ex
-                                    fugiat
-                                    reprehenderit enim labore
-                                    culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.</span>
-                            </a>
-
-                            <a href="../routes/blog-data.html" class="more_blog_card shadow">
-
-                                <img class="more_blog_thumbnail"
-                                    src="https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/H58t2KNlUXjBYzahHER34W9m0GS39wOfyH8BR9Jp.png"
-                                    alt="blog_thumbnail" width="300px" height="300px">
-
-                                <span class="more_blog_description items_center text_center">Lorem ipsum dolor sit amet,
-                                    officia excepteur ex
-                                    fugiat
-                                    reprehenderit enim labore
-                                    culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.</span>
-                            </a>
-
-                            <a href="../routes/blog-data.html" class="more_blog_card shadow">
-
-                                <img class="more_blog_thumbnail"
-                                    src="https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/H58t2KNlUXjBYzahHER34W9m0GS39wOfyH8BR9Jp.png"
-                                    alt="blog_thumbnail" width="300px" height="300px">
-
-                                <span class="more_blog_description items_center text_center">Lorem ipsum dolor sit amet,
-                                    officia excepteur ex
-                                    fugiat
-                                    reprehenderit enim labore
-                                    culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.</span>
-                            </a>
-                            <a href="../routes/blog-data.html" class="more_blog_card shadow">
-
-                                <img class="more_blog_thumbnail"
-                                    src="https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/H58t2KNlUXjBYzahHER34W9m0GS39wOfyH8BR9Jp.png"
-                                    alt="blog_thumbnail" width="300px" height="300px">
-
-                                <span class="more_blog_description items_center text_center">Lorem ipsum dolor sit amet,
-                                    officia excepteur ex
-                                    fugiat
-                                    reprehenderit enim labore
-                                    culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.</span>
-                            </a>
-                            <a href="../routes/blog-data.html" class="more_blog_card shadow">
-
-                                <img class="more_blog_thumbnail"
-                                    src="https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/H58t2KNlUXjBYzahHER34W9m0GS39wOfyH8BR9Jp.png"
-                                    alt="blog_thumbnail" width="300px" height="300px">
-
-                                <span class="more_blog_description items_center text_center">Lorem ipsum dolor sit amet,
-                                    officia excepteur ex
-                                    fugiat
-                                    reprehenderit enim labore
-                                    culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.</span>
-                            </a>
-                            <a href="../routes/blog-data.html" class="more_blog_card shadow">
-
-                                <img class="more_blog_thumbnail"
-                                    src="https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/H58t2KNlUXjBYzahHER34W9m0GS39wOfyH8BR9Jp.png"
-                                    alt="blog_thumbnail" width="300px" height="300px">
-
-                                <span class="more_blog_description items_center text_center">Lorem ipsum dolor sit amet,
-                                    officia excepteur ex
-                                    fugiat
-                                    reprehenderit enim labore
-                                    culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.</span>
-                            </a>
-                            <a href="../routes/blog-data.html" class="more_blog_card shadow">
-
-                                <img class="more_blog_thumbnail"
-                                    src="https://poetistic.com/_ipx/f_webp/https://d1a1sxzos5rrmb.cloudfront.net/post-featured-images/H58t2KNlUXjBYzahHER34W9m0GS39wOfyH8BR9Jp.png"
-                                    alt="blog_thumbnail" width="300px" height="300px">
-
-                                <span class="more_blog_description items_center text_center">Lorem ipsum dolor sit amet,
-                                    officia excepteur ex
-                                    fugiat
-                                    reprehenderit enim labore
-                                    culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.</span>
-                            </a>
-
-                        </div>
-                    </div>
 
 
-                    </span>
+
                 </div>
             </div>
             </div>
 
-
-
-
-            <!-- load more button-->
-            <div class="load_more items_center self_center mt_lg">
-                <button class="load_more_button">Load More...</button>
-            </div>
-
-
-
-
-
-
-
-
         </section>
+        <section class=" carousel latest_blog flex_col " style="width: 80%;">
+            <div class="coupletBoxHeader">
+                <h1 class="line_clamp_3">Read More Blogs</h1>
+                <p>Chackout various blogs of literary </p>
+                <a class="ebookSeeAll" href="./blogs.html">
+                    See All
+                </a>
+            </div>
+            <div class="owl-carousel owl-theme blog_carousel" style="width: 100%;">
+                <!-- cards -->
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/Blog-Cover-Azra-Naqvi.jpg" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        आसी ने ज़िंदगी की महरूमियों को क़बूल ज़रूर किया लेकिन कभी हालात के आगे झुके नहीं. कभी
+                        ख़ुदकुशी करने की नहीं सोची. मुस्तक़िल उदासियों की सौगात ने आसी को हस्सास से हस्सासतर
+                        बनाया और वे राह में आने वाले हर अजनबी से पूरे ख़ुलूस और मुहब्बत से मिले और यही वजह है
+                        कि उनसे मिलने वाला हर अजनबी उनका अपना बन गया.
+                    </span>
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/02/Valentines-Day-Blog.jpg" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        उर्दू शायरी में इश्क़ के बारे में ये और ऐसे कई शे’र मशहूर हैं मगर ऐसा नहीं है कि इश्क़ और आशिक़ की
+                        बरबादी के क़िस्से सिर्फ़ उर्दू शायरी तक महदूद रह गए हैं। हिंदुस्तान की और ज़बानों और इलाक़ों में भी
+                        देखा जाए तो पंजाब की तरफ़ हीर-राँझा, सोहनी-महीवाल, मिर्ज़ा-साहिबा और सस्सी-पुन्नू के क़िस्से हमें
+                        ख़ूब मिलते हैं जिन का असर बॉलीवुड में भी बहुत है।
+                </a>
 
+                <a href="./routes/blog-data.html" class="item flex_col" height:500px ; 3>
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/10/Artboard-1.png" alt="blog">
+                    <span class=" text_md line_clamp_2" style="direction: rtl;">
+                        سن 2023ء کا ادب کا نوبیل انعام ناروے کے ادیب یان فاسے (Jon Olav Fosse)نے حاصل کیا۔
+                        اردو دنیا کے قارئین کے لیے یہ نام اجنبی ہے۔ ذیل میں ان کی شخصیت اور کام کا مختصر
+                        تعارف پیش ہے۔ :تعارف یان فاسے 29 ستمبر 1959 ء کو ناروے میں پیدا ہوئے۔ان کا بچپن اور
+                        لڑکپن اسٹین برم نامی قصبے میں بیتا۔ جہاں سات برس کی عمر میں مسلسل ہونے والے حادث
+                    </span>
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/22nd-Aug-Blog-Cover.jpg" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        In 1977, a well-known journalist and writer late, Kushwant Singh, called Urdu a
+                        dying language. How did a language with such a rich history become the subject of
+                        discussions about its ultimate decline? The situation may not be as dire as some
+                        individuals intentionally portray it to be
+                    </span>
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/Artboard-2.png" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        Urdu poetry is a realm where words transcend their literal meanings, weaving a
+                        tapestry of emotions, spirituality, and profound insights. At its heart lies a deep
+                        connection to mysticism and Sufism, two interwoven threads that have illuminated the
+                        path of countless poets, leading them on a journey to find divinity within verses.
+                    </span>
+                </a>
 
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/03/Womens-Day.jpg" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        When we look at the canon of Urdu literature, it doesn’t take much time to realise women are
+                        abnormally absent from the picture. If we speak of the classical age, The important Tazkiras
+                        like Khush-Marka-e-Zeba or Majmua-e-Naghz rarely mention a female.
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2021/09/MeerTaqiMeer_Blog_Cover.jpg"
+                        alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        किशोरावस्था में ही मिल जाने वाले इश्क़ के सबक़ को लेकर मीर उम्र भर जीते रहे। उनकी ज़िंदगी का कोई
+                        काम इश्क़ के शोर और वलवले से ख़ाली नहीं था। उन्होंने न सिर्फ़ पिता से ये नसीहतें सुनी थीं बल्कि
+                        इश्क़ में शराबोर उनके जीवन का नज़ारा भी किया था।
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/Artboard-2.png" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        Urdu poetry is a realm where words transcend their literal meanings, weaving a
+                        tapestry of emotions, spirituality, and profound insights. At its heart lies a deep
+                        connection to mysticism and Sufism, two interwoven threads that have illuminated the
+                        path of countless poets, leading them on a journey to find divinity within verses.
+                    </span>
+                </a>
+
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/03/Womens-Day.jpg" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        When we look at the canon of Urdu literature, it doesn’t take much time to realise women are
+                        abnormally absent from the picture. If we speak of the classical age, The important Tazkiras
+                        like Khush-Marka-e-Zeba or Majmua-e-Naghz rarely mention a female.
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2021/09/MeerTaqiMeer_Blog_Cover.jpg"
+                        alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        किशोरावस्था में ही मिल जाने वाले इश्क़ के सबक़ को लेकर मीर उम्र भर जीते रहे। उनकी ज़िंदगी का कोई
+                        काम इश्क़ के शोर और वलवले से ख़ाली नहीं था। उन्होंने न सिर्फ़ पिता से ये नसीहतें सुनी थीं बल्कि
+                        इश्क़ में शराबोर उनके जीवन का नज़ारा भी किया था।
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/Artboard-2.png" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        Urdu poetry is a realm where words transcend their literal meanings, weaving a
+                        tapestry of emotions, spirituality, and profound insights. At its heart lies a deep
+                        connection to mysticism and Sufism, two interwoven threads that have illuminated the
+                        path of countless poets, leading them on a journey to find divinity within verses.
+                    </span>
+                </a>
+
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/03/Womens-Day.jpg" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        When we look at the canon of Urdu literature, it doesn’t take much time to realise women are
+                        abnormally absent from the picture. If we speak of the classical age, The important Tazkiras
+                        like Khush-Marka-e-Zeba or Majmua-e-Naghz rarely mention a female.
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2021/09/MeerTaqiMeer_Blog_Cover.jpg"
+                        alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        किशोरावस्था में ही मिल जाने वाले इश्क़ के सबक़ को लेकर मीर उम्र भर जीते रहे। उनकी ज़िंदगी का कोई
+                        काम इश्क़ के शोर और वलवले से ख़ाली नहीं था। उन्होंने न सिर्फ़ पिता से ये नसीहतें सुनी थीं बल्कि
+                        इश्क़ में शराबोर उनके जीवन का नज़ारा भी किया था।
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/Artboard-2.png" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        Urdu poetry is a realm where words transcend their literal meanings, weaving a
+                        tapestry of emotions, spirituality, and profound insights. At its heart lies a deep
+                        connection to mysticism and Sufism, two interwoven threads that have illuminated the
+                        path of countless poets, leading them on a journey to find divinity within verses.
+                    </span>
+                </a>
+
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/03/Womens-Day.jpg" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        When we look at the canon of Urdu literature, it doesn’t take much time to realise women are
+                        abnormally absent from the picture. If we speak of the classical age, The important Tazkiras
+                        like Khush-Marka-e-Zeba or Majmua-e-Naghz rarely mention a female.
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2021/09/MeerTaqiMeer_Blog_Cover.jpg"
+                        alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        किशोरावस्था में ही मिल जाने वाले इश्क़ के सबक़ को लेकर मीर उम्र भर जीते रहे। उनकी ज़िंदगी का कोई
+                        काम इश्क़ के शोर और वलवले से ख़ाली नहीं था। उन्होंने न सिर्फ़ पिता से ये नसीहतें सुनी थीं बल्कि
+                        इश्क़ में शराबोर उनके जीवन का नज़ारा भी किया था।
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/08/Artboard-2.png" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        Urdu poetry is a realm where words transcend their literal meanings, weaving a
+                        tapestry of emotions, spirituality, and profound insights. At its heart lies a deep
+                        connection to mysticism and Sufism, two interwoven threads that have illuminated the
+                        path of countless poets, leading them on a journey to find divinity within verses.
+                    </span>
+                </a>
+
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2023/03/Womens-Day.jpg" alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        When we look at the canon of Urdu literature, it doesn’t take much time to realise women are
+                        abnormally absent from the picture. If we speak of the classical age, The important Tazkiras
+                        like Khush-Marka-e-Zeba or Majmua-e-Naghz rarely mention a female.
+                </a>
+                <a href="./routes/blog-data.html" class="item">
+                    <img src="https://blog.rekhta.org/wp-content/uploads/2021/09/MeerTaqiMeer_Blog_Cover.jpg"
+                        alt="blog">
+                    <span class=" text_md line_clamp_2">
+                        किशोरावस्था में ही मिल जाने वाले इश्क़ के सबक़ को लेकर मीर उम्र भर जीते रहे। उनकी ज़िंदगी का कोई
+                        काम इश्क़ के शोर और वलवले से ख़ाली नहीं था। उन्होंने न सिर्फ़ पिता से ये नसीहतें सुनी थीं बल्कि
+                        इश्क़ में शराबोर उनके जीवन का नज़ारा भी किया था।
+                </a>
+
+            </div>
+        </section>
     </main>
 
     <footer id="footer">
@@ -626,6 +681,94 @@
         <div class="overlayRCritiqueForm"></div>
 
     </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $('.blog_carousel').owlCarousel({
+            loop: false,
+            margin: 10,
+            responsive: {
+                0: {
+                    items: 1.2,
+                    nav: true,
+                    dots: true,
+                    autoWidth: false,
+                },
+                486: {
+                    items: 2.3,
+                    nav: true,
+                    dots: true,
+                    autoWidth: false,
+                },
+                728: {
+                    items: 3.3,
+                    nav: true,
+                    dots: true,
+                    autoWidth: false,
+                },
+                900: {
+                    items: 4.5,
+                    nav: true,
+                    dots: true,
+                    autoWidth: true,
+                },
+                1200: {
+                    items: 5.5,
+                    nav: true,
+                    dots: false,
+                    autoWidth: true,
+
+                },
+                1300: {
+                    items: 6.5,
+                    nav: true,
+                    dots: false,
+                    autoWidth: true,
+                }
+            }
+        })
+
+        $('.collection_carousel').owlCarousel({
+            loop: false,
+            margin: 10,
+            nav: true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1.3,
+
+                },
+                486: {
+                    items: 2.3,
+
+                },
+                728: {
+                    items: 3.3,
+
+                },
+                900: {
+                    items: 4.5,
+
+                },
+                1200: {
+                    items: 5.5,
+
+
+                },
+                1300: {
+                    items: 6.5,
+
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>

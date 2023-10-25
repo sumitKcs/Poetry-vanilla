@@ -1,0 +1,620 @@
+@media all {
+    ul {
+        box-sizing: border-box;
+    }
+
+    .has-text-align-center {
+        text-align: center;
+    }
+}
+
+@media all {
+
+    div,
+    span,
+    h2,
+    h4,
+    h5,
+    h6,
+    p,
+    pre,
+    a,
+    em,
+    strong,
+    i,
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    strong {
+        font-weight: bold;
+    }
+
+    em {
+        font-style: italic;
+    }
+}
+
+@media all {
+    [class^="rico-"] {
+        font-family: 'rIcons' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .rico-arrowright:before {
+        content: "\e930";
+    }
+
+    .rico-arrowleft:before {
+        content: "\e932";
+    }
+
+    .rico-arrowthindown:before {
+        content: "\e935";
+    }
+
+    .rico-sort:before {
+        content: "\e948";
+    }
+
+    .rico-Thumb_up:before {
+        content: "\e957";
+    }
+
+    .rico-Thumbs_down:before {
+        content: "\e958";
+    }
+}
+
+@media all {
+    .container {
+        max-width: 1124px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .clearfix {
+        *zoom: 1;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    .has-text-align-center {
+        text-align: center !important;
+    }
+
+    h2 {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #404040;
+        font-family: "Lato", "NotoSansDevanagari", "NotoNastaliqUrdu", sans-serif;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #000000;
+        line-height: 1.75;
+        margin-bottom: 30px;
+        font-weight: 400;
+    }
+
+    .blogPostWrap {
+        float: left;
+        width: 738px;
+    }
+
+    .blogDetailsPage p {
+        font-size: 18px;
+        color: #000000;
+    }
+
+    .nextPrevPostLinks {
+        text-align: center;
+        clear: both;
+        padding-top: 32px;
+    }
+
+    .nextPrevPostLinks a {
+        display: block;
+        padding: 0 8px;
+        box-sizing: border-box;
+        display: inline-block;
+        vertical-align: middle;
+        background: #ff006a;
+        color: #fff;
+        font-size: 16px;
+        line-height: 40px;
+        min-width: 186px;
+        margin: 0 12px;
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .nextPrevPostLinks a:hover {
+        opacity: 0.7;
+    }
+
+    .nextPrevPostLinks a i {
+        font-size: 24px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    .blogPostWrap pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        text-align: justify;
+    }
+
+    .tagsWrap {
+        text-align: center;
+        clear: both;
+        padding-top: 32px;
+    }
+
+    .tagsWrap p {
+        font-size: 14px;
+    }
+
+    .tagsWrap p a {
+        color: #00aaff;
+    }
+
+    .tagsWrap p a:hover {
+        text-decoration: underline;
+    }
+}
+
+@media all {
+    @media all and (min-width: 768px) and (max-width: 1199px) {
+        h2 {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .container {
+            padding: 0 32px;
+            box-sizing: border-box;
+        }
+
+        .blogPostWrap {
+            float: none;
+            width: 100%;
+        }
+
+        .blogDetailsPage p {
+            font-size: 16px;
+        }
+    }
+
+    @media all and (min-width: 320px) and (max-width: 767px) {
+        h2 {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .container {
+            padding: 0 16px;
+            box-sizing: border-box;
+        }
+
+        .blogPostWrap {
+            float: none;
+            width: 100%;
+        }
+
+        .blogDetailsPage p {
+            font-size: 16px;
+        }
+
+        .nextPrevPostLinks a {
+            margin: 0 12px 12px;
+        }
+    }
+}
+
+@media all {
+    .forumContainer {
+        padding: 0px 0px 16px;
+    }
+
+    .commentCount,
+    .sortCmnt h5 {
+        font-size: 16px;
+        line-height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        color: #0d0d0d;
+    }
+
+    .cmntCntSort {
+        padding: 0px 0px 24px;
+    }
+
+    .sortCmnt {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .sortCmnt h5 {
+        text-transform: uppercase;
+        position: relative;
+        margin-left: 16px;
+        color: #606060;
+        font-family: 'lato';
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .sortCmnt h5 i {
+        vertical-align: middle;
+    }
+
+    .sortCmnt .cmntSortList {
+        background-color: #fff;
+        padding: 12px;
+        width: 102px;
+        position: absolute;
+        top: 36px;
+        left: 25px;
+        box-shadow: 0px 1px 5px 2px #eee;
+        display: none;
+        z-index: 1;
+    }
+
+    .sortCmnt .cmntSortList li {
+        padding: 10px 0px;
+        font-size: 14px;
+    }
+
+    .commentBox {
+        position: relative;
+        min-height: 48px;
+        padding: 8px 0px;
+    }
+
+    #CommentDiv {
+        margin-top: 24px;
+        margin-bottom: 48px;
+    }
+
+    .commentBox .cmntInputOtpt {
+        padding-left: 60px;
+        position: relative;
+    }
+
+    .commentBox .cmntInputOtpt .userName {
+        color: #4c4c4c;
+        font-family: 'lato';
+        font-weight: 700;
+        font-size: 14px;
+        margin-bottom: 15px;
+        margin-top: 13px;
+    }
+
+    .commentBox .cmntInputOtpt .userName span {
+        font-family: 'lato';
+        font-weight: 400;
+        margin-left: 8px;
+        color: #8e8e8e;
+        font-size: 12px;
+    }
+
+    .commentBox .cmntInputOtpt .cmntPara {
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 24px;
+        white-space: pre-wrap;
+    }
+
+    .commentBox .cmntInputOtpt .lkDslkRpl {
+        margin-left: -6px;
+        margin-top: 8px;
+        font-size: 12px;
+    }
+
+    .commentBox .cmntInputOtpt .lkDslkRpl span i {
+        vertical-align: middle;
+        cursor: pointer;
+        font-size: 24px;
+        color: #909090;
+        padding: 0px 4px 0px 4px;
+    }
+
+    .commentBox .cmntInputOtpt .replycmnt {
+        font-family: 'lato';
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #8e8e8e;
+        margin-left: 16px;
+        cursor: pointer;
+    }
+
+    .commentBox .cmntInputOtpt .vwReply {
+        font-family: 'lato';
+        font-weight: 700;
+        color: #00aaff;
+        margin-top: 16px;
+        margin-left: -6px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .commentBox .cmntInputOtpt .vwReply i {
+        vertical-align: middle;
+        font-size: 18px;
+    }
+
+    .commentBox textarea {
+        width: 100%;
+        border: 0;
+        outline: none;
+        line-height: 24px;
+        height: 32px;
+        font-family: 'lato';
+        font-weight: 400;
+        font-size: 14px;
+        border-bottom: 1px solid #eeeeee;
+        resize: none;
+        overflow: hidden;
+    }
+
+    .cmntButtons {
+        text-align: right;
+        margin-top: 8px;
+    }
+
+    .cmntButtons button {
+        border: 0;
+        padding: 6px 10px;
+        font-size: 12px;
+        color: #000;
+        border: 1px solid #fff;
+        text-transform: uppercase;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .cmntButtons .cmntCncl {
+        cursor: pointer;
+    }
+
+    .cmntButtons .cmntDone {
+        border: 1px solid #00aaff;
+        background-color: #00aaff;
+        color: #fff;
+    }
+
+    .cmntReplyCont {
+        padding-left: 60px;
+        display: none;
+    }
+
+    .rplyCmntByUser {
+        padding-top: 16px;
+        display: none;
+    }
+
+    .commentBox .cmntInputOtpt.ReplyArguComnt {
+        padding-left: 36px;
+    }
+
+    .userCmntNameTitlwrd {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        background-color: #cecece;
+        text-align: center;
+        color: #fff;
+        font-family: 'lato';
+        font-weight: 700;
+        line-height: 40px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        text-transform: uppercase;
+    }
+
+    .userCmntNameTitlwrd.userCmntUndrcmntNameTitl {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+    }
+
+    .shareExperience {
+        text-align: center;
+        padding-bottom: 48px;
+    }
+
+    .shareExperience h2 {
+        font-size: 20px;
+        color: #010101;
+        line-height: 1;
+        font-family: "Lato", "NotoSansDevanagari", "NotoNastaliqUrdu";
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    .shareExperience h4 {
+        font-size: 11px;
+        color: #4C4C4C;
+        line-height: 1;
+        font-family: "Lato", "NotoSansDevanagari", "NotoNastaliqUrdu";
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    #div_forum {
+        direction: ltr;
+    }
+
+    .forumContainer .contentLoadMoreBtnWrap {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .commentSectionWrap {
+        padding-top: 72px;
+    }
+
+    .contentLoadMoreBtn {
+        border: 1px solid #00aaff;
+        background-color: #00aaff;
+        color: #fff;
+        padding: 8px 18px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    @media screen and (min-width:992px) {
+        .cmntButtons button {
+            padding: 10px 16px;
+            font-size: 14px;
+        }
+
+        .commentBox textarea,
+        .commentBox .cmntInputOtpt .cmntPara,
+        .commentBox .cmntInputOtpt .userName {
+            font-size: 16px;
+        }
+
+        .cmntOutputcontainer .cmntPara {
+            padding-right: 24px;
+        }
+
+        .userCmntNameTitlwrd {
+            width: 48px;
+            height: 48px;
+            font-size: 18px;
+            line-height: 48px;
+        }
+
+        .shareExperience h2 {
+            font-size: 28px;
+        }
+
+        .shareExperience h4 {
+            font-size: 14px;
+        }
+
+        .commentBox .cmntInputOtpt .userName {
+            margin-top: 15px;
+        }
+    }
+}
+
+@font-face {
+    font-family: 'rIcons';
+    src: url('https://blog.rekhta.org/wp-content/themes/rekhtablog/assets/fonts/rIcons.eot?5z877s');
+    src: url('https://blog.rekhta.org/wp-content/themes/rekhtablog/assets/fonts/rIcons.eot?5z877s#iefix') format('embedded-opentype'), url('https://blog.rekhta.org/wp-content/themes/rekhtablog/assets/fonts/rIcons.ttf?5z877s') format('truetype'), url('https://blog.rekhta.org/wp-content/themes/rekhtablog/assets/fonts/rIcons.woff?5z877s') format('woff'), url('https://blog.rekhta.org/wp-content/themes/rekhtablog/assets/fonts/rIcons.svg?5z877s#rIcons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh7USSwaPGR_p.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh7USSwiPGQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh6UVSwaPGR_p.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "NotoSansDevanagari";
+    src: url("https://blog.rekhta.org/wp-content/themes/rekhtablog/assets/fonts/NotoSansDevanagari-Regular.ttf") format("truetype"), url("https://blog.rekhta.org/wp-content/themes/rekhtablog/assets/fonts/notosansdevanagari-regular-webfont.woff2") format("woff2"), url("https://blog.rekhta.org/wp-content/themes/rekhtablog/assets/fonts/notosansdevanagari-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NotoNastaliqUrdu";
+    src: url("https://blog.rekhta.org/wp-content/themes/rekhtablog/assets/fonts/NotoNastaliqUrdu-Regular.ttf") format("truetype"), url("https://blog.rekhta.org/wp-content/themes/rekhtablog/assets/fonts/notonastaliqurdu-regular.woff2") format("woff2"), url("https://blog.rekhta.org/wp-content/themes/rekhtablog/assets/fonts/NotoNastaliqUrdu-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
