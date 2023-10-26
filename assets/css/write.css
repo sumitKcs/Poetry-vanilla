@@ -13,9 +13,18 @@
     resize: none;
     padding: 5rem .5rem;
     border-radius: .5rem;
+    overflow-y: scroll;
 }
 
 .write_form textarea:focus {
     outline: transparent;
     border: 2px solid var(--primary-color);
+}
+
+@media only screen and (max-width: 768px) {
+    .write_form_wrapper {
+        width: 90vw;
+        height: 350px;
+        padding: .5rem;
+    }
 }
